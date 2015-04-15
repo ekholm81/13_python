@@ -3,8 +3,10 @@
 import os
 import time
 class Tips:
-	def __init__(self, tips, user):
+	def __init__(self, tips, user):		
+		self.ncrossed=[]
 		self.crossed=[]
+		self.nodds=[]
 		self.odds=[]
 		self.gamestring=[]
 		self.closing=""
@@ -18,7 +20,29 @@ class Tips:
 	def erase_html(self):
 		os.system("rm /home/"+self.user+"/13_python/wget/"+self.tips)
 	
+	def get_closing(self):
+		line=""
+		f=open(self.path, 'r')
+		for line in f.readlines():
+			if line[:23]=="svs.tipset.data.draws =":
+				break
+		f.close()
+		for i in range(len(line)):
+			if line[i:i+5]=="nger ":
+				idx=i+5
+				tmp=""
+				for j in range(25):
+					if line[idx+j]=='"':
+						break
+					tmp+=line[idx+j]
+				self.closing=tmp
+				break
+		return self.closing
 	def get_data(self):	
+		self.crossed=[]
+		self.odds=[]
+		self.gamestring=[]
+		self.oms=""
 		line=""
 		f=open(self.path, 'r')
 		for line in f.readlines():
@@ -85,20 +109,11 @@ class Tips:
 					tmp+=line[idx+j]
 				self.oms=tmp
 				break
-		for i in range(len(line)):
-			if line[i:i+5]=="nger ":
-				idx=i+5
-				tmp=""
-				for j in range(25):
-					if line[idx+j]=='"':
-						break
-					tmp+=line[idx+j]
-				self.closing=tmp
-				break
 		num_odds=[]
 		num_crossed=[]
 		tmp_arr=[]		
 		for i in range(8):
+			print self.odds[i]
 			self.odds[i]=self.odds[i][4:]
 			self.odds[i]= self.odds[i].replace("   ", ",",2)
 			self.crossed[i]= self.crossed[i].replace(" ", ",",2)
@@ -108,17 +123,17 @@ class Tips:
 			num_odds.append(tmp_arr)
 			tmp_arr = [int(k) for k in self.crossed[i].split(',')]
 			num_crossed.append(tmp_arr)
-		self.odds=num_odds
-		self.crossed=num_crossed
+		self.nodds=num_odds
+		self.ncrossed=num_crossed
 		
 
 	def log(self):
 		print time.ctime()+" Logging..."
 		f= open(os.path.join("/home/"+self.user+"/13_python/data", self.closing+time.ctime()), 'w')
 		for i in range (8):
-			f.write(str(self.crossed[i][0])+" "+str(self.crossed[i][1])+" "+str(self.crossed[i][2])+"\n")
+			f.write(str(self.ncrossed[i][0])+" "+str(self.ncrossed[i][1])+" "+str(self.ncrossed[i][2])+"\n")
 		for i in range (8):	
-			f.write(str(self.odds[i][0])+" "+str(self.odds[i][1])+" "+str(self.odds[i][2])+"\n")
+			f.write(str(self.nodds[i][0])+" "+str(self.nodds[i][1])+" "+str(self.nodds[i][2])+"\n")
 		for i in range (8):
 			f.write(self.gamestring[i]+"\n")
 		f.write(self.closing +"\n"+self.oms+"\n")

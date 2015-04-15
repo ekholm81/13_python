@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="ft-oddset-1x2-extrainfo ft-oddset-system  os-unknown  osver-unknown tablet  browser-unknown powerplay tipset no-js lt-ie9 lt-ie8 lt-ie7" lang="sv"> <![endif]-->
+<!--[if IE 7]>    <html class="ft-oddset-1x2-extrainfo ft-oddset-system  os-unknown  osver-unknown tablet  browser-unknown powerplay tipset no-js lt-ie9 lt-ie8" lang="sv"> <![endif]-->
+<!--[if IE 8]>    <html class="ft-oddset-1x2-extrainfo ft-oddset-system  os-unknown  osver-unknown tablet  browser-unknown powerplay tipset no-js lt-ie9" lang="sv"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="ft-oddset-1x2-extrainfo ft-oddset-system  os-unknown  osver-unknown tablet  browser-unknown powerplay tipset nojs" lang="sv">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="description" content="Oddset Powerplay för Sport betting på NHL, SHL Hockey åtta rätt räcker för att vinna. Spela och vinn!">
+    <meta name="keywords" content="vinn, vinnare, oddset powerplay, spela, betting">
+    <link rel="canonical" href="https://svenskaspel.se/?pageid=/sport/oddsetpowerplay" />
+
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0,user-scalable=no,width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <title>Oddset Powerplay - NHL, SHL, Hockey, Sport Betting, för vinnare!</title>
+
+  
+      <link rel="stylesheet" href="//cdn1.svenskaspel.net/stylesheets/e73d0bf718fd025e2986d96fa86fb9240b887dc7.css">
+  
+      <link rel="stylesheet" href="//cdn1.svenskaspel.net/stylesheets/f048505720d398c272a9b5e3e5d84cfbfe4cba75.css">
+  
+    <link rel="icon" href="//cdn1.svenskaspel.net/images/core/layout/favicon.ico">
+    <link rel="shortcut icon" href="//cdn1.svenskaspel.net/images/core/layout/favicon.ico" type="image/x-icon">
+
+    <link href="//cdn1.svenskaspel.net/images/core/layout/apple-touch-icon-precomposed.png"         rel="apple-touch-icon-precomposed">
+    <link href="//cdn1.svenskaspel.net/images/core/layout/apple-touch-icon-72x72-precomposed.png"   rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="//cdn1.svenskaspel.net/images/core/layout/apple-touch-icon-76x76-precomposed.png"   rel="apple-touch-icon-precomposed" sizes="76x76">
+    <link href="//cdn1.svenskaspel.net/images/core/layout/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="//cdn1.svenskaspel.net/images/core/layout/apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+    <link href="//cdn1.svenskaspel.net/images/core/layout/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="//cdn1.svenskaspel.net/images/core/layout/apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+    <script src="//cdn1.svenskaspel.net/javascripts/libs/modernizr/modernizr-2.6.2.min.js" crossorigin="anonymous"></script>
+</head>
+
+  <body class="wrap bg-grey-300">
+
+  <header id="top-content" class="grid-row grid-row-remove-margins header header-powerplay">
+    <div class="js-top-content header-content">
+      
+    
+        <a class="js-menu-activate header-button-left"><i class="icon-default icon-menu header-menu-icon"></i></a>
+    
+    <div class="header-left-buttons">
+        
+    </div>
+    <h1 class="header-title">
+  <span class="js-top-center-content header-title-content header-title-content-1-rows">
+  
+    
+      <i class="icon-header-default icon-header-powerplay"></i>
+    
+  
+  </span>
+</h1>
+    <div class="header-right-buttons">
+        
+    </div>
+
+    </div>
+    
+      <div class="js-user-menu header-user-info"></div>
+    
+  </header>
+
+
+    <div class="js-navigation-dimmer navigation-dimmer"></div>
+    <nav class="js-navigation-menu navigation-menu"><div class="js-nav-content nav-content">
+  <div class="js-nav-container-content nav-container-content"></div>
+</div>
+<div class="js-navigation-container navigation-container">
+    <div class="js-navigation-content-scroll navigation-content-scroll">
+        
+            <nav class="expandable-menu">
+  
+    <a href="/" class="navigation-logo block padding-xs-v-1 padding-xs-h-2"><i class="icon-header-default icon-header-svenskaspel"></i></a>
+  
+
+    <ul class="nav">
+        
+            <li class="nav-item ">
+              <a href="/" class="padding-xs-2 padding-sm-right-1 js-nav-item js-nav-item-start block" data-index="0">
+                <div class="grid-row">                  
+                    <div class="col-xs-12">
+                      <i class="icon-default icon-nav-default icon-nav-hem"></i>
+                      <span class="js-nav-item-title nav-item-title">Start</span>
+                    </div>
+                  
+                </div>
+              </a>
+            </li>
+        
+            <li class="nav-item ">
+              <a href="/spela" class="padding-xs-2 padding-sm-right-1 js-nav-item js-nav-item-spela block" data-index="1">
+                <div class="grid-row">                  
+                    <div class="col-xs-12">
+                      <i class="icon-default icon-nav-default icon-nav-spela"></i>
+                      <span class="js-nav-item-title nav-item-title">Spela</span>
+                    </div>
+                  
+                </div>
+              </a>
+            </li>
+        
+            <li class="nav-item ">
+              <a href="/mina-spel" class="padding-xs-2 padding-sm-right-1 js-nav-item js-nav-item-mina-spel block" data-index="2">
+                <div class="grid-row">                  
+                    <div class="col-xs-11">
+                      <i class="icon-default icon-nav-default icon-nav-minaspel"></i>
+                      <span class="js-nav-item-title nav-item-title">Mina Spel</span>
+                    </div>
+                    <div class="col-xs-1 align-center">
+                      <div class="js-uncorrected-nav nav-badge-mark bg-green hide"></div>
+                    </div>
+                  
+                </div>
+              </a>
+            </li>
+        
+            <li class="nav-item ">
+              <a href="" class="padding-xs-2 padding-sm-right-1 js-nav-item js-nav-item-sportservice block" data-index="3">
+                <div class="grid-row">                  
+                    <div class="col-xs-12">
+                      <i class="icon-default icon-nav-default icon-nav-sportservice"></i>
+                      <span class="js-nav-item-title nav-item-title">Sportservice</span>
+                    </div>
+                  
+                </div>
+              </a>
+            </li>
+        
+            <li class="nav-item ">
+              <a href="" class="padding-xs-2 padding-sm-right-1 js-nav-item js-nav-item-mer block" data-index="4">
+                <div class="grid-row">                  
+                    <div class="col-xs-12">
+                      <i class="icon-default icon-nav-default icon-nav-mer"></i>
+                      <span class="js-nav-item-title nav-item-title">Mer från Svenska Spel</span>
+                    </div>
+                  
+                </div>
+              </a>
+            </li>
+        
+      </ul>
+
+      <div class="legal-info padding-xs-2 fc-grey-400">
+        Spel för dig över 18 år<br />
+        Stödlinjen : 020-81 91 00
+      </div>
+
+    
+</nav>        
+    </div>
+</div></nav>
+
+  <div id="main-content" class="js-main-content main-content grid-container grid-padding-0 grid-gutter-0 ">
+    
+
+<div id="startpage"></div>
+<div class="col-sm-6 col-md-4 col-lg-3 tips-coupon-column" id="couponColumn">
+    <div id="couponHolder" class="row">
+        <div id="coupon" class="scrollable tips-coupon overflow-scroll-auto">
+            <div id="uSignsBg" class="u-sign-bg-tablet"></div>
+            <div class="js-context-menu"></div>
+            <div id="actionbar-content" class="actionbar-content"></div>
+            <div id="tipset"></div>
+        </div>
+    </div>
+    <div id="uSignRow" class="row">
+        <div id="uSignsBtn" class="col-sm-6 col-md-4 col-lg-3 tips-usign-btn"></div>
+    </div>
+</div>
+<div class="col-sm-6 col-md-8 col-lg-9 scrollable hide tips-stat-col" id="statsColumn">
+    <div id="statContainer"></div>
+</div>
+<div class="clearfix"></div>
+
+
+  </div>
+
+<div id="betslip-wrapper" class="betslip-wrapper hide-mobile-landscape"></div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-7859264-15',
+            {
+                'cookieDomain': 'www.svenskaspel.se',
+                'siteSpeedSampleRate': 25
+            });
+    ga('set', 'dimension1', 'tablet');
+    ga('send', 'pageview');
+</script>
+<script>
+    function dataLayerPush(data) {
+        digitalData.push(data);
+    }
+</script>
+
+
+    <script>
+        digitalData = [];
+        dataLayerPush({
+            'event': 'pageview',
+            'page': {
+                'pageInfo': {
+                    'pageID': document.location.pathname,
+                    'pageName': document.title,
+                    'destinationURL': document.location.href,
+                    'sysEnv': 'tablet'
+                },
+                'webPropertyId': 'UA-7859264-15'
+            }
+        });
+    </script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WP3D5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','digitalData','GTM-WP3D5R');
+</script>
+<!-- End Google Tag Manager -->
+
+
+    <script type="text/javascript">
+        window.svs = window.svs || {};
+window.svs.core = window.svs.core || {};
+window.svs.core.layout = window.svs.core.layout || {};
+window.svs.core.layout.data = window.svs.core.layout.data || {};
+window.svs.core.layout.data.alert = window.svs.core.layout.data.alert || {};
+svs.core.layout.data.alert = {"error":[],"info":[],"success":[]};
+window.svs.core.jupiter = window.svs.core.jupiter || {};
+window.svs.core.jupiter.data = window.svs.core.jupiter.data || {};
+window.svs.core.jupiter.data.url = window.svs.core.jupiter.data.url || {};
+svs.core.jupiter.data.url = "https://api.www.svenskaspel.se";
+window.svs.core.session = window.svs.core.session || {};
+window.svs.core.session.data = window.svs.core.session.data || {};
+window.svs.core.session.data.session = window.svs.core.session.data.session || {};
+svs.core.session.data.session = {"features":{"ft-hide-navigation":{"status":"off"}}};
+window.svs.core.session.data.userSession = window.svs.core.session.data.userSession || {};
+svs.core.session.data.userSession = {"isAnonymous":true,"roles":{"PLAYER":"Player","INTERNAL":"Internal","RETAILER":"Retailer"}};
+window.svs.core.config = window.svs.core.config || {};
+window.svs.core.config.data = window.svs.core.config.data || {};
+window.svs.core.config.data.svsconfig = window.svs.core.config.data.svsconfig || {};
+svs.core.config.data.svsconfig = {"ver":"1.61.8787","env":"production","cdn":"//cdn1.svenskaspel.net","cdn2":"//cdn2.svenskaspel.net","socketIO":{"showAlertDelay":8000,"reconnectWait":500},"clientAjaxTimeout":30000,"logconfigClient":{"targets":{"console":{},"server":{"host":"https://luna.www.svenskaspel.se","maxQueueSize":500,"sendIntervalSoft":500,"sendIntervalHard":1000,"maxLogMessageLength":197}},"rules":[{"pattern":".*","minLevel":"off","writeTo":"console"},{"pattern":".*","minLevel":"info","writeTo":"server"}],"suppressLoggingMetricsToServer":false}};
+window.svs.components = window.svs.components || {};
+window.svs.components.header = window.svs.components.header || {};
+window.svs.components.header.data = window.svs.components.header.data || {};
+window.svs.components.header.data.svsheader = window.svs.components.header.data.svsheader || {};
+svs.components.header.data.svsheader = {"centercontent":"","hideMenuButtons":false};
+window.svs.components.login = window.svs.components.login || {};
+window.svs.components.login.data = window.svs.components.login.data || {};
+window.svs.components.login.data.svslogin = window.svs.components.login.data.svslogin || {};
+svs.components.login.data.svslogin = {"setPasswordUrl":"/nytt-losenord"};
+window.svs.components.analytics = window.svs.components.analytics || {};
+window.svs.components.analytics.data = window.svs.components.analytics.data || {};
+window.svs.components.analytics.data.svsanalytics = window.svs.components.analytics.data.svsanalytics || {};
+svs.components.analytics.data.svsanalytics = {"account":"UA-7859264-15","domain":"www.svenskaspel.se","siteSpeedSampleRate":"25","gtmAccount":"GTM-WP3D5R","gtmEnabled":true,"formFactor":"tablet"};
+window.svs.components.data = window.svs.components.data || {};
+window.svs.components.data.navigationmenu = window.svs.components.data.navigationmenu || {};
+svs.components.data.navigationmenu = {"menuType":"expandable","showProfileMenu":false,"showSearch":false,"items":[{"id":"start","title":"Start","url":"/","icon":"icon-nav-hem"},{"id":"spela","title":"Spela","url":"/spela","icon":"icon-nav-spela","openOnHash":true,"loadModule":true},{"id":"mina-spel","title":"Mina Spel","url":"/mina-spel","icon":"icon-nav-minaspel","openOnHash":true,"loadModule":true},{"id":"sportservice","title":"Sportservice","url":"","icon":"icon-nav-sportservice","items":[{"title":"Matcher/Event","url":"/sportservice"},{"title":"Favoriter","url":"/sportservice/favoriter"},{"title":"Sport A-Ö","url":"/sportservice/sport-a-o"}]},{"id":"mer","title":"Mer från Svenska Spel","url":"","icon":"icon-nav-mer","items":[{"title":"Spelkoll","url":"/spelkoll"},{"title":"Kundservice","url":"/kundservice"},{"title":"Gräsroten - Stöd din förening","url":"/grasroten"},{"title":"Spel-TV","url":"/spel-tv"},{"title":"Årsredovisningen","url":"https://svenskaspel.se/AnnualReport/2014/sv/index.html"}]}]};
+window.svs.components.theme = window.svs.components.theme || {};
+window.svs.components.theme.data = window.svs.components.theme.data || {};
+window.svs.components.theme.data.mapping = window.svs.components.theme.data.mapping || {};
+svs.components.theme.data.mapping = {"sport":{"1000002":"sport-soccer","1000003":"sport-hockey"},"league":{"1000482":"league-nhl"}};
+svs.core.jupiter.data.url = "https://api.www.svenskaspel.se";
+window.svs.core.data = window.svs.core.data || {};
+window.svs.core.data.components = window.svs.core.data.components || {};
+svs.core.data.components = [];
+window.svs.core.data.routes = window.svs.core.data.routes || {};
+svs.core.data.routes = {"":"routeStart","spela":"tipsBoard","spela/:did":"tipsBoard","spela/:did/:mid":"match","mina-spel/:id/:currentDrawNumber(/:currentAddonDrawNumber)":"showTab","mina-spel/:id/:currentDrawNumber(/:currentAddonDrawNumber)/:tab":"showTab","tipssm":"tipsSM"};
+window.svs.core.data.loginRoutes = window.svs.core.data.loginRoutes || {};
+svs.core.data.loginRoutes = {"mina-spel/:id/:currentDrawNumber/:currentAddonDrawNumber?":true,"mina-spel/:id/:currentDrawNumber/:currentAddonDrawNumber?/:tab":true};
+window.svs.tipset = window.svs.tipset || {};
+window.svs.tipset.data = window.svs.tipset.data || {};
+window.svs.tipset.data.gameDefinitions = window.svs.tipset.data.gameDefinitions || {};
+svs.tipset.data.gameDefinitions = {"numberOfMatches":8,"hasJoker":false,"hideStatistics":false,"apiNameLong":"powerplay","multiDraws":[1],"hasTTT":false,"isCorrectable":true,"myBetsName":"powerplay","apiName":"POWERPLAY","maxSystemSize":4374,"hasRAndU":false,"rowPrices":[1,2,5,10],"htmlClass":"powerplay","logoClass":"logo-powerplay","productId":28,"productName":"Powerplay"};
+svs.components.header.data.svsheader = {"centercontent":"<i class=\"icon-header-default icon-header-powerplay\"></i>"};
+window.svs.tipset.data.draws = window.svs.tipset.data.draws || {};
+svs.tipset.data.draws = {"draws":[{"productName":"PowerPlay","seasonLastDraw":false,"productId":28,"currentNetSale":"346 119","regCloseDescription":"PowerPlay v 16, stänger 2015-04-15 23:59","drawNumber":1024,"drawState":"Open","drawStateId":2,"regBetDisabled":"NotDisabled","regOpenTime":"2015-04-13T07:00:00+02:00","regCloseTime":"2015-04-15T23:59:00+02:00","cancelCloseTime":"2015-04-16T00:00:00+02:00","drawComment":"PowerPlay v. 2015-16","bombenDrawNum":8526,"drawEvents":[{"eventComment":"","eventDescription":"Montreal - Ottawa","eventNumber":1,"participantType":"Team","match":{"matchId":4214444,"matchStart":"2015-04-16T01:00:00+02:00","status":"Inte startat","statusId":0,"statusTime":"2015-04-16T01:00:00+02:00","coverage":1,"participants":[{"mediumName":"Montreal","shortName":"MONTR","code":"MONTR","countryId":0,"managerId":0,"arenaId":0,"id":1000030,"type":"home","name":"Montreal","latest":["V","V","V","F","F"],"trend":1,"goalAvg":"3,60","trendClass":"up"},{"mediumName":"Ottawa","shortName":"OTT","code":"OTT","countryId":0,"managerId":0,"arenaId":0,"id":1001320,"type":"away","name":"Ottawa","latest":["V","V","V","F","V"],"trend":2,"goalAvg":"3,20","trendClass":"positive"}],"league":{"id":1000626,"uniqueLeagueId":12690473,"uniqueLeagueName":"NHL","name":"NHL, Playoff","shortName":"NHL Playo","country":{"id":1000014,"name":"USA","isoCode":"USA","population":0},"code":"NHLPO","printAbbreviation":"NHL","season":{"id":3417051,"name":"NHL Playoff 2014 - 2015","startDate":"2015-04-16T01:00:00+02:00","endDate":"2015-04-30T02:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000011,"channelName":"Viasat Sport","startTime":"2015-04-16T01:05:00+02:00","endTime":null,"competitionId":0},{"channelId":1000043,"channelName":"Viaplay","startTime":"2015-04-16T01:05:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":1,"draws":0,"awayWins":4,"homeWidth":19,"drawWidth":0,"awayWidth":76}},"odds":{"one":"2,05","x":"3,55","two":"3,15"},"svenskaFolket":{"one":"44 %","x":"21 %","two":"35 %"},"tioTidningar":null,"expertPredictions":null,"isBomben":true,"matchLink":"spela/1024/1-montreal-ottawa","matchLinkLong":"/powerplay/spela/1024/1-montreal-ottawa","experts":[]},{"eventComment":"","eventDescription":"P Subban - E Karlsso","eventNumber":2,"participantType":"Team","match":{"matchId":4218462,"matchStart":"2015-04-16T01:00:00+02:00","status":"Inte startat","statusId":0,"statusTime":"0001-01-01T01:00:00+01:00","coverage":1,"participants":[{"mediumName":"P Subban","shortName":"PKSU","code":"PKSU","countryId":0,"managerId":0,"arenaId":0,"id":1292774,"type":"home","name":"P.K. Subban, MON","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"},{"mediumName":"E Karlsso","shortName":"EKARL","code":"EKARL","countryId":0,"managerId":0,"arenaId":0,"id":1202180,"type":"away","name":"E Karlsson, OTT","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"}],"league":{"id":1005468,"uniqueLeagueId":0,"name":"H2H","shortName":"H2H","country":{"id":1000094,"name":"Internationell","isoCode":"INT","population":0},"code":"H2H","printAbbreviation":"H2H","season":{"id":3523289,"name":"Ishockey Internationell H2H","startDate":"2014-09-15T00:00:00+02:00","endDate":"2015-06-30T00:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":null,"mutuals":null},"odds":null,"svenskaFolket":{"one":"17 %","x":"58 %","two":"25 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1024/2-p-subban-e-karlsso","matchLinkLong":"/powerplay/spela/1024/2-p-subban-e-karlsso","experts":[]},{"eventComment":"","eventDescription":"Nashville - Chicago","eventNumber":3,"participantType":"Team","match":{"matchId":4214436,"matchStart":"2015-04-16T02:30:00+02:00","status":"Inte startat","statusId":0,"statusTime":"2015-04-16T02:30:00+02:00","coverage":1,"participants":[{"mediumName":"Nashville","shortName":"NASH","code":"NASH","countryId":0,"managerId":0,"arenaId":0,"id":1000413,"type":"home","name":"Nashville","latest":["F","F","F","F","F"],"trend":-2,"goalAvg":"2,40","trendClass":"negative"},{"mediumName":"Chicago","shortName":"CHI","code":"CHI","countryId":0,"managerId":0,"arenaId":0,"id":1001495,"type":"away","name":"Chicago","latest":["F","F","F","F","V"],"trend":-1,"goalAvg":"1,80","trendClass":"down"}],"league":{"id":1000626,"uniqueLeagueId":12690473,"uniqueLeagueName":"NHL","name":"NHL, Playoff","shortName":"NHL Playo","country":{"id":1000014,"name":"USA","isoCode":"USA","population":0},"code":"NHLPO","printAbbreviation":"NHL","season":{"id":3417051,"name":"NHL Playoff 2014 - 2015","startDate":"2015-04-16T01:00:00+02:00","endDate":"2015-04-30T02:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000037,"channelName":"Viasat Xtra","startTime":"2015-04-16T02:35:00+02:00","endTime":null,"competitionId":0},{"channelId":1000043,"channelName":"Viaplay","startTime":"2015-04-16T02:35:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":2,"draws":0,"awayWins":3,"homeWidth":38,"drawWidth":0,"awayWidth":57}},"odds":{"one":"2,50","x":"3,50","two":"2,50"},"svenskaFolket":{"one":"35 %","x":"25 %","two":"40 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1024/3-nashville-chicago","matchLinkLong":"/powerplay/spela/1024/3-nashville-chicago","experts":[]},{"eventComment":"","eventDescription":"F Forsber - J Toews","eventNumber":4,"participantType":"Team","match":{"matchId":4218464,"matchStart":"2015-04-16T02:30:00+02:00","status":"Inte startat","statusId":0,"statusTime":"0001-01-01T01:00:00+01:00","coverage":1,"participants":[{"mediumName":"F Forsber","shortName":"FFOR","code":"FFOR","countryId":0,"managerId":0,"arenaId":0,"id":1286714,"type":"home","name":"F Forsberg, NSH","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"},{"mediumName":"J Toews","shortName":"JTOE","code":"JTOE","countryId":0,"managerId":0,"arenaId":0,"id":1292770,"type":"away","name":"J Toews, CHI","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"}],"league":{"id":1005468,"uniqueLeagueId":0,"name":"H2H","shortName":"H2H","country":{"id":1000094,"name":"Internationell","isoCode":"INT","population":0},"code":"H2H","printAbbreviation":"H2H","season":{"id":3523289,"name":"Ishockey Internationell H2H","startDate":"2014-09-15T00:00:00+02:00","endDate":"2015-06-30T00:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":null,"mutuals":null},"odds":null,"svenskaFolket":{"one":"21 %","x":"52 %","two":"27 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1024/4-f-forsber-j-toews","matchLinkLong":"/powerplay/spela/1024/4-f-forsber-j-toews","experts":[]},{"eventComment":"","eventDescription":"Vancouver - Calgary","eventNumber":5,"participantType":"Team","match":{"matchId":4214428,"matchStart":"2015-04-16T04:00:00+02:00","status":"Inte startat","statusId":0,"statusTime":"2015-04-16T04:00:00+02:00","coverage":1,"participants":[{"mediumName":"Vancouver","shortName":"VANC","code":"VANC","countryId":0,"managerId":0,"arenaId":0,"id":1000116,"type":"home","name":"Vancouver","latest":["V","V","V","F","F"],"trend":1,"goalAvg":"3,60","trendClass":"up"},{"mediumName":"Calgary","shortName":"CALG","code":"CALG","countryId":0,"managerId":0,"arenaId":0,"id":1001327,"type":"away","name":"Calgary","latest":["F","V","V","V","F"],"trend":1,"goalAvg":"2,40","trendClass":"up"}],"league":{"id":1000626,"uniqueLeagueId":12690473,"uniqueLeagueName":"NHL","name":"NHL, Playoff","shortName":"NHL Playo","country":{"id":1000014,"name":"USA","isoCode":"USA","population":0},"code":"NHLPO","printAbbreviation":"NHL","season":{"id":3417051,"name":"NHL Playoff 2014 - 2015","startDate":"2015-04-16T01:00:00+02:00","endDate":"2015-04-30T02:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000036,"channelName":"Viasat Hockey","startTime":"2015-04-16T04:05:00+02:00","endTime":null,"competitionId":0},{"channelId":1000037,"channelName":"Viasat Xtra","startTime":"2015-04-16T04:05:00+02:00","endTime":null,"competitionId":0},{"channelId":1000043,"channelName":"Viaplay","startTime":"2015-04-16T04:05:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":3,"draws":0,"awayWins":2,"homeWidth":57,"drawWidth":0,"awayWidth":38}},"odds":{"one":"1,97","x":"3,65","two":"3,25"},"svenskaFolket":{"one":"57 %","x":"19 %","two":"24 %"},"tioTidningar":null,"expertPredictions":null,"isBomben":true,"matchLink":"spela/1024/5-vancouver-calgary","matchLinkLong":"/powerplay/spela/1024/5-vancouver-calgary","experts":[]},{"eventComment":"","eventDescription":"D Sedin - J Hudler","eventNumber":6,"participantType":"Team","match":{"matchId":4218465,"matchStart":"2015-04-16T04:00:00+02:00","status":"Inte startat","statusId":0,"statusTime":"0001-01-01T01:00:00+01:00","coverage":1,"participants":[{"mediumName":"D Sedin","shortName":"DSED","code":"DSED","countryId":0,"managerId":0,"arenaId":0,"id":1283836,"type":"home","name":"D Sedin, VAN","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"},{"mediumName":"J Hudler","shortName":"JHUD","code":"JHUD","countryId":0,"managerId":0,"arenaId":0,"id":1292771,"type":"away","name":"J Hudler, CAL","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"}],"league":{"id":1005468,"uniqueLeagueId":0,"name":"H2H","shortName":"H2H","country":{"id":1000094,"name":"Internationell","isoCode":"INT","population":0},"code":"H2H","printAbbreviation":"H2H","season":{"id":3523289,"name":"Ishockey Internationell H2H","startDate":"2014-09-15T00:00:00+02:00","endDate":"2015-06-30T00:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":null,"mutuals":null},"odds":null,"svenskaFolket":{"one":"33 %","x":"49 %","two":"18 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1024/6-d-sedin-j-hudler","matchLinkLong":"/powerplay/spela/1024/6-d-sedin-j-hudler","experts":[]},{"eventComment":"","eventDescription":"Washingt. - N.Y Islan","eventNumber":7,"participantType":"Team","match":{"matchId":4214440,"matchStart":"2015-04-16T01:00:00+02:00","status":"Inte startat","statusId":0,"statusTime":"2015-04-16T01:00:00+02:00","coverage":1,"participants":[{"mediumName":"Washingt.","shortName":"WASH","code":"WASH","countryId":0,"managerId":0,"arenaId":0,"id":1001323,"type":"home","name":"Washington","latest":["F","V","V","F","V"],"trend":1,"goalAvg":"3,00","trendClass":"up"},{"mediumName":"N.Y Islan","shortName":"NYI","code":"NYI","countryId":0,"managerId":0,"arenaId":0,"id":1000891,"type":"away","name":"N.Y. Islanders","latest":["F","V","F","V","F"],"trend":0,"goalAvg":"3,40","trendClass":"neutral"}],"league":{"id":1000626,"uniqueLeagueId":12690473,"uniqueLeagueName":"NHL","name":"NHL, Playoff","shortName":"NHL Playo","country":{"id":1000014,"name":"USA","isoCode":"USA","population":0},"code":"NHLPO","printAbbreviation":"NHL","season":{"id":3417051,"name":"NHL Playoff 2014 - 2015","startDate":"2015-04-16T01:00:00+02:00","endDate":"2015-04-30T02:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000036,"channelName":"Viasat Hockey","startTime":"2015-04-16T01:05:00+02:00","endTime":null,"competitionId":0},{"channelId":1000043,"channelName":"Viaplay","startTime":"2015-04-16T01:05:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":3,"draws":0,"awayWins":2,"homeWidth":57,"drawWidth":0,"awayWidth":38}},"odds":{"one":"2,13","x":"3,60","two":"2,95"},"svenskaFolket":{"one":"58 %","x":"20 %","two":"22 %"},"tioTidningar":null,"expertPredictions":null,"isBomben":true,"matchLink":"spela/1024/7-washingt-ny-islan","matchLinkLong":"/powerplay/spela/1024/7-washingt-ny-islan","experts":[]},{"eventComment":"","eventDescription":"A Ovechki - J Tavares","eventNumber":8,"participantType":"Team","match":{"matchId":4218463,"matchStart":"2015-04-16T01:00:00+02:00","status":"Inte startat","statusId":0,"statusTime":"0001-01-01T01:00:00+01:00","coverage":1,"participants":[{"mediumName":"A Ovechki","shortName":"AOVEC","code":"AOVEC","countryId":0,"managerId":0,"arenaId":0,"id":1006186,"type":"home","name":"Alex Ovechkin, WSH","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"},{"mediumName":"J Tavares","shortName":"JTAV","code":"JTAV","countryId":0,"managerId":0,"arenaId":0,"id":1169586,"type":"away","name":"J Tavares, NYI","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"}],"league":{"id":1005468,"uniqueLeagueId":0,"name":"H2H","shortName":"H2H","country":{"id":1000094,"name":"Internationell","isoCode":"INT","population":0},"code":"H2H","printAbbreviation":"H2H","season":{"id":3523289,"name":"Ishockey Internationell H2H","startDate":"2014-09-15T00:00:00+02:00","endDate":"2015-06-30T00:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":null,"mutuals":null},"odds":null,"svenskaFolket":{"one":"41 %","x":"41 %","two":"18 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1024/8-a-ovechki-j-tavares","matchLinkLong":"/powerplay/spela/1024/8-a-ovechki-j-tavares","experts":[]}],"currentNetSaleFormatted":"346 119 kr","currentJackpotInMillions":"0","currentJackpotFormatted":"ca 0 kr","currentJackpot":0,"friendlySpelstopp":"Idag, 23:59","week":16},{"productName":"PowerPlay","seasonLastDraw":false,"productId":28,"currentNetSale":"44 650","regCloseDescription":"PowerPlay v 16, stänger 2015-04-16 18:29","drawNumber":1025,"drawState":"Open","drawStateId":2,"regBetDisabled":"NotDisabled","regOpenTime":"2015-04-13T07:00:00+02:00","regCloseTime":"2015-04-16T18:29:00+02:00","cancelCloseTime":"2015-04-16T18:30:00+02:00","drawComment":"PowerPlay v. 2015-16","bombenDrawNum":8527,"drawEvents":[{"eventComment":"","eventDescription":"Skelleft. - Växjö Lak","eventNumber":1,"participantType":"Team","match":{"matchId":4205748,"matchStart":"2015-04-16T18:30:00+02:00","status":"Inte startat","statusId":0,"statusTime":"0001-01-01T01:00:00+01:00","coverage":1,"participants":[{"mediumName":"Skelleft.","shortName":"SKEL","code":"SKEL","countryId":0,"managerId":0,"arenaId":0,"id":1000177,"type":"home","name":"Skellefteå","latest":["V","F","V","F","V"],"trend":1,"goalAvg":"2,40","trendClass":"up"},{"mediumName":"Växjö Lak","shortName":"VÄXJÖ","code":"VÄXJÖ","countryId":0,"managerId":0,"arenaId":0,"id":1002326,"type":"away","name":"Växjö Lakers","latest":["F","V","V","F","V"],"trend":1,"goalAvg":"2,00","trendClass":"up"}],"league":{"id":1000483,"uniqueLeagueId":12692967,"uniqueLeagueName":"SHL","name":"SHL Slutspel","shortName":"Slutspel","country":{"id":1000006,"name":"Sverige","isoCode":"SWE","population":0},"code":"SHLS","printAbbreviation":"SHL","season":{"id":4068189,"name":"SHL Slutspel 2015","startDate":"2015-03-04T00:00:00+01:00","endDate":"2015-06-30T00:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000033,"channelName":"C More Hockey","startTime":"2015-04-16T18:30:00+02:00","endTime":null,"competitionId":0},{"channelId":1000003,"channelName":"TV 4","startTime":"2015-04-16T18:30:00+02:00","endTime":null,"competitionId":0},{"channelId":1000070,"channelName":"Csports.se","startTime":"2015-04-16T18:30:00+02:00","endTime":null,"competitionId":0},{"channelId":1000081,"channelName":"TV4Play.se","startTime":"2015-04-16T18:30:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":3,"draws":0,"awayWins":2,"homeWidth":57,"drawWidth":0,"awayWidth":38}},"odds":{"one":"1,65","x":"3,95","two":"4,70"},"svenskaFolket":{"one":"70 %","x":"19 %","two":"11 %"},"tioTidningar":null,"expertPredictions":null,"isBomben":true,"matchLink":"spela/1025/1-skelleft-vaxjo-lak","matchLinkLong":"/powerplay/spela/1025/1-skelleft-vaxjo-lak","experts":[]},{"eventComment":"","eventDescription":"J Pesonen - R Rakhsha","eventNumber":2,"participantType":"Team","match":{"matchId":4218468,"matchStart":"2015-04-16T18:30:00+02:00","status":"Inte startat","statusId":0,"statusTime":"0001-01-01T01:00:00+01:00","coverage":1,"participants":[{"mediumName":"J Pesonen","shortName":"JPES","code":"JPES","countryId":0,"managerId":0,"arenaId":0,"id":1286387,"type":"home","name":"J Pesonen, SAIK","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"},{"mediumName":"R Rakhsha","shortName":"RRAK","code":"RRAK","countryId":0,"managerId":0,"arenaId":0,"id":1292772,"type":"away","name":"R Rakhshani, VLH","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"}],"league":{"id":1005468,"uniqueLeagueId":0,"name":"H2H","shortName":"H2H","country":{"id":1000094,"name":"Internationell","isoCode":"INT","population":0},"code":"H2H","printAbbreviation":"H2H","season":{"id":3523289,"name":"Ishockey Internationell H2H","startDate":"2014-09-15T00:00:00+02:00","endDate":"2015-06-30T00:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":null,"mutuals":null},"odds":null,"svenskaFolket":{"one":"34 %","x":"45 %","two":"21 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1025/2-j-pesonen-r-rakhsha","matchLinkLong":"/powerplay/spela/1025/2-j-pesonen-r-rakhsha","experts":[]},{"eventComment":"","eventDescription":"N.Y Rang. - Pittsb.","eventNumber":3,"participantType":"Team","match":{"matchId":4214432,"matchStart":"2015-04-17T01:00:00+02:00","status":"Inte startat","statusId":0,"statusTime":"2015-04-17T01:00:00+02:00","coverage":1,"participants":[{"mediumName":"N.Y Rang.","shortName":"NYR","code":"NYR","countryId":0,"managerId":0,"arenaId":0,"id":1001496,"type":"home","name":"N.Y. Rangers","latest":["V","F","V","V","V"],"trend":2,"goalAvg":"3,60","trendClass":"positive"},{"mediumName":"Pittsb.","shortName":"PIT","code":"PIT","countryId":0,"managerId":0,"arenaId":0,"id":1000901,"type":"away","name":"Pittsburgh","latest":["V","F","F","F","F"],"trend":-1,"goalAvg":"2,00","trendClass":"down"}],"league":{"id":1000626,"uniqueLeagueId":12690473,"uniqueLeagueName":"NHL","name":"NHL, Playoff","shortName":"NHL Playo","country":{"id":1000014,"name":"USA","isoCode":"USA","population":0},"code":"NHLPO","printAbbreviation":"NHL","season":{"id":3417051,"name":"NHL Playoff 2014 - 2015","startDate":"2015-04-16T01:00:00+02:00","endDate":"2015-04-30T02:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000036,"channelName":"Viasat Hockey","startTime":"2015-04-17T01:05:00+02:00","endTime":null,"competitionId":0},{"channelId":1000043,"channelName":"Viaplay","startTime":"2015-04-17T01:05:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":4,"draws":0,"awayWins":1,"homeWidth":76,"drawWidth":0,"awayWidth":19}},"odds":{"one":"1,97","x":"3,65","two":"3,30"},"svenskaFolket":{"one":"60 %","x":"22 %","two":"18 %"},"tioTidningar":null,"expertPredictions":null,"isBomben":true,"matchLink":"spela/1025/3-ny-rang-pittsb","matchLinkLong":"/powerplay/spela/1025/3-ny-rang-pittsb","experts":[]},{"eventComment":"","eventDescription":"R Nash - S Crosby","eventNumber":4,"participantType":"Team","match":{"matchId":4218469,"matchStart":"2015-04-17T01:00:00+02:00","status":"Inte startat","statusId":0,"statusTime":"0001-01-01T01:00:00+01:00","coverage":1,"participants":[{"mediumName":"R Nash","shortName":"RNASH","code":"RNASH","countryId":0,"managerId":0,"arenaId":0,"id":1170663,"type":"home","name":"R Nash, NYR","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"},{"mediumName":"S Crosby","shortName":"SCRO","code":"SCRO","countryId":0,"managerId":0,"arenaId":0,"id":1292773,"type":"away","name":"S Crosby, PIT","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"}],"league":{"id":1005468,"uniqueLeagueId":0,"name":"H2H","shortName":"H2H","country":{"id":1000094,"name":"Internationell","isoCode":"INT","population":0},"code":"H2H","printAbbreviation":"H2H","season":{"id":3523289,"name":"Ishockey Internationell H2H","startDate":"2014-09-15T00:00:00+02:00","endDate":"2015-06-30T00:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":null,"mutuals":null},"odds":null,"svenskaFolket":{"one":"34 %","x":"40 %","two":"26 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1025/4-r-nash-s-crosby","matchLinkLong":"/powerplay/spela/1025/4-r-nash-s-crosby","experts":[]},{"eventComment":"","eventDescription":"Tampa Bay - Detroit","eventNumber":5,"participantType":"Team","match":{"matchId":4214424,"matchStart":"2015-04-17T01:30:00+02:00","status":"Inte startat","statusId":0,"statusTime":"2015-04-17T01:30:00+02:00","coverage":1,"participants":[{"mediumName":"Tampa Bay","shortName":"TAM","code":"TAM","countryId":0,"managerId":0,"arenaId":0,"id":1000936,"type":"home","name":"Tampa Bay","latest":["V","V","V","F","F"],"trend":1,"goalAvg":"2,60","trendClass":"up"},{"mediumName":"Detroit","shortName":"DET","code":"DET","countryId":0,"managerId":0,"arenaId":0,"id":1000118,"type":"away","name":"Detroit","latest":["V","F","V","F","V"],"trend":1,"goalAvg":"2,40","trendClass":"up"}],"league":{"id":1000626,"uniqueLeagueId":12690473,"uniqueLeagueName":"NHL","name":"NHL, Playoff","shortName":"NHL Playo","country":{"id":1000014,"name":"USA","isoCode":"USA","population":0},"code":"NHLPO","printAbbreviation":"NHL","season":{"id":3417051,"name":"NHL Playoff 2014 - 2015","startDate":"2015-04-16T01:00:00+02:00","endDate":"2015-04-30T02:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000011,"channelName":"Viasat Sport","startTime":"2015-04-17T01:35:00+02:00","endTime":null,"competitionId":0},{"channelId":1000043,"channelName":"Viaplay","startTime":"2015-04-17T01:35:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":3,"draws":0,"awayWins":2,"homeWidth":57,"drawWidth":0,"awayWidth":38}},"odds":{"one":"2,00","x":"3,65","two":"3,20"},"svenskaFolket":{"one":"41 %","x":"28 %","two":"31 %"},"tioTidningar":null,"expertPredictions":null,"isBomben":true,"matchLink":"spela/1025/5-tampa-bay-detroit","matchLinkLong":"/powerplay/spela/1025/5-tampa-bay-detroit","experts":[]},{"eventComment":"","eventDescription":"S Stamkos - H Zetterb","eventNumber":6,"participantType":"Team","match":{"matchId":4218470,"matchStart":"2015-04-17T01:30:00+02:00","status":"Inte startat","statusId":0,"statusTime":"0001-01-01T01:00:00+01:00","coverage":1,"participants":[{"mediumName":"S Stamkos","shortName":"STSTA","code":"STSTA","countryId":0,"managerId":0,"arenaId":0,"id":1006923,"type":"home","name":"Steven Stamkos, TAM","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"},{"mediumName":"H Zetterb","shortName":"HZETT","code":"HZETT","countryId":0,"managerId":0,"arenaId":0,"id":1006197,"type":"away","name":"H Zetterberg, DET","latest":["X","X","X","X","X"],"trend":0,"goalAvg":null,"trendClass":"neutral"}],"league":{"id":1005468,"uniqueLeagueId":0,"name":"H2H","shortName":"H2H","country":{"id":1000094,"name":"Internationell","isoCode":"INT","population":0},"code":"H2H","printAbbreviation":"H2H","season":{"id":3523289,"name":"Ishockey Internationell H2H","startDate":"2014-09-15T00:00:00+02:00","endDate":"2015-06-30T00:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":null,"mutuals":null},"odds":null,"svenskaFolket":{"one":"36 %","x":"39 %","two":"25 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1025/6-s-stamkos-h-zetterb","matchLinkLong":"/powerplay/spela/1025/6-s-stamkos-h-zetterb","experts":[]},{"eventComment":"","eventDescription":"Anaheim - Winnipeg","eventNumber":7,"participantType":"Team","match":{"matchId":4214420,"matchStart":"2015-04-17T04:30:00+02:00","status":"Inte startat","statusId":0,"statusTime":"2015-04-17T04:30:00+02:00","coverage":1,"participants":[{"mediumName":"Anaheim","shortName":"ANAH","code":"ANAH","countryId":0,"managerId":0,"arenaId":0,"id":1001330,"type":"home","name":"Anaheim","latest":["V","F","F","V","V"],"trend":1,"goalAvg":"2,20","trendClass":"up"},{"mediumName":"Winnipeg","shortName":"WINNI","code":"WINNI","countryId":0,"managerId":0,"arenaId":0,"id":1001321,"type":"away","name":"Winnipeg","latest":["V","F","V","V","V"],"trend":2,"goalAvg":"2,60","trendClass":"positive"}],"league":{"id":1000626,"uniqueLeagueId":12690473,"uniqueLeagueName":"NHL","name":"NHL, Playoff","shortName":"NHL Playo","country":{"id":1000014,"name":"USA","isoCode":"USA","population":0},"code":"NHLPO","printAbbreviation":"NHL","season":{"id":3417051,"name":"NHL Playoff 2014 - 2015","startDate":"2015-04-16T01:00:00+02:00","endDate":"2015-04-30T02:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000011,"channelName":"Viasat Sport","startTime":"2015-04-17T04:35:00+02:00","endTime":null,"competitionId":0},{"channelId":1000037,"channelName":"Viasat Xtra","startTime":"2015-04-17T04:35:00+02:00","endTime":null,"competitionId":0},{"channelId":1000043,"channelName":"Viaplay","startTime":"2015-04-17T04:35:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":4,"draws":0,"awayWins":1,"homeWidth":76,"drawWidth":0,"awayWidth":19}},"odds":{"one":"1,95","x":"3,65","two":"3,30"},"svenskaFolket":{"one":"61 %","x":"20 %","two":"19 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1025/7-anaheim-winnipeg","matchLinkLong":"/powerplay/spela/1025/7-anaheim-winnipeg","experts":[]},{"eventComment":"","eventDescription":"St.Louis - Minnesota","eventNumber":8,"participantType":"Team","match":{"matchId":4214416,"matchStart":"2015-04-17T03:30:00+02:00","status":"Inte startat","statusId":0,"statusTime":"2015-04-17T03:30:00+02:00","coverage":1,"participants":[{"mediumName":"St.Louis","shortName":"STL","code":"STL","countryId":0,"managerId":0,"arenaId":0,"id":1001324,"type":"home","name":"St.Louis","latest":["V","V","F","V","V"],"trend":2,"goalAvg":"3,00","trendClass":"positive"},{"mediumName":"Minnesota","shortName":"MINN","code":"MINN","countryId":0,"managerId":0,"arenaId":0,"id":1000119,"type":"away","name":"Minnesota","latest":["F","V","V","F","F"],"trend":0,"goalAvg":"2,00","trendClass":"neutral"}],"league":{"id":1000626,"uniqueLeagueId":12690473,"uniqueLeagueName":"NHL","name":"NHL, Playoff","shortName":"NHL Playo","country":{"id":1000014,"name":"USA","isoCode":"USA","population":0},"code":"NHLPO","printAbbreviation":"NHL","season":{"id":3417051,"name":"NHL Playoff 2014 - 2015","startDate":"2015-04-16T01:00:00+02:00","endDate":"2015-04-30T02:00:00+02:00","legacyKey":0},"doShow":false,"isHome":false,"legacyKey":0,"numTeams":0,"popular":false,"rank":0},"leagueTable":null,"result":[],"media":[{"channelId":1000036,"channelName":"Viasat Hockey","startTime":"2015-04-17T03:35:00+02:00","endTime":null,"competitionId":0},{"channelId":1000037,"channelName":"Viasat Xtra","startTime":"2015-04-17T03:35:00+02:00","endTime":null,"competitionId":0},{"channelId":1000043,"channelName":"Viaplay","startTime":"2015-04-17T03:35:00+02:00","endTime":null,"competitionId":0}],"mutuals":{"homeWins":2,"draws":0,"awayWins":3,"homeWidth":38,"drawWidth":0,"awayWidth":57}},"odds":{"one":"2,03","x":"3,55","two":"3,20"},"svenskaFolket":{"one":"44 %","x":"28 %","two":"28 %"},"tioTidningar":null,"expertPredictions":null,"matchLink":"spela/1025/8-stlouis-minnesota","matchLinkLong":"/powerplay/spela/1025/8-stlouis-minnesota","experts":[]}],"currentNetSaleFormatted":"44 650 kr","currentJackpotInMillions":"0","currentJackpotFormatted":"ca 0 kr","currentJackpot":0,"friendlySpelstopp":"Imorgon, 18:29","week":16}],"error":null,"requestInfo":{"elapsedTime":"2 ms","apiVersion":1},"requestId":"8e344a6f-861d-4931-97bd-08b648d7c41f","sessionId":"[hidden]","deviceId":"[hidden]","session":null,"sessionUser":null,"clientInfo":null,"bombenDraws":[{"bombenRound":8526,"bombenDescription":"Montreal - Ottawa","bombenMatchId":4214444},{"bombenRound":8526,"bombenDescription":"Vancouver - Calgary","bombenMatchId":4214428},{"bombenRound":8526,"bombenDescription":"Washingt. - N.Y Islan","bombenMatchId":4214440},{"bombenRound":8527,"bombenDescription":"Skelleft. - Växjö Lak","bombenMatchId":4205748},{"bombenRound":8527,"bombenDescription":"N.Y Rang. - Pittsb.","bombenMatchId":4214432},{"bombenRound":8527,"bombenDescription":"Tampa Bay - Detroit","bombenMatchId":4214424}]};
+window.svs.core.data.selectedUrlMappings = window.svs.core.data.selectedUrlMappings || {};
+svs.core.data.selectedUrlMappings = {"loginHome":"/logga-in","customerRegistrationHome":"/skapa-inloggning","setPasswordHome":"/nytt-losenord","orderUsernameOrPasswordHome":"/glomt-inloggningsuppgifter","startPage":"/","annualReport":"https://svenskaspel.se/AnnualReport/2014/sv/index.html","gamingResponsibilityHome":"/spelkoll","transactionsHome":"/overforingar","mySettingsHome":"/installningar","myProfileHome":"/min-profil","gameChooserHome":"/spela","myBetsHome":"/mina-spel","sportServiceHome":"/sportservice","sportServiceFavorites":"/sportservice/favoriter","sportServiceAO":"/sportservice/sport-a-o","grassrootsHome":"/grasroten","customerServiceHome":"/kundservice","customerServiceOpinion":"/kundservice/tyck-till","webTvHome":"/spel-tv","terms":"/kundservice/regler-och-villkor"};
+window.svs.core.data.features = window.svs.core.data.features || {};
+svs.core.data.features = ["ft-oddset-1x2-extrainfo","ft-oddset-system"];
+window.svs.core.data.capabilities = window.svs.core.data.capabilities || {};
+svs.core.data.capabilities = {"interaction":"touch","formFactor":"tablet","os":"unknown","osVersion":"unknown","browser":"unknown","isRobot":false};
+window.svs.core.data.baseUrl = window.svs.core.data.baseUrl || {};
+svs.core.data.baseUrl = "/powerplay";
+window.svs.core.data.baseOriginalUrl = window.svs.core.data.baseOriginalUrl || {};
+svs.core.data.baseOriginalUrl = "/powerplay/";
+window.svs.core.data.backUrl = window.svs.core.data.backUrl || {};
+svs.core.data.backUrl = "/";
+window.svs.core.data.requireLogin = window.svs.core.data.requireLogin || {};
+svs.core.data.requireLogin = false;
+
+    </script>
+
+
+
+    <script type="text/javascript" src="//cdn1.svenskaspel.net/javascripts/0b16ddb51bf16b11df1cdf623466e1b291a097a4.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//cdn1.svenskaspel.net/javascripts/d8de0e6ad0a38a6eacd84ce27728d4b2a7cc3b54.js" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

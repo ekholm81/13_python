@@ -6,31 +6,30 @@ def main():
 	topptips=Tips("topptipset", "mq")
 	topptips.get_html()
 	topptips.get_data()
-	topptips.erase_html()
-	tt=topptips.closing
+	tt=topptips.get_closing()
 	powerplay=Tips("powerplay", "mq")
 	powerplay.get_html()
 	powerplay.get_data()
-	powerplay.erase_html()
-	pp=powerplay.closing
+	pp=powerplay.get_closing()
+	print tt
 	while True:
-		topptips=Tips("topptipset", "mq")
+	
 		topptips.get_html()
-		topptips.get_data()
-		topptips.erase_html()
-		if topptips.closing!=tt:
+		if topptips.get_closing()!=tt:
 			print time.ctime()+"topptipsupdate"
 			topptips.log()
-			tt=topptips.closing
+			tt=topptips.get_closing()		
+		topptips.get_data()
+		
 		powerplay=Tips("powerplay", "mq")
-		powerplay.get_html()
-		powerplay.get_data()
-		powerplay.erase_html()
-		if powerplay.closing!=pp:
+		powerplay.get_html() 
+		if powerplay.get_closing()!=pp:
 			print time.ctime()+"powerplayupdate"
 			powerplay.log()
-			pp=powerplay.closing
+			pp=powerplay.get_closing()
+		powerplay.get_data()
+		
 		print time.ctime()+" waiting..."
-		time.sleep(180)
+		time.sleep(1)
 main()	
 

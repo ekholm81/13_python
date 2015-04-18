@@ -1,4 +1,4 @@
-
+# coding: utf-8
 
 import os
 import time
@@ -64,7 +64,13 @@ class Tips:
 					break
 		counter=0
 		for i in range(len(line)):
-			if line[i:i+9]=="\"odds\":{\"":
+			if line[i:i+7]=="\"odds\":":
+				if line[i+7]=='n':
+					counter+=1
+					self.odds.append("    0    0      0             ")
+					if counter==8:
+						break
+					continue
 				tmp=""
 				idx=9+i
 				b=True
@@ -111,9 +117,8 @@ class Tips:
 				break
 		num_odds=[]
 		num_crossed=[]
-		tmp_arr=[]		
+		tmp_arr=[]	
 		for i in range(8):
-			print self.odds[i]
 			self.odds[i]=self.odds[i][4:]
 			self.odds[i]= self.odds[i].replace("   ", ",",2)
 			self.crossed[i]= self.crossed[i].replace(" ", ",",2)
@@ -127,14 +132,13 @@ class Tips:
 		self.ncrossed=num_crossed
 		
 
-	def log(self):
-		print time.ctime()+" Logging..."
-		f= open(os.path.join("/home/"+self.user+"/13_python/data", self.closing+time.ctime()), 'w')
+	def log(self,c):
+		f= open(os.path.join("/home/"+self.user+"/13_python/data", self.tips+"-"+c+"-"+time.ctime()), 'w')
 		for i in range (8):
 			f.write(str(self.ncrossed[i][0])+" "+str(self.ncrossed[i][1])+" "+str(self.ncrossed[i][2])+"\n")
 		for i in range (8):	
 			f.write(str(self.nodds[i][0])+" "+str(self.nodds[i][1])+" "+str(self.nodds[i][2])+"\n")
 		for i in range (8):
 			f.write(self.gamestring[i]+"\n")
-		f.write(self.closing +"\n"+self.oms+"\n")
+		f.write(c +"\n"+self.oms+"\n")
 		f.close()

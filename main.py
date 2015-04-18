@@ -3,33 +3,32 @@ import os
 import time
 from Tips import Tips
 def main():
-	topptips=Tips("topptipset", "mq")
+	file=time.ctime()+"-log"
+	logfile=open(file,'a')
+	topptips=Tips("topptipset", "pi")
 	topptips.get_html()
 	topptips.get_data()
 	tt=topptips.get_closing()
-	powerplay=Tips("powerplay", "mq")
+	powerplay=Tips("powerplay", "pi")
 	powerplay.get_html()
 	powerplay.get_data()
 	pp=powerplay.get_closing()
-	print tt
 	while True:
-	
 		topptips.get_html()
 		if topptips.get_closing()!=tt:
-			print time.ctime()+"topptipsupdate"
-			topptips.log()
+			logfile.write("-----------------"+time.ctime()+"topptipsupdate\n")
+			topptips.log(tt)
 			tt=topptips.get_closing()		
 		topptips.get_data()
-		
-		powerplay=Tips("powerplay", "mq")
 		powerplay.get_html() 
 		if powerplay.get_closing()!=pp:
-			print time.ctime()+"powerplayupdate"
-			powerplay.log()
+			logfile.write("-----------------"+time.ctime()+"powerplayupdate\n")
+			powerplay.log(pp)
 			pp=powerplay.get_closing()
 		powerplay.get_data()
-		
-		print time.ctime()+" waiting..."
-		time.sleep(1)
+		logfile.write(time.ctime()+" waiting...\n")
+		logfile.close()
+		time.sleep(300)
+		logfile=open(file,'a')
 main()	
 

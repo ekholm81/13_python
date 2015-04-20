@@ -2,25 +2,25 @@
 import os
 import time
 from Tips import Tips
+from Jaromir import Jaromir
 def main():
-	file=time.ctime()+"-log"
-	logfile=open(file,'a')
-	topptips=Tips("topptipset", "pi")
-	topptips.get_html()
+	f="Log--"+time.ctime()
+	logfile=open(f,'a')
+	topptips=Tips("topptipset", "mq")
 	topptips.get_data()
+	j=Jaromir(topptips.ncrossed, topptips.nodds, topptips.oms)
+	print j.medel
+	print j.sane
 	tt=topptips.get_closing()
-	powerplay=Tips("powerplay", "pi")
-	powerplay.get_html()
+	powerplay=Tips("powerplay", "mq")
 	powerplay.get_data()
 	pp=powerplay.get_closing()
 	while True:
-		topptips.get_html()
 		if topptips.get_closing()!=tt:
 			logfile.write("-----------------"+time.ctime()+"topptipsupdate\n")
 			topptips.log(tt)
 			tt=topptips.get_closing()		
 		topptips.get_data()
-		powerplay.get_html() 
 		if powerplay.get_closing()!=pp:
 			logfile.write("-----------------"+time.ctime()+"powerplayupdate\n")
 			powerplay.log(pp)
@@ -29,6 +29,6 @@ def main():
 		logfile.write(time.ctime()+" waiting...\n")
 		logfile.close()
 		time.sleep(300)
-		logfile=open(file,'a')
+		logfile=open(f,'a')
 main()	
 

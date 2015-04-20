@@ -4,6 +4,7 @@ import os
 import time
 class Tips:
 	def __init__(self, tips, user):		
+		self.allodds=True
 		self.ncrossed=[]
 		self.crossed=[]
 		self.nodds=[]
@@ -21,6 +22,7 @@ class Tips:
 		os.system("rm /home/"+self.user+"/13_python/wget/"+self.tips)
 	
 	def get_closing(self):
+		self.get_html()
 		line=""
 		f=open(self.path, 'r')
 		for line in f.readlines():
@@ -39,6 +41,7 @@ class Tips:
 				break
 		return self.closing
 	def get_data(self):	
+		self.get_html()
 		self.crossed=[]
 		self.odds=[]
 		self.gamestring=[]

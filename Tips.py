@@ -29,6 +29,10 @@ class Tips:
 			if line[:23]=="svs.tipset.data.draws =":
 				break
 		f.close()
+		if line[:23]!="svs.tipset.data.draws =":
+			self.internetERROR=True
+			return
+		self.internetERROR=False
 		for i in range(len(line)):
 			if line[i:i+5]=="nger ":
 				idx=i+5
@@ -39,6 +43,7 @@ class Tips:
 					tmp+=line[idx+j]
 				self.closing=tmp
 				break
+		self.erase_html()
 		return self.closing
 	def get_data(self):	
 		self.get_html()
@@ -52,6 +57,10 @@ class Tips:
 			if line[:23]=="svs.tipset.data.draws =":
 				break
 		f.close()
+		if line[:23]!="svs.tipset.data.draws =":
+			self.internetERROR=True
+			return
+		self.internetERROR=False
 		counter=0
 		for i in range(len(line)):
 			if line[i:i+19]=="eventDescription\":\"":
@@ -66,11 +75,13 @@ class Tips:
 				if counter==8:
 					break
 		counter=0
+		self.zeroodds=False
 		for i in range(len(line)):
 			if line[i:i+7]=="\"odds\":":
 				if line[i+7]=='n':
 					counter+=1
 					self.odds.append("    0    0      0             ")
+					self.zeroodds=True
 					if counter==8:
 						break
 					continue
@@ -133,10 +144,16 @@ class Tips:
 			num_crossed.append(tmp_arr)
 		self.nodds=num_odds
 		self.ncrossed=num_crossed
-		
+		self.erase_html()
 
-	def log(self,c):
-		f= open(os.path.join("/home/"+self.user+"/13_python/data", self.tips+"-"+c+"-"+time.ctime()), 'w')
+	def log(self,c):	
+		try:		
+			f= open(os.path.join("/home/"+self.user+"/13_python/data", self.tips+"-"+c+"-"+time.ctime()), 'w')
+		except:
+			return
+		if self.internetERROR:
+			f.write("internetERROR\n")
+			return
 		for i in range (8):
 			f.write(str(self.ncrossed[i][0])+" "+str(self.ncrossed[i][1])+" "+str(self.ncrossed[i][2])+"\n")
 		for i in range (8):	

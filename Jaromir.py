@@ -13,7 +13,6 @@ class Jaromir:
 		return chance
 	
 	def get_medel(self,chance, streck, oms):
-		fi=open("rader",'w')
 		oms= int(re.sub("[^0-9]", "", oms))
 		utd=oms*0.70
 		s=0

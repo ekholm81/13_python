@@ -4,12 +4,13 @@ import time
 from Tips import Tips
 from Jaromir import Jaromir
 def main():
+	user="mq"
 	f="Log--"+time.ctime()
-	logfile=open(f,'a')
-	topptips=Tips("topptipset", "mq")
+	logfile=open("/home/"+user+"/13_python/"+f,'a')
+	topptips=Tips("topptipset", user)
 	topptips.get_data()
 	tt=topptips.get_closing()
-	powerplay=Tips("powerplay", "mq")
+	powerplay=Tips("powerplay", user)
 	powerplay.get_data()
 	pp=powerplay.get_closing()
 	while True:

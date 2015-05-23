@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1432326500 source:/home/mq/tst/main.cpp
+	<iostream>
+	<string>
+	<stdio.h>
+	<time.h>
+	<vector>
+	<algorithm>
+	<cstdlib>
+

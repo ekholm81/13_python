@@ -1,10 +1,11 @@
+#include <fstream>
+#include <string>
 #include <iostream>
 #include <string>
 #include <stdio.h>
 #include <time.h>
 #include <vector>
-#include <algorithm>    // std::random_shuffle
-#include <fstream>
+#include <algorithm>
 #include <cstdlib>      // std::rand, std::srand
 using namespace std;
 
@@ -125,12 +126,6 @@ int find_lg_m(vector<vector<int> >&m){
 
 int main()
 {
-    ofstream myfile;
-    myfile.open ("rows.txt");
-    myfile<<"fdsfds\n";
-    myfile<<44;
-    myfile<<"fdsfds\n";
-    myfile.close();
     int sel=0;
     vector<int>tmp(8);
     vector< vector<int> >msys;
@@ -160,6 +155,18 @@ int main()
         tmp[7]=h;
         rrows.push_back(tmp);
     }
+    rrows.clear();
+    ifstream inf("rows.txt");
+    string STRING;
+    while( getline(inf,STRING)) // To get you all the lines.
+    {
+
+        for (int i=0;i<STRING.size();i++){
+            tmp[i]=STRING[i];
+        }
+            rrows.push_back(tmp);
+    }
+	inf.close();
     random_shuffle(rrows.begin(),rrows.end());
     cout <<rrows.size()<<"\n";
     for (int i=0;i<rrows.size();i++){
@@ -183,10 +190,7 @@ int main()
         }
         int idx=find_lg_m(msys);
         print_row(msys[idx]);
-         myfile.open ("rows.txt");
-        for(int i=0;i<8;i++)myfile<<msys[idx][i];
-        myfile<<"\n";
-        myfile.close();
+        //for(int i=0;i<8;i++)myfile<<msys[idx][i];
         chosen.push_back(msys[idx]);
         rrows.clear();
         set_rrows(msys[idx],rrows);

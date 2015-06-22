@@ -19,6 +19,7 @@ class Tips:
 		os.system("wget https://www.svenskaspel.se/"+self.tips+"/spela -O /home/"+self.user+"/13_python/wget/"+self.tips+"  -q --no-check-certificate")
 
 	def erase_html(self):
+		
 		os.system("rm /home/"+self.user+"/13_python/wget/"+self.tips)
 	
 	def get_closing(self):
@@ -108,11 +109,11 @@ class Tips:
 			if line[i:i+16]=="svenskaFolket\":{":
 				tmp=""
 				idx=16+i
-				for j in range(56):
+				for j in range(40):
 					if ord(line[idx+j])>47 and ord(line[idx+j])<58:
 						tmp+=line[idx+j]
 						continue
-					if line[idx+j]=='%':
+					if line[idx+j]==',':
 						tmp+=' '
 						continue
 				self.crossed.append(tmp)

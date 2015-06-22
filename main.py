@@ -3,16 +3,17 @@ import os
 import time
 from Tips import Tips
 from Jaromir import Jaromir
+from Mailer import Mailer
+import matplotlib.pyplot as plt
 def main():
+	m=Mailer()
+	limit=0
 	user="mq"
 	f="Log--"+time.ctime()
-	logfile=open("/home/"+user+"/13_python/"+f,'a')
+	logfile=open("/home/"+user+"/13_python/Log",'a')
 	topptips=Tips("topptipset", user)
 	topptips.get_data()
 	tt=topptips.get_closing()
-	powerplay=Tips("powerplay", user)
-	powerplay.get_data()
-	pp=powerplay.get_closing()
 	while True:
 		if topptips.get_closing()!=tt and topptips.internetERROR==False:
 			logfile.write("-----------------"+time.ctime()+"topptipsupdate\n")
@@ -24,27 +25,19 @@ def main():
 			if topptips.zeroodds==True:
 				logfile.write("Jaromir:TT - zero odds spotted!\n")
 			else:
-				logfile.write("Jaromir:TT - "+repr(Jaromir(topptips.ncrossed, topptips.nodds, topptips.oms).medel)+"\n")
+				j=Jaromir(topptips.ncrossed, topptips.nodds, topptips.oms)
+				j.get_medel()
+				Jaromir(topptips.ncrossed, topptips.nodds, topptips.oms).get_medel()
+				logfile.write("Jaromir:TT - EXP(500): "+repr(j.exp)+" Chance: "+repr(j.s)+"%\n")
+				if j.exp[0]>limit and m.ready()==True:
+					#print tt
+					m.send_mail(tt,j.exp,j.s)
 		else:
 			logfile.write("Jaromir:TT - InternetERROR spotted!\n")
-			
-			
-		if powerplay.get_closing()!=pp and powerplay.internetERROR==False:
-			logfile.write("-----------------"+time.ctime()+"powerplayupdate\n")
-			powerplay.log(pp)
-			pp=powerplay.get_closing()
-		powerplay.get_data()
-		
-		if powerplay.internetERROR==False:
-			if powerplay.zeroodds==True:
-				logfile.write("Jaromir:PP - zero odds spotted!\n")
-			else:
-				logfile.write("Jaromir:PP - "+repr(Jaromir(powerplay.ncrossed, powerplay.nodds, powerplay.oms).medel)+"\n")
-		else:
-			logfile.write("Jaromir:PP - InternetERROR spotted!\n")
-		logfile.write(time.ctime()+" waiting...\n\n")
+		logfile.write("sleep "+time.ctime()+"\n")	
 		logfile.close()
-		time.sleep(1)
+		
+		time.sleep(60)
 		logfile=open(f,'a')
 main()	
 

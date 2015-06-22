@@ -1,11 +1,10 @@
-#include <fstream>
-#include <string>
 #include <iostream>
 #include <string>
 #include <stdio.h>
 #include <time.h>
 #include <vector>
-#include <algorithm>
+#include <algorithm>    // std::random_shuffle
+#include <fstream>
 #include <cstdlib>      // std::rand, std::srand
 using namespace std;
 
@@ -64,10 +63,14 @@ bool in_mrow(const vector<int>&msys,const vector<int>&row){
     return true;
 }
 
-void print_row(vector<int>&r){
+void print_row(vector<int>&r,std::ofstream& dumFile){
     cout << "vec: ";
-    for(int i=0;i<8;i++)cout<<r[i]<<"-";
+    for(int i=0;i<8;i++){
+        dumFile<<r[i];
+        cout<<r[i]<<"-";
+    }
     cout<<"\n";
+    dumFile<<"\n";
 }
 
 void set_rrows(const vector<int>&msys,vector<vector<int> >&rrows){
@@ -126,6 +129,9 @@ int find_lg_m(vector<vector<int> >&m){
 
 int main()
 {
+    ofstream myfile;
+    myfile.open ("rows.txt");
+
     int sel=0;
     vector<int>tmp(8);
     vector< vector<int> >msys;
@@ -143,7 +149,8 @@ int main()
         msys.push_back(tmp);
    }
     vector< vector<int> >rrows;
-    for(int a=0;a<3;a++)for(int b=0;b<3;b++)for(int c=0;c<2;c++)for(int d=0;d<3;d++)for(int e=0;e<1;e++)for(int f=0;f<3;f++)for(int g=0;g<3;g++)for(int h=0;h<3;h++){
+
+  /*  for(int a=0;a<3;a++)for(int b=0;b<1;b++)for(int c=0;c<2;c++)for(int d=0;d<3;d++)for(int e=0;e<1;e++)for(int f=0;f<3;f++)for(int g=0;g<1;g++)for(int h=0;h<1;h++){
 
         tmp[0]=a;
         tmp[1]=b;
@@ -154,19 +161,16 @@ int main()
         tmp[6]=g;
         tmp[7]=h;
         rrows.push_back(tmp);
-    }
-    rrows.clear();
-    ifstream inf("rows.txt");
-    string STRING;
-    while( getline(inf,STRING)) // To get you all the lines.
+    }*/
+    ifstream infile("o.txt");
+    string line;
+    while (std::getline(infile, line))
     {
-
-        for (int i=0;i<STRING.size();i++){
-            tmp[i]=STRING[i];
+        for (int i=0;i<line.size();i++){
+            tmp[i]=line[i]-48;
         }
-            rrows.push_back(tmp);
+        rrows.push_back(tmp);
     }
-	inf.close();
     random_shuffle(rrows.begin(),rrows.end());
     cout <<rrows.size()<<"\n";
     for (int i=0;i<rrows.size();i++){
@@ -186,18 +190,18 @@ int main()
     while(true){
         if(msys.size()==0){
             cout<<"terminating";
+             myfile.close();
             break;
         }
         int idx=find_lg_m(msys);
-        print_row(msys[idx]);
-        //for(int i=0;i<8;i++)myfile<<msys[idx][i];
+        print_row(msys[idx],myfile);
         chosen.push_back(msys[idx]);
         rrows.clear();
         set_rrows(msys[idx],rrows);
         if(rrows.size()==0)break;
         sel+=rrows.size();
         cout<<"sel: "<<sel<<"\n";
-        trim_msys(msys,msys[idx]);
+    //    trim_msys(msys,msys[idx]);
         cout <<"msys sz: "<<msys.size()<<"\n";
         cout <<"rrows sz: "<<rrows.size()<<"\n";
         for (int i=0;i<rrows.size();i++){

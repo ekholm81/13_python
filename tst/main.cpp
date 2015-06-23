@@ -7,7 +7,7 @@
 #include <fstream>
 #include <cstdlib>      // std::rand, std::srand
 using namespace std;
-
+int glob_r;
 string currentDateTime() {
     time_t     now = time(0);
     struct tm  tstruct;
@@ -63,14 +63,14 @@ bool in_mrow(const vector<int>&msys,const vector<int>&row){
     return true;
 }
 
-void print_row(vector<int>&r,std::ofstream& dumFile){
+void print_row(vector<int>&r,std::ofstream& dumFile,int sz,int sel){
     cout << "vec: ";
     for(int i=0;i<8;i++){
         dumFile<<r[i];
         cout<<r[i]<<"-";
     }
     cout<<"\n";
-    dumFile<<"\n";
+    dumFile<<"  "<<sz<<"  "<<sel<<"\n";
 }
 
 void set_rrows(const vector<int>&msys,vector<vector<int> >&rrows){
@@ -129,8 +129,9 @@ int find_lg_m(vector<vector<int> >&m){
 
 int main()
 {
+    glob_r=0;
     ofstream myfile;
-    myfile.open ("rows.txt");
+    myfile.open ("o.txt");
 
     int sel=0;
     vector<int>tmp(8);
@@ -162,7 +163,7 @@ int main()
         tmp[7]=h;
         rrows.push_back(tmp);
     }*/
-    ifstream infile("o.txt");
+    ifstream infile("i.txt");
     string line;
     while (std::getline(infile, line))
     {
@@ -194,12 +195,12 @@ int main()
             break;
         }
         int idx=find_lg_m(msys);
-        print_row(msys[idx],myfile);
         chosen.push_back(msys[idx]);
         rrows.clear();
         set_rrows(msys[idx],rrows);
         if(rrows.size()==0)break;
         sel+=rrows.size();
+        print_row(msys[idx],myfile,rrows.size(),sel);
         cout<<"sel: "<<sel<<"\n";
     //    trim_msys(msys,msys[idx]);
         cout <<"msys sz: "<<msys.size()<<"\n";

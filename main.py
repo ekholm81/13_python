@@ -9,7 +9,7 @@ def main():
 	m=Mailer()
 	limit=0
 	user="mq"
-	f="Log--"+time.ctime()
+	f="Log"
 	logfile=open("/home/"+user+"/13_python/Log",'a')
 	topptips=Tips("topptipset", user)
 	topptips.get_data()

@@ -13,8 +13,9 @@ public class GameData {
     public MyPair[] rowVal;
     public int[][] tecken;
     public int[][] dtecken;
-    public double sannolikhet13;
+    public double expval;
     public double sannolikhet12;
+    public double sannolikhet13;
     public double sannolikhet11;
     public double sannolikhet10;
     public double edge;
@@ -40,10 +41,11 @@ public class GameData {
         dtecken=new int[numMatches][3];
         spelstopp=new String("");
         omsättning=new String("");
-        sannolikhet13 =-1;
-        sannolikhet12 =-1;
-        sannolikhet11 =-1;
-        sannolikhet10 =-1;
+        sannolikhet13 =0;
+        sannolikhet12 =0;
+        expval =0;
+        sannolikhet11 =0;
+        sannolikhet10 =0;
         edge=-1;
     }
 

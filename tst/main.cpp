@@ -138,7 +138,6 @@ int main()
     vector< vector<int> >msys;
     vector< vector<int> >chosen;
     for(int a=0;a<7;a++)for(int b=0;b<7;b++)for(int c=0;c<7;c++)for(int d=0;d<7;d++)for(int e=0;e<7;e++)for(int f=0;f<7;f++)for(int g=0;g<7;g++)for(int h=0;h<7;h++){
-
         tmp[0]=a;
         tmp[1]=b;
         tmp[2]=c;

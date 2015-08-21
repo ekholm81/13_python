@@ -12,6 +12,7 @@ public class Data {
     GameData EU;
     GameData PP;
     Utills utills;
+    public boolean access=false;
     public Data(){
         utills=new Utills();
     }
@@ -66,7 +67,9 @@ public class Data {
             while ((line = br.readLine()) != null)
             {
                 i++;
-                if(i==266)break;
+                if(line.length()>22){
+                    if(line.substring(0,22).equals("_svs.tipset.data.draws"))break;
+                }
             }
             int c=0;
             for (i = -1; (i = line.indexOf("eventDescription\":\"", i + 1)) != -1; ) {
@@ -81,22 +84,27 @@ public class Data {
                 }
             }
              c=0;
-            System.out.println("\"odds\":");
             for (i = -1; (i = line.indexOf("\"odds\":", i + 1)) != -1; ) {
 
                 c++;
                 int inc=0;
-                if(c>n)break;
-               /* if(c==7){
-                    gd.odds[c-1][0]=1.66;
-                    gd.odds[c-1][1]=4.00;
-                    gd.odds[c-1][2]=4.75;
+                if(c>n)break;/*
+                if(c==5){
+                    gd.odds[c-1][0]=1.61;
+                    gd.odds[c-1][1]=3.75;
+                    gd.odds[c-1][2]=5.50;
                     gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
                     continue;
-                }if(c==8){
-                    gd.odds[c-1][0]=4.75;
+                }if(c==6){
+                    gd.odds[c-1][0]=2.25;
+                    gd.odds[c-1][1]=3.40;
+                    gd.odds[c-1][2]=3.10;
+                    gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
+                    continue;
+                }if(c==7){
+                    gd.odds[c-1][0]=3.75;
                     gd.odds[c-1][1]=3.60;
-                    gd.odds[c-1][2]=1.72;
+                    gd.odds[c-1][2]=1.90;
                     gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
                     continue;
                 }*/
@@ -125,21 +133,13 @@ public class Data {
                 if(c>n)break;
                 int inc=0;
                 String o1=cleanString(line.substring(i+22,i+24));
-                System.out.println(("o1: "+Double.parseDouble(o1)));
                 gd.crossed[c-1][0]=Double.parseDouble(o1);
                 if(gd.crossed[c-1][0]<10.00)inc--;
                 String o2= cleanString(line.substring(i + 29 + inc,i+31+inc));
-                System.out.println(("o2: "+Double.parseDouble(o2)));
-
                 gd.crossed[c-1][1]=Double.parseDouble(o2);
                 if(gd.crossed[c-1][1]<10.00)inc--;
                 String o3=cleanString(line.substring(i+38+inc,i+40+inc));
-                System.out.println(("o3: "+Double.parseDouble(o3)));
-
                 gd.crossed[c-1][2]=Double.parseDouble(o3);
-                for(int ii=0;ii<3;ii++)System.out.print(ii+" : "+gd.crossed[c - 1][ii] + " ");
-                System.out.println("");
-
             }
 
             i=line.indexOf("\"currentNetSale\":\"");
@@ -159,8 +159,7 @@ public class Data {
             }
             i = line.indexOf(", stänger ", i + 1);
             gd.spelstopp=line.substring(i + 10, i + 26);
-
-
+            if(gd.spelstopp.substring(0,6).equals("2015-0"))access=true;
             if(type==gameTypes.STRYKTIPSET)Stryk=gd;
             if(type==gameTypes.EUROPATIPSET)EU=gd;
             if(type==gameTypes.POWERPLAY)PP=gd;

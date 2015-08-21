@@ -5,16 +5,20 @@ import java.util.Arrays;
  * Created by mq on 2014-12-20.
  */
 public class Datahandler {
+
+    int[] binom13={13,78,286};
+    int[] binom8={8,28,56};
+
     Utills utills;
     public Datahandler(){
         utills=new Utills();
     }
 
-    public void calcRows(GameData gd, int slider,boolean inv){
+    public void calcRows(GameData gd, double slider,boolean inv){
         for(int i=0;i<gd.games.length;i++){
             for(int j=0;j<3;j++){
                // gd.value[i][j]=gd.crossed[i][j]*(gd.wodds[i][j]);
-                gd.wvalue[i][j]=(gd.crossed[i][j]*(gd.wodds[i][j]-(slider/100.00))/100.00);
+                gd.wvalue[i][j]=(gd.crossed[i][j]*(gd.wodds[i][j]-(slider))/100.00);
             }
         }
         if(gd.numMatch==13){
@@ -81,16 +85,16 @@ public class Datahandler {
                 }
                 SB.reverse();
 
-                //writer.print("E,");
+                writer.print("E,");
                 for(int j=0;j<gd.wvalue.length;j++){
                     char c=SB.charAt(j);
-                    if(c=='0')writer.print('0');
-                    if(c=='1')writer.print('1');
+                    if(c=='0')writer.print('1');
+                    if(c=='1')writer.print('X');
                     if(c=='2')writer.print('2');
-                   // if(!(j+1==gd.value.length))writer.print(",");
+                    if(!(j+1==gd.value.length))writer.print(",");
                 }
-               // writer.print("\r\n");
-                if(i+1!=antalrader)writer.print("\n");
+                writer.print("\r\n");
+              //  if(i+1!=antalrader)writer.print("\n");
 
                 rowVal+=get_val(gd,SB.toString());
 
@@ -126,11 +130,11 @@ public class Datahandler {
 
                 if (i+1!=Math.pow(3,gd.wvalue.length))iwriter.print("\n");
             }
-            gd.sannolikhet12=utills.round(rowVal*gd.utdelning, 2);
+            gd.expval =utills.round(rowVal*gd.utdelning, 2);
             gd.sannolikhet13=  utills.round(chance,2);
-         //   gd.sannolikhet11=utills.round(gd.sannolikhet12/gd.utdelning,2);
-           // gd.sannolikhet10=utills.round(antalrader*100.00/gd.sannolikhet11,2);
-
+            gd.sannolikhet12=utills.round(gd.sannolikhet13+getC(1,chance,gd.games.length),2);
+            gd.sannolikhet11=utills.round(gd.sannolikhet12+getC(2,chance,gd.games.length),2);
+            gd.sannolikhet10=utills.round(gd.sannolikhet11+getC(3,chance,gd.games.length),2);
             for(int i=0;i<gd.wvalue.length;i++){
                 for(int j=0;j<3;j++){
                     gd.dtecken[i][j]=(int)utills.round((double)(gd.tecken[i][j])*100/(double)antalrader,0);
@@ -147,11 +151,18 @@ public class Datahandler {
 
 
 
-    public void beast(String antalRaderS, GameData gd, int slider,boolean inv){
+    public void beast(String antalRaderS, GameData gd, double slider,boolean inv){
         int antalRader=Integer.parseInt(antalRaderS);
         calcRows(gd, slider,inv);
         setTecken(gd,antalRader);
     }
 
+    public double getC(int fel,double a,int n){
+        a=Math.pow(a/100.00,1.00/13.00);
+        int b=0;
+        if (n==8)b=binom8[fel-1];
+        if (n==13)b=binom13[fel-1];
+        return 100*Math.pow(a,n-fel)*Math.pow(1.00-a,fel)*b;
+    }
 
 }

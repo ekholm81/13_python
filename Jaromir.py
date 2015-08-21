@@ -27,7 +27,41 @@ class Jaromir:
 			for j in range (3):
 				chance[i][j]=(1.00/odds[i][j])*1.00/(1.00/odds[i][0]+1.00/odds[i][1]+1.00/odds[i][2])
 		return chance	
-			
+	
+	def get_chart(self):
+		self.oms= int(re.sub("[^0-9]", "", self.oms))
+		utd=self.oms*0.70
+		chance=self.get_modchance(0)
+		numrows=[]
+		ch=[]
+		aa=0
+		chosen=[]
+		for a in range(3):
+			for b in range(3):
+				for c in range(3):
+					for d in range(3):
+						for e in range(3):
+							for f in range(3):
+								for g in range(3):
+									for h in range(3):
+										if a==1 and b==1 and c==1 and d==1 and e==1 and f==1 and g==1 and h==1:															
+											print ((self.streck[0][a])*0.01*(self.streck[1][b])*0.01*(self.streck[2][c])*0.01*(self.streck[3][d])*0.01*(self.streck[4][e])*0.01*(self.streck[5][f])*0.01*(self.streck[6][g])*0.01*(self.streck[7][h])*0.01)*utd
+										numrows.append((self.streck[0][a])*0.01*(self.streck[1][b])*0.01*(self.streck[2][c])*0.01*(self.streck[3][d])*0.01*(self.streck[4][e])*0.01*(self.streck[5][f])*0.01*(self.streck[6][g])*0.01*(self.streck[7][h])*0.01)
+										ch.append(self.chance[0][a]*self.chance[1][b]*self.chance[2][c]*self.chance[3][d]*self.chance[4][e]*self.chance[5][f]*self.chance[6][g]*self.chance[7][h])
+										if numrows[-1]/(ch[-1])<0.7:
+											aa=aa+1	
+											chosen.append([numrows[-1],ch[-1]])
+		print len(chosen)
+		sann=[]
+		for i in range(1000):
+			sann.append(0)
+			for j in range(len(chosen)):
+				#print utd/(chosen[j][0]*self.oms)
+				if utd/(chosen[j][0]*self.oms)>(i+1)*100:
+					sann[-1]+=chosen[j][1]
+		plt.plot(sann)
+		plt.show()
+		
 	def get_medel(self):	
 		self.oms= int(re.sub("[^0-9]", "", self.oms))
 		utd=self.oms*0.70

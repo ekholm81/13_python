@@ -44,6 +44,17 @@ public class Utills {
         }
         return res;
     }
+
+    public String fs(String s, int n){
+        StringBuilder SB=new StringBuilder();
+        if(s.length()>=n)return s;
+        else{
+            SB.append(s);
+            while (SB.length()<n)SB.append(' ');
+        }
+        return SB.toString();
+    }
+
     public double getNotProb(double[] i, boolean[]b){
         return 1.00-getProb(i,b);
     }

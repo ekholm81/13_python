@@ -34,7 +34,8 @@ public class GUI extends JFrame{
         GameData gamedata;
         Datahandler datahandler;
         Data data;
-        private JToggleButton tick;
+        private boolean offline=false;
+        private JButton tick;
         private JSlider slider;
         private JTextField halv;
         private JTextField hel;
@@ -44,20 +45,21 @@ public class GUI extends JFrame{
         Image bgImage = Toolkit.getDefaultToolkit().createImage("bdd.jpg");
         public Datapanel(){
             utills=new Utills();
-            setPreferredSize(new Dimension(panelWidth,panelHeight));
+            setPreferredSize(new Dimension(panelWidth, panelHeight));
             setLayout(null);
             setBackground(bc);
             data=new Data();
             datahandler=new Datahandler();
             menuBar = new JMenuBar();
             setJMenuBar(menuBar);
-            setPP();
             initMenu();
+            dataMenu();
             settingsMenu();
             initslider();
             initTextbox();
             initlabels();
             initButtons();
+
             repaint();
         }
 
@@ -90,6 +92,19 @@ public class GUI extends JFrame{
             });
         }
 
+        private void dataMenu(){
+            JMenu datamenu=new JMenu("Dataverktyg");
+            menuBar.add(datamenu);
+            JMenuItem radutd=new JMenuItem("Radutdelning");
+            datamenu.add(radutd);
+            radutd.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    Radutd r=new Radutd();
+                }
+            });
+        }
+
         private void settingsMenu(){
             JMenu settings=new JMenu("Inställningar");
             menuBar.add(settings);
@@ -98,9 +113,66 @@ public class GUI extends JFrame{
             utdelning.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent) {
-                    Utdelningar u=new Utdelningar();
+                    Utdelningar u = new Utdelningar();
                 }
             });
+            final JCheckBoxMenuItem off=new JCheckBoxMenuItem("Offline");
+            settings.add(off);
+            off.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                   offline=off.getState();
+                }
+            });
+        }
+
+        public class Radutd extends JFrame{
+            public Radutd(){
+                setSize(400, 110);
+                setLayout(null);
+                setVisible(true);
+                final JTextField jt=new JTextField();
+                jt.setBounds(10, 40, 100, 30);
+                JLabel ulabel=new JLabel("Mata in rad (ex 1x2x1x21)");
+                ulabel.setBounds(10, 5, 350, 30);
+                final JLabel rlabel=new JLabel("");
+                rlabel.setBounds(200,35,400,50);
+                JButton btn=new JButton("ok");
+                btn.setBounds(125, 40, 55, 30);
+                btn.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        String s = jt.getText();
+                        if (s.length() != gamedata.wodds.length){
+                            rlabel.setText("Fel antal tecken");
+                            return;
+                        }
+                        else{
+                            for (int i=0;i<s.length();i++){
+                                if(!(s.charAt(i)=='1' || s.charAt(i)=='X' || s.charAt(i)=='x' || s.charAt(i)=='2' )){
+                                    rlabel.setText("Fel inmatning");
+                                    return;
+                                }
+                            }
+                        }
+                        int[] n= new int[s.length()];
+                        for (int i=0;i<s.length();i++){
+                            if(s.charAt(i)=='1')n[i]=0;
+                            if(s.charAt(i)=='X')n[i]=1;
+                            if(s.charAt(i)=='x')n[i]=1;
+                            if(s.charAt(i)=='2')n[i]=2;
+                        }
+                        double[] res=datahandler.getRowstats(n,gamedata);
+                        rlabel.setText("Utd: "+utills.round(res[0],2)+", %: "+utills.round(res[1],4));
+                    }
+                });
+
+                add(rlabel);
+                add(ulabel);
+                add(jt);
+                add(btn);
+                setVisible(true);
+            }
         }
 
         public class Utdelningar extends JFrame {
@@ -126,6 +198,37 @@ public class GUI extends JFrame{
                 add(jt);
                 add(btn);
                 setVisible(true);
+            }
+        }
+
+        public class Details extends JFrame{
+            public Details(){
+                setSize(680, 510);
+                setLayout(null);
+                setVisible(true);
+                JLabel[] labels= new JLabel[120];
+
+                double[] sumch=new double[labels.length];
+                for(int i=labels.length-1;i>=0;i--){
+                    if(i==labels.length-1)sumch[i]=gamedata.utdchans[i];
+                    else{
+                        sumch[i]=sumch[i+1]+gamedata.utdchans[i];
+                    }
+                }
+                for(int i=0;i<labels.length;i++){
+                    String num=utills.fs(String.valueOf(750 * (i + 1)), 5);
+                    labels[i]=new JLabel(num+":   "+utills.fs(String.valueOf(gamedata.utdarray[i]), 4)+" / "+utills.fs(String.valueOf(utills.round(gamedata.utdchans[i],2)),4)+"% / "+utills.fs(String.valueOf(utills.round(sumch[i],2)),4)+"%");
+                    if(i<(labels.length/3.00)){
+                        labels[i].setBounds(20,-20+(i*10),220,100);
+                    }
+                    else if (i<((2*labels.length)/3.00)) {
+                        labels[i].setBounds(240,-20+(i-labels.length/3)*10,220,100);
+                    }
+                    else{
+                        labels[i].setBounds(450,-20+((i-labels.length*2/3)*10),220,100);
+                    }
+                    this.add(labels[i]);
+                }
             }
         }
 
@@ -176,17 +279,23 @@ public class GUI extends JFrame{
         }
 
         private void initButtons(){
-            tick=new JToggleButton("inv");
-            tick.setBounds((int)((double)panelWidth*0.90),(int)((double)panelHeight * 0.57),60,30);
+            tick=new JButton("...");
+            tick.setBounds((int) ((double) panelWidth * 0.90), (int) ((double) panelHeight * 0.57), 60, 30);
             add(tick);
-            JButton beastButton=new JButton("Go");
+            JButton beastButton=new JButton("Kör");
             beastButton.setBounds((int)((double)panelWidth*0.90),(int)((double)panelHeight * 0.72),75,30);
             add(beastButton);
             beastButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent) {
-                    datahandler.beast(antr.getText(),gamedata, getSlider(),tick.isSelected());
+                    datahandler.beast(antr.getText(), gamedata, getSlider());
                     repaint();
+                }
+            });
+            tick.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    Details details = new Details();
                 }
             });
 
@@ -195,24 +304,28 @@ public class GUI extends JFrame{
 
 
         private void setStryk(){
-            data.collectStrykData();
+            data.collectStrykData(offline);
             if(data.access==false)return;
             gamedata=data.Stryk;
+            tick.setEnabled(false);
             repaint();
         }
 
         private void setEU(){
-            data.collectEUData();
+            data.collectEUData(offline);
             if(data.access==false)return;
             gamedata=data.EU;
+            tick.setEnabled(false);
             repaint();
 
         }
 
+
         private void setPP(){
-            data.collectPPData();
+            data.collectPPData(offline);
             if(data.access==false)return;
             gamedata=data.PP;
+            tick.setEnabled(true);
             repaint();
         }
         @Override

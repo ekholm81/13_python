@@ -10,7 +10,7 @@ public class GameData {
     public double[][] wvalue;
     public boolean[][] rad;
     public double[][] beastData;
-    public MyPair[] rowVal;
+    public Triplet[] rowVal;
     public int[][] tecken;
     public int[][] dtecken;
     public double expval;
@@ -23,13 +23,15 @@ public class GameData {
     public String spelstopp;
     public String omsättning;
     public int numMatch;
+    public int[] utdarray;
+    public double[] utdchans;
     public GameData(int numMatches){
         numMatch=numMatches;
         int numRows;
         if (numMatches==13)numRows=1594323;
         else numRows=6561;
         beastData=new double[numMatches][3];
-        rowVal =new MyPair[numRows];
+        rowVal =new Triplet[numRows];
         games=new String[numMatches];
         odds=new double[numMatches][3];
         crossed=new double[numMatches][3];

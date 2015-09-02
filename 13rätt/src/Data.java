@@ -17,14 +17,13 @@ public class Data {
         utills=new Utills();
     }
 
-    public void collectStrykData(){
-        genHtml(gameTypes.STRYKTIPSET);
+    public void collectStrykData(boolean offline){
+        genHtml(gameTypes.STRYKTIPSET,offline);
     }
 
-    public void collectEUData(){
-        genHtml(gameTypes.EUROPATIPSET);
+    public void     collectEUData(boolean offline){genHtml(gameTypes.EUROPATIPSET, offline);}
 
-    }
+    public void     collectPPData(boolean offline){genHtml(gameTypes.POWERPLAY,offline);}
 
     private String cleanString(String s){
         StringBuilder SB=new StringBuilder();
@@ -36,30 +35,30 @@ public class Data {
         }return SB.toString();
     }
 
-    public void collectPPData(){
-        genHtml(gameTypes.POWERPLAY);
-    }
 
-    private void genHtml(gameTypes type){
+    private void genHtml(gameTypes type,boolean offline){
         String gameType;
         if(type==gameTypes.STRYKTIPSET){gameType="stryktipset";}
         else if(type==gameTypes.EUROPATIPSET)gameType="europatipset";
         else if(type==gameTypes.POWERPLAY)gameType="topptipset";
         else gameType="";
         try{
-            Process pp = Runtime.getRuntime().exec("rm "+gameType);
-            pp.waitFor();
-            Process p = Runtime.getRuntime().exec("wget https://www.svenskaspel.se/"+gameType+"/spela -O "+gameType);
-            p.waitFor();
+            if(!offline){
+                Process pp = Runtime.getRuntime().exec("rm "+gameType);
+                pp.waitFor();
+                Process p = Runtime.getRuntime().exec("wget https://www.svenskaspel.se/"+gameType+"/spela -O "+gameType);
+                p.waitFor();
+            }
         }
         catch (Exception e){e.printStackTrace();}
+        int n=0;
+        if(type==gameTypes.EUROPATIPSET || type==gameTypes.STRYKTIPSET)n=13;
+        if (type==gameTypes.POWERPLAY)n=8;
+        GameData gd=new GameData(n);
         try{
-            int n=0;
-            if(type==gameTypes.EUROPATIPSET || type==gameTypes.STRYKTIPSET)n=13;
-            if (type==gameTypes.POWERPLAY)n=8;
+
             BufferedReader br = new BufferedReader(new FileReader(gameType));
             String line = null;
-            GameData gd=new GameData(n);
             if(type==gameTypes.STRYKTIPSET)gd.utdelning=0.65;
             if(type==gameTypes.EUROPATIPSET)gd.utdelning=0.65;
             if(type==gameTypes.POWERPLAY)gd.utdelning=0.7;
@@ -163,7 +162,9 @@ public class Data {
             if(type==gameTypes.STRYKTIPSET)Stryk=gd;
             if(type==gameTypes.EUROPATIPSET)EU=gd;
             if(type==gameTypes.POWERPLAY)PP=gd;
-        }catch (Exception e){}
+        }catch (Exception e){
+
+        }
 
     }
 }

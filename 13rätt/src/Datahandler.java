@@ -14,19 +14,22 @@ public class Datahandler {
         utills=new Utills();
     }
 
-    public void calcRows(GameData gd, double slider,boolean inv){
+    public void calcRows(GameData gd, double slider){
         for(int i=0;i<gd.games.length;i++){
             for(int j=0;j<3;j++){
-               // gd.value[i][j]=gd.crossed[i][j]*(gd.wodds[i][j]);
                 gd.wvalue[i][j]=(gd.crossed[i][j]*(gd.wodds[i][j]-(slider))/100.00);
             }
         }
         if(gd.numMatch==13){
             int counter=0;
             for(int a=0;a<3;a++) for(int b=0;b<3;b++) for(int c=0;c<3;c++) for(int d=0;d<3;d++) for(int e=0;e<3;e++) for(int f=0;f<3;f++) for(int g=0;g<3;g++) for(int h=0;h<3;h++) for(int i=0;i<3;i++) for(int j=0;j<3;j++) for(int k=0;k<3;k++) for(int l=0;l<3;l++) for(int m=0;m<3;m++){
-                gd.rowVal[counter]=new MyPair();
-                if(inv)gd.rowVal[counter].append(counter,-1* gd.wvalue[0][a]*gd.wvalue[1][b]*gd.wvalue[2][c]*gd.wvalue[3][d]*gd.wvalue[4][e]*gd.wvalue[5][f]*gd.wvalue[6][g]*gd.wvalue[7][h]*gd.wvalue[8][i]*gd.wvalue[9][j]*gd.wvalue[10][k]*gd.wvalue[11][l]*gd.wvalue[12][m]);
-                else gd.rowVal[counter].append(counter, gd.wvalue[0][a] * gd.wvalue[1][b]*gd.wvalue[2][c]*gd.wvalue[3][d]*gd.wvalue[4][e]*gd.wvalue[5][f]*gd.wvalue[6][g]*gd.wvalue[7][h]*gd.wvalue[8][i]*gd.wvalue[9][j]*gd.wvalue[10][k]*gd.wvalue[11][l]*gd.wvalue[12][m]);
+                gd.rowVal[counter]=new Triplet();
+                double intoms=Double.parseDouble(gd.omsättning.replaceAll(" ",""));
+                double intutd=intoms*gd.utdelning;
+                double chans=1.00/gd.wodds[0][a]*1.00/gd.wodds[0][b]*1.00/gd.wodds[0][c]*1.00/gd.wodds[0][d]*1.00/gd.wodds[0][e]*1.00/gd.wodds[0][f]*1.00/gd.wodds[0][g]*1.00/gd.wodds[0][h]*1.00/gd.wodds[0][i]*1.00/gd.wodds[0][j]*1.00/gd.wodds[0][k]*1.00/gd.wodds[0][l]*1.00/gd.wodds[0][m];
+                double cross=gd.utdelning/(gd.crossed[0][a]/100.00*gd.crossed[0][b]/100.00*gd.crossed[0][c]/100.00*gd.crossed[0][d]/100.00*gd.crossed[0][e]/100.00*gd.crossed[0][f]/100.00*gd.crossed[0][g]/100.00*gd.crossed[0][h]/100.00*gd.crossed[0][i]/100.00*gd.crossed[0][j]/100.00*gd.crossed[0][k]/100.00*gd.crossed[0][l]/100.00*gd.crossed[0][m]/100.00);
+               // if (cross>intutd) System.out.println(a+" "+b+" "+c+" "+d+" "+e+" "+f+" "+g+" "+h+" "+i+" "+j+" "+k+" "+l+" "+m);
+                gd.rowVal[counter].append(counter, gd.wvalue[0][a] * gd.wvalue[1][b]*gd.wvalue[2][c]*gd.wvalue[3][d]*gd.wvalue[4][e]*gd.wvalue[5][f]*gd.wvalue[6][g]*gd.wvalue[7][h]*gd.wvalue[8][i]*gd.wvalue[9][j]*gd.wvalue[10][k]*gd.wvalue[11][l]*gd.wvalue[12][m],cross,chans);
                 counter++;
             }
             Arrays.sort(gd.rowVal);
@@ -34,10 +37,14 @@ public class Datahandler {
         if(gd.numMatch==8){
             int counter=0;
             for(int a=0;a<3;a++) for(int b=0;b<3;b++) for(int c=0;c<3;c++) for(int d=0;d<3;d++) for(int e=0;e<3;e++) for(int f=0;f<3;f++) for(int g=0;g<3;g++) for(int h=0;h<3;h++) {
-                gd.rowVal[counter]=new MyPair();
-                gd.rowVal[counter].append(counter, gd.wvalue[0][a] * gd.wvalue[1][b] * gd.wvalue[2][c] * gd.wvalue[3][d] * gd.wvalue[4][e] * gd.wvalue[5][f] * gd.wvalue[6][g] * gd.wvalue[7][h]);
+                gd.rowVal[counter]=new Triplet();
+                double intoms=Double.parseDouble(gd.omsättning.replaceAll(" ",""));
+                double intutd=intoms*gd.utdelning;
+                double chans=1.00/gd.wodds[0][a]*1.00/gd.wodds[1][b]*1.00/gd.wodds[2][c]*1.00/gd.wodds[3][d]*1.00/gd.wodds[4][e]*1.00/gd.wodds[5][f]*1.00/gd.wodds[6][g]*1.00/gd.wodds[7][h];
+                double cross=gd.utdelning/(gd.crossed[0][a]/100.00*gd.crossed[1][b]/100.00*gd.crossed[2][c]/100.00*gd.crossed[3][d]/100.00*gd.crossed[4][e]/100.00*gd.crossed[5][f]/100.00*gd.crossed[6][g]/100.00*gd.crossed[7][h]/100.00);
+               // if (cross>intutd) System.out.println(a+" "+b+" "+c+" "+d+" "+e+" "+f+" "+g+" "+h);
+                gd.rowVal[counter].append(counter, gd.wvalue[0][a] * gd.wvalue[1][b] * gd.wvalue[2][c] * gd.wvalue[3][d] * gd.wvalue[4][e] * gd.wvalue[5][f] * gd.wvalue[6][g] * gd.wvalue[7][h],cross,chans);
                 counter++;
-
             }
             Arrays.sort(gd.rowVal);
         }
@@ -67,7 +74,15 @@ public class Datahandler {
             PrintWriter iwriter = new PrintWriter("i.txt", "UTF-8");
            // writer.print("Stryktipset");
            // writer.print("\r\n");
+            gd.utdarray=new int[50000];
+            gd.utdchans=new double[50000];
             for(int i=0;i<antalrader;i++){
+                System.out.println(gd.rowVal[i].cross());
+                if(gd.wodds.length==8){
+                    gd.utdarray[(int)(gd.rowVal[i].cross()/750.00)]++;
+                    gd.utdchans[(int)(gd.rowVal[i].cross()/750.00)]+=gd.rowVal[i].chance()*100.00;
+                }
+
                 double rowchance=100;
 
                 StringBuilder SB=new StringBuilder();
@@ -151,10 +166,22 @@ public class Datahandler {
 
 
 
-    public void beast(String antalRaderS, GameData gd, double slider,boolean inv){
+    public void beast(String antalRaderS, GameData gd, double slider){
         int antalRader=Integer.parseInt(antalRaderS);
-        calcRows(gd, slider,inv);
+        calcRows(gd, slider);
         setTecken(gd,antalRader);
+    }
+
+    public double[] getRowstats(int[] n, GameData gd){
+        double[] res={gd.utdelning,100};
+        boolean zeroodds=false;
+        for (int i=0; i<n.length;i++){
+            res[0]=res[0]/(gd.crossed[i][n[i]]/100.00);
+            if(gd.wodds[i][n[i]]==0) zeroodds=true;
+            res[1]=res[1]*(1.00/gd.wodds[i][n[i]]);
+        }
+        if(zeroodds)res[1]=0;
+        return res;
     }
 
     public double getC(int fel,double a,int n){

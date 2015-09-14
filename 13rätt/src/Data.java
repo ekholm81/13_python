@@ -11,6 +11,7 @@ public class Data {
     GameData Stryk;
     GameData EU;
     GameData PP;
+    GameData TT;
     Utills utills;
     public boolean access=false;
     public Data(){
@@ -22,6 +23,8 @@ public class Data {
     }
 
     public void     collectEUData(boolean offline){genHtml(gameTypes.EUROPATIPSET, offline);}
+
+    public void     collectTTData(boolean offline){genHtml(gameTypes.TOPPTIPSET,offline);}
 
     public void     collectPPData(boolean offline){genHtml(gameTypes.POWERPLAY,offline);}
 
@@ -40,7 +43,8 @@ public class Data {
         String gameType;
         if(type==gameTypes.STRYKTIPSET){gameType="stryktipset";}
         else if(type==gameTypes.EUROPATIPSET)gameType="europatipset";
-        else if(type==gameTypes.POWERPLAY)gameType="topptipset";
+        else if(type==gameTypes.TOPPTIPSET)gameType="topptipset";
+        else if(type==gameTypes.POWERPLAY)gameType="powerplay";
         else gameType="";
         try{
             if(!offline){
@@ -54,6 +58,7 @@ public class Data {
         int n=0;
         if(type==gameTypes.EUROPATIPSET || type==gameTypes.STRYKTIPSET)n=13;
         if (type==gameTypes.POWERPLAY)n=8;
+        if (type==gameTypes.TOPPTIPSET)n=8;
         GameData gd=new GameData(n);
         try{
 
@@ -62,6 +67,7 @@ public class Data {
             if(type==gameTypes.STRYKTIPSET)gd.utdelning=0.65;
             if(type==gameTypes.EUROPATIPSET)gd.utdelning=0.65;
             if(type==gameTypes.POWERPLAY)gd.utdelning=0.7;
+            if(type==gameTypes.TOPPTIPSET)gd.utdelning=0.7;
             int i=0;
             while ((line = br.readLine()) != null)
             {
@@ -100,10 +106,10 @@ public class Data {
                     gd.odds[c-1][2]=3.10;
                     gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
                     continue;
-                }if(c==7){
-                    gd.odds[c-1][0]=3.75;
-                    gd.odds[c-1][1]=3.60;
-                    gd.odds[c-1][2]=1.90;
+                }if(c==2){
+                    gd.odds[c-1][0]=30;
+                    gd.odds[c-1][1]=6;
+                    gd.odds[c-1][2]=1.1;
                     gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
                     continue;
                 }*/
@@ -162,6 +168,7 @@ public class Data {
             if(type==gameTypes.STRYKTIPSET)Stryk=gd;
             if(type==gameTypes.EUROPATIPSET)EU=gd;
             if(type==gameTypes.POWERPLAY)PP=gd;
+            if(type==gameTypes.TOPPTIPSET)TT=gd;
         }catch (Exception e){
 
         }

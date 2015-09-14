@@ -1,4 +1,5 @@
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -77,7 +78,6 @@ public class Datahandler {
             gd.utdarray=new int[50000];
             gd.utdchans=new double[50000];
             for(int i=0;i<antalrader;i++){
-                System.out.println(gd.rowVal[i].cross());
                 if(gd.wodds.length==8){
                     gd.utdarray[(int)(gd.rowVal[i].cross()/750.00)]++;
                     gd.utdchans[(int)(gd.rowVal[i].cross()/750.00)]+=gd.rowVal[i].chance()*100.00;
@@ -181,6 +181,71 @@ public class Datahandler {
             res[1]=res[1]*(1.00/gd.wodds[i][n[i]]);
         }
         if(zeroodds)res[1]=0;
+        return res;
+    }
+
+    public boolean sign(int a,int b){
+        if(a==0)return (b==6||b==4||b==3||b==0);
+        if(a==1)return (b==6||b==5||b==3||b==1);
+        if(a==2)return (b==6||b==5||b==4||b==2);
+        System.out.println("Error in sign function");
+        return false;
+    }
+
+    public boolean s_in_m(int[] s, int[] m){
+        for (int i=0;i<s.length;i++){
+            if(!(sign(s[i],m[i])))return false;
+        }
+        return true;
+    }
+
+    public double[] getMRowstats(int[] m, GameData gd){
+        ArrayList<int[]> al=new ArrayList<int[]>();
+        if(m.length==8) {
+            for (int a = 0; a < 3; a++)
+                for (int b = 0; b < 3; b++)
+                    for (int c = 0; c < 3; c++)
+                        for (int d = 0; d < 3; d++)
+                            for (int e = 0; e < 3; e++)
+                                for (int f = 0; f < 3; f++)
+                                    for (int g = 0; g < 3; g++)
+                                        for (int h = 0; h < 3; h++) {
+                                            if (s_in_m(new int[]{a, b, c, d, e, f, g, h}, m))
+                                                al.add(new int[]{a, b, c, d, e, f, g, h});
+                                        }
+        }
+        else {
+            for (int a = 0; a < 3; a++)
+                for (int b = 0; b < 3; b++)
+                    for (int c = 0; c < 3; c++)
+                        for (int d = 0; d < 3; d++)
+                            for (int e = 0; e < 3; e++)
+                                for (int f = 0; f < 3; f++)
+                                    for (int g = 0; g < 3; g++)
+                                        for (int h = 0; h < 3; h++)
+                                            for (int i = 0; i < 3; i++)
+                                                for (int j = 0; j < 3; j++)
+                                                    for (int k = 0; k < 3; k++)
+                                                        for (int l = 0; l < 3; l++)
+                                                            for (int mm = 0; mm < 3; mm++)
+                                                            {
+                                                                  if (s_in_m(new int[]{a, b, c, d, e, f, g, h,i,j,k,l,mm}, m))
+                                                                  al.add(new int[]{a, b, c, d, e, f, g, h,i,j,k,l,mm});
+                                        }
+        }
+        double[] res={0,0,0};
+        for (int i=0;i<al.size();i++){
+            double utd=gd.utdelning;
+            double chance=100.00;
+            for(int j=0;j<m.length;j++){
+                utd=utd/(gd.crossed[j][al.get(i)[j]]/100.00);
+                chance=chance*(1.00/gd.wodds[j][al.get(i)[j]]);
+            }
+            res[0]+=utd*chance/100.00;
+            res[1]+=chance;
+
+        }
+        res[2]=al.size();
         return res;
     }
 

@@ -68,9 +68,11 @@ public class GUI extends JFrame{
             menuBar.add(fileMenu);
             JMenuItem s = new JMenuItem("Stryktipset");
             JMenuItem e = new JMenuItem("Europatipset");
-            JMenuItem p = new JMenuItem("Topptipset");
+            JMenuItem t = new JMenuItem("Topptipset");
+            JMenuItem p = new JMenuItem("Powerplay");
             fileMenu.add(s);
             fileMenu.add(e);
+            fileMenu.add(t);
             fileMenu.add(p);
             s.addActionListener(new ActionListener() {
                 @Override
@@ -82,6 +84,12 @@ public class GUI extends JFrame{
                 @Override
                 public void actionPerformed(ActionEvent actionEvent) {
                     setEU();
+                }
+            });
+            t.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    setTT();
                 }
             });
             p.addActionListener(new ActionListener() {
@@ -100,7 +108,15 @@ public class GUI extends JFrame{
             radutd.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent) {
-                    Radutd r=new Radutd();
+                    Radutd r = new Radutd();
+                }
+            });
+            JMenuItem msyscheck=new JMenuItem("M system stats");
+            datamenu.add(msyscheck);
+            msyscheck.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    Msysch r=new Msysch();
                 }
             });
         }
@@ -121,9 +137,61 @@ public class GUI extends JFrame{
             off.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent) {
-                   offline=off.getState();
+                    offline = off.getState();
                 }
             });
+        }
+
+        public class Msysch extends JFrame{
+            public Msysch(){
+                setSize(510, 110);
+                setLayout(null);
+                setVisible(true);
+                final JTextField jt=new JTextField();
+                jt.setBounds(10, 40, 100, 30);
+                JLabel ulabel=new JLabel("Mata in ett m system (ex 02464342)");
+                ulabel.setBounds(10, 5, 350, 30);
+                final JLabel rlabel=new JLabel("");
+                rlabel.setBounds(200,35,400,50);
+                JButton btn=new JButton("ok");
+                btn.setBounds(125, 40, 55, 30);
+                btn.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        String s = jt.getText();
+                        if (s.length() != gamedata.wodds.length){
+                            rlabel.setText("Fel antal tecken");
+                            return;
+                        }
+                        else{
+                            for (int i=0;i<s.length();i++){
+                                if(!(s.charAt(i)=='0' || s.charAt(i)=='1' || s.charAt(i)=='2' || s.charAt(i)=='3'  || s.charAt(i)=='4' || s.charAt(i)=='5' || s.charAt(i)=='6')){
+                                    rlabel.setText("Fel inmatning");
+                                    return;
+                                }
+                            }
+                        }
+                        int[] n= new int[s.length()];
+                        for (int i=0;i<s.length();i++){
+                            if(s.charAt(i)=='0')n[i]=0;
+                            if(s.charAt(i)=='1')n[i]=1;
+                            if(s.charAt(i)=='2')n[i]=2;
+                            if(s.charAt(i)=='3')n[i]=3;
+                            if(s.charAt(i)=='4')n[i]=4;
+                            if(s.charAt(i)=='5')n[i]=5;
+                            if(s.charAt(i)=='6')n[i]=6;
+                        }
+                        double[] res=datahandler.getMRowstats(n,gamedata);
+                        rlabel.setText("Rader: "+(int)res[2]+", Utd: "+utills.round(res[0],2)+", %: "+utills.round(res[1],4));
+                    }
+                });
+
+                add(rlabel);
+                add(ulabel);
+                add(jt);
+                add(btn);
+                setVisible(true);
+            }
         }
 
         public class Radutd extends JFrame{
@@ -320,6 +388,13 @@ public class GUI extends JFrame{
 
         }
 
+        private void setTT(){
+            data.collectTTData(offline);
+            if(data.access==false)return;
+            gamedata=data.TT;
+            tick.setEnabled(true);
+            repaint();
+        }
 
         private void setPP(){
             data.collectPPData(offline);

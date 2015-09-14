@@ -2,7 +2,7 @@
 ** server.c -- a stream socket server demo
 */
 #include <iostream>
-
+#include <algorithm>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -16,7 +16,7 @@
 #include <sys/wait.h>
 #include <signal.h>
 #include <sstream>
-
+#include<map>
 #include <string>
 #include <string.h>
 #define PORT "10000"  // the port users will be connecting to
@@ -40,35 +40,34 @@ void edit_cHeader(string *request){
     }
 }
 
-bool forbidden_url(string *request){
+bool forbidden_url(string request){
      for (int i = 0; i < 7; i++){
-        if((*request).find(bad_strings[i])!=string::npos) return true;
+        if((request).find(bad_strings[i])!=string::npos) return true;
      }
      return false;
 }
-string const& getHost(string *request){
+
+
+
+string getHost(string request){
     string s;
     string res="";
-    istringstream ss((*request));
+    istringstream ss((request));
     while(getline((ss),s)){
         if(s.substr(0,6)=="Host: "){
-            s.erase(0,6);
-            s.erase(s.length()-1,1);
-            res.append(s);
+            for(int i=6;i<543;i++){
+                if(s[i]=='\r')return res;
+                res+=s[i];
+            }
         }
     }
-    return res;
+    return "";
 }
 
 
 
 
-void clientSend(string *request, int client_socket){
-    edit_cHeader(request);
-    string const&host=getHost(request);
-    const char *host2="www.dn.se";
-    cout<<"len:"<<(host.length())<<":"<<host<<"\n";
-    cout<<"len:"<<strlen(host2)<<":"<<host2<<"\n";
+void clientSend(string host,string request, int client_socket){
     int retval;
     int sock;
     struct addrinfo hints, *sinfo, *it;
@@ -77,12 +76,10 @@ void clientSend(string *request, int client_socket){
     hints.ai_family = AF_UNSPEC;     // don't care IPv4 or IPv6
     hints.ai_socktype = SOCK_STREAM; // TCP stream sockets
     hints.ai_flags = AI_PASSIVE;     // fill in my IP for me
-
     if((retval=getaddrinfo(host.c_str(),"80",&hints,&sinfo))!=0){
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(retval));
         return;
     }
-
     for(it=sinfo;it!=NULL;it=it->ai_next){
         if((sock=socket(it->ai_family,it->ai_socktype,it->ai_protocol))==-1){
             perror("server: socket");
@@ -100,33 +97,81 @@ void clientSend(string *request, int client_socket){
         fprintf(stderr, "server: failed to bind\n");
         exit(1);
     }
-    cout<<(*request);
-    if(send(sock,(*request).c_str(),strlen((*request).c_str()),0)==-1)cout<<"error while sending"<<"\n";
-    char rec_buf[512];
-    int numbytes = 1;
+    if(send(sock, request.c_str(), strlen(request.c_str()), 0) == -1)cout<<"failed to send"<<endl;
+
+    char rec_buf[2000];
+    int numbytes=1;
     string recv_data;
+    int len;
+    int i = 0;
     numbytes = recv(sock, rec_buf, sizeof(rec_buf), 0);
-    recv_data = string(rec_buf,numbytes);
-    cout<<"res data:    "<<recv_data;
+    recv_data=string(rec_buf);
+    cout<<"recv: "<<recv_data<<"\n\n";
+
 }
 
- map<string, string> ref_header(string request){
+char lc(char in){
+  if(in<='Z' && in>='A')
+    return in-('Z'-'z');
+  return in;
+}
+
+map<string, string> h_map(string request){
      map<string, string> header;
-     istringstream ss(request,s);
+     istringstream ss(request);
+     string s,res;
      int i=0;
-     while(getline(ss)){
+     while(getline(ss,s)){
         if(i==0){
             i++;
-            header->insert(pair<string,string>("req",s));
+            header.insert(pair<string,string>("req",s));
         }
         else{
-            string tmp:
+            string k,v;
             istringstream lss(s);
-            lss>>tmp;
-            transform(tmp.begin(),tmp.end(),tmp.begin(),::tolower());
+            lss>>k;
+            transform(k.begin(),k.end(),k.begin(),lc);
+            getline(lss,v,'\r');
+            v.erase(0,1);
+            header.insert(pair<string, string>(k, v));
         }
-     }
+     }/*
+      string s = "http://" + (*header)["host:"];
+      int pos = (*http_header)["request:"].find(s);
+      if(pos != string::npos){
+        (*http_header)["request:"].replace(pos, s.length(), "");
+      }*/
+
+      return header;
  }
+
+string create_header(string request){
+     istringstream ss(request);
+     string s;
+     string res="";
+     int i=0;
+     while(getline(ss,s)){
+        if(i==0){
+            i++;
+            res+=(s+"\n");
+        }
+        else{
+            transform(s.begin(),s.end(),s.begin(),lc);
+            if(s.substr(0,11)=="connection:"){
+                res+="connection: close\r\n";
+            }
+            else{
+                res+=(s+"\n");
+            }
+
+        }
+     }res+="\r\n";
+    return res;
+}
+
+
+
+
 
 void serverGet(){
 
@@ -196,13 +241,15 @@ void serverGet(){
             char buf[2048];
             int numbytes=recv(data_socket, buf, 2048, 0);
             string request = string(buf, numbytes);
-            map<string, string> header= ref_header(request);
-            cout<<request;
-            if(forbidden_url(&request)){
+            buf[numbytes] = '\0';
+            string new_header=create_header(request);
+            string host=getHost(request);
+            if(forbidden_url(host)){
+                cout<<"FORBIDDEN URL DETECTED\N";
                 send(data_socket,URL,strlen(URL),0);
             }
             else{
-                clientSend(&request,  data_socket);
+                clientSend(host,new_header, data_socket);
             }
             close(data_socket);
             exit(0);//kill child

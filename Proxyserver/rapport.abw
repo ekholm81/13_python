@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="15" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:sv-SE; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Fri Sep 18 16:50:50 2015
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">Magnus Qvigstad</m>
+<m key="dc.date">Fri Sep 18 16:50:50 2015
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="1" edit-time="1996" last-saved="1442587850" uid="01ac3036-5e10-11e5-80f0-e1023227d8a7">
+<version id="1" started="1442587850" uid="a78b68d8-5e14-11e5-80f0-e1023227d8a7" auto="0" top-xid="15"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+<s type="P" name="Section Heading" basedon="Numbered Heading 1" followedby="Normal" props="list-delim:Avsnitt %L.; list-style:Numbered List; start-value:1; field-color:transparent; field-font:Liberation Sans; margin-left:0.0in; text-indent:0.0in; tabstops:1.1in/L0"/>
+<s type="P" name="Numbered Heading 1" basedon="Heading 1" followedby="Normal" props="list-delim:%L.; list-style:Numbered List; start-value:1; field-color:transparent; field-font:Liberation Sans; margin-left:0.0in; text-indent:0.0in; tabstops:0.3in/L0"/>
+<s type="P" name="Heading 1" basedon="Normal" followedby="Normal" props="keep-with-next:1; margin-top:22pt; font-weight:bold; margin-bottom:3pt; font-family:Liberation Sans; font-size:17pt"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="6" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" xid="7"><c>2,3,6,7,8</c></p>
+<p style="Section Heading" xid="1" props="text-indent:0in; margin-left:0pt"><c>Proxyserver</c></p>
+<p style="Normal" xid="3"><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none"></c></p>
+<p style="Normal" xid="5"><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none">My implementation of the proxyserver is written in C++. The compiler i used to develop the software was ”GNU GCC compiler”. The proxyservers listen on a specifyed port and for each GET request that is sent by the user the proxyserver scan the URL associated with it and if it contains a substring that is not allowed the proxyserver will send you a 301 response and you will be redirected to an errorwebpage. </c></p>
+<p style="Normal" xid="9"><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none">	The ”serverGet” function in the code is responsible for listening on the port that the users browser is connected to and checks if the requested URL is allowed. If it is, the request will be forwarded to the ”serverSend” function that will redirect the request to the real server. If the response from the real server contains text we will scan this text for bad strings and if we find anything, the user will be sent a 301 response and redirected to an errorpage.</c><c>	</c></p>
+<p style="Normal" xid="10"><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none">	The proxyserver has been tested with all the major browsers without any problems.</c></p>
+<p style="Normal" xid="12"><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none"></c></p>
+<p style="Normal" xid="13"><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none">When compiling the program, you need to specify the port that your browser is connected to. This is done by passing an argument to the program before compilation. 	</c></p>
+<p style="Normal" xid="14"><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none"></c></p>
+<p style="Normal" xid="15" props="text-align:left; dom-dir:ltr"><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none">The proxyserver does not scan every content for bad strings. It first checks in the header-line ”</c><c>Content-Type</c><c props="lang:sv-SE; display:inline; homogeneous:1; height:0in; width:0in; text-transform:none">” if we are dealing with text and if not, it ignores it.</c></p>
+</section>
+</abiword>

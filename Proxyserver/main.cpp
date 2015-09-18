@@ -13,13 +13,11 @@
 #include <sys/wait.h>
 #include <signal.h>
 #include <sstream>
-#include<map>
 #include <string>
-#include <string.h>
-#define PORT "10000"
+#define DPORT "10000"
 #define BADURL "HTTP/1.1 301 Moved Permanently\r\nLocation: http://www.ida.liu.se/~TDTS04/labs/2011/ass2/error1.html\r\n\r\n"
-#define BADTEXT "HTTP/1.1 301 Moved Permanently\r\nLocation: http://www.ida.liu.se/~TDTS04/labs/2011/ass2/error2.html\r\nConnection: Close\r\n\r\n"
-#define BACKLOG 10     // how many pending connections queue will hold
+#define BADTEXT "HTTP/1.1 301 Moved Permanently\r\nLocation: http://www.ida.liu.se/~TDTS04/labs/2011/ass2/error2.html\r\n\r\n"
+#define BACKLOG 10     // #pending connections queue will hold
 using namespace std;
 string bad_strings[9] = { "norrköping", "spongebob", "norrkoping","paris hilton","britney spears","parishilton","britneyspears","britney+spears","paris+hilton"};
 void sigchld_handler(int s)
@@ -37,7 +35,7 @@ char lc(char in)
     return in;
 }
 
-bool forbidden_url(string request)
+bool forbidden_strings(string request)
 {
     string s=request;
     transform(s.begin(),s.end(),s.begin(),lc);
@@ -48,6 +46,7 @@ bool forbidden_url(string request)
     return false;
 }
 
+//Make requiered changes to the
 string create_header(string request)
 {
     istringstream ss(request);
@@ -78,6 +77,7 @@ string create_header(string request)
     return res;
 }
 
+//Filters out the Host from headerlines
 string getHost(string request)
 {
     string s;
@@ -98,10 +98,11 @@ string getHost(string request)
     return "";
 }
 
+//Detects if httpdata is textformat
 bool isText(string resp)
 {
     string s;
-    cout<<resp<<"\n";
+    //cout<<resp<<"\n";
     istringstream ss((resp));
     while(getline((ss),s))
     {
@@ -114,6 +115,8 @@ bool isText(string resp)
     return false;
 }
 
+//Forwards request to the real webserver and recieves the response.
+//When the respons is fetched this function also scans the content to detect the "bad words"
 void serverSend(string host,string request, int client_socket)
 {
     int retval;
@@ -161,7 +164,7 @@ void serverSend(string host,string request, int client_socket)
         numbytes = recv(sock, buf, sizeof(buf), 0);
         if(numbytes==0)break;
         rec=string(buf,numbytes);
-        if(isText(rec) && forbidden_url(rec))
+        if(isText(rec) && forbidden_strings(rec))
         {
             send(client_socket,BADTEXT,strlen(BADTEXT),0);
         }
@@ -173,15 +176,14 @@ void serverSend(string host,string request, int client_socket)
                 numbytes = send(client_socket, rec.c_str() + sent, rec.size()-sent, 0);
                 sent = sent + numbytes;
             }
-            //send(client_socket, rec.c_str(),rec.size(), 0);
         }
-       // for(int j=0;j<1000000;j++)int a=1;
     }
     freeaddrinfo(sinfo);
     close(sock);
 }
 
-void serverGet()
+//This function catches the initial GET request from the client and scans the URL for inappropriate words.
+void serverGet(char* port)
 {
     struct sigaction sa;
     int yes=1;
@@ -194,7 +196,7 @@ void serverGet()
     hints.ai_socktype = SOCK_STREAM; // TCP stream sockets
     hints.ai_flags = AI_PASSIVE;     // fill in my IP for me
 
-    if((retval=getaddrinfo(NULL,PORT,&hints,&sinfo))!=0)
+    if((retval=getaddrinfo(NULL,port,&hints,&sinfo))!=0)
     {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(retval));
         return;
@@ -214,7 +216,7 @@ void serverGet()
             perror("setsockopt");
             exit(1);
         }
-        //bind port and socket together
+        //bind port and socket
         if(bind(lis_socket,it->ai_addr,it->ai_addrlen)==-1)
         {
             close(lis_socket);
@@ -263,7 +265,7 @@ void serverGet()
             buf[numbytes] = '\0';
             string new_header=create_header(request);
             string host=getHost(request);
-            if(forbidden_url(host))
+            if(forbidden_strings(host))
             {
                 cout<<"FORBIDDEN URL DETECTED\N";
                 send(data_socket,BADURL,strlen(BADURL),0);
@@ -283,8 +285,8 @@ void serverGet()
 
 
 
-int main()
+int main(int argc, char *argv[])
 {
-    serverGet();
+    serverGet(argv[1]);
     return 1;
 }

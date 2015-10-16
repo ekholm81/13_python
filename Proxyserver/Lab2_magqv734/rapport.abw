@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
-<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="34" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:sv-SE; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="32" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:sv-SE; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
 <!-- ======================================================================== -->
 <!-- This file is an AbiWord document.                                        -->
 <!-- AbiWord is a free, Open Source word processor.                           -->
@@ -9,7 +9,7 @@
 <!-- ======================================================================== -->
 
 <metadata>
-<m key="abiword.date_last_changed">Tue Sep 22 17:35:19 2015
+<m key="abiword.date_last_changed">Tue Sep 22 17:32:35 2015
 </m>
 <m key="abiword.generator">AbiWord</m>
 <m key="dc.creator">Magnus Qvigstad</m>
@@ -19,9 +19,9 @@
 </metadata>
 <rdf>
 </rdf>
-<history version="5" edit-time="17066" last-saved="1442936119" uid="01ac3036-5e10-11e5-80f0-e1023227d8a7">
+<history version="3" edit-time="16902" last-saved="1442935955" uid="01ac3036-5e10-11e5-80f0-e1023227d8a7">
 <version id="1" started="1442587850" uid="a78b68d8-5e14-11e5-80f0-e1023227d8a7" auto="0" top-xid="15"/>
-<version id="5" started="1442927006" uid="87a06888-613f-11e5-8aef-dc33d04f529b" auto="0" top-xid="32"/>
+<version id="3" started="1442927006" uid="2603938e-613f-11e5-8aef-dc33d04f529b" auto="0" top-xid="32"/>
 </history>
 <styles>
 <s type="P" name="Heading 1" basedon="Normal" followedby="Normal" props="font-size:17pt; margin-top:22pt; font-weight:bold; margin-bottom:3pt; font-family:Liberation Sans; keep-with-next:1"/>
@@ -31,10 +31,10 @@
 <s type="P" name="Section Heading" basedon="Numbered Heading 1" followedby="Normal" props="list-delim:Avsnitt %L.; list-style:Numbered List; start-value:1; field-color:transparent; tabstops:1.1in/L0; margin-left:0.0in; text-indent:0.0in; field-font:Liberation Sans"/>
 </styles>
 <pagesize pagetype="A4" orientation="portrait" width="8.267717" height="11.692913" units="in" page-scale="1.000000"/>
-<section header="0" xid="6" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<section xid="6" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
 <p style="Heading 1" xid="7">Proxyserver<c></c></p>
 <p style="Normal" xid="3"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c><c></c></p>
-<p style="Normal" xid="5"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">My implementation of the proxyserver is written in C++. The compiler I used </c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">when</c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"> developing the software was ”GNU GCC compiler”. The proxyservers listen on a specifyed port and for each GET request that is sent by the user, the proxyserver scans the URL associated with it and if it contains a substring that is not allowed the proxyserver will send you a 301 response and you will be redirected to an errorwebpage. </c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c></p>
+<p style="Normal" xid="5"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">My implementation of the proxyserver is written in C++. The compiler i used </c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">when</c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"> developing the software was ”GNU GCC compiler”. The proxyservers listen on a specifyed port and for each GET request that is sent by the user, the proxyserver scans the URL associated with it and if it contains a substring that is not allowed the proxyserver will send you a 301 response and you will be redirected to an errorwebpage. </c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c></p>
 <p style="Normal" xid="9"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">	The ”listener” function in the code is responsible for listening on the port that the users browser is connected to and checks if the requested URL is allowed. If it is, the request will be forwarded to the ”serverGetSend” function that will redirect the request to the real server. If the response from the real server contains text we will scan this text for bad strings and if we find anything, the user will be sent a 301 response and redirected to an errorpage.</c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c>	</p>
 <p style="Normal" xid="10"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c></p>
 <p style="Normal" xid="12"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c><c></c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">When compiling the program, you need to specify the port that your browser is connected to. This is done by passing an argument to the program when running it. 	</c><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c></p>
@@ -50,13 +50,10 @@
 <p style="Heading 2" xid="28" props="dom-dir:ltr"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">Do not support</c></p>
 <p style="Normal" xid="29" props="dom-dir:ltr"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">	- Other HTTP requsts than GET</c></p>
 <p style="Normal" xid="30" props="dom-dir:ltr"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">	- HTTPS filtering</c></p>
-<p style="Normal" xid="31" props="dom-dir:ltr"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">	- Filtering data that is not in text format, ex images or gzip content</c></p>
+<p style="Normal" xid="31" props="dom-dir:ltr"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">	- Data that is not in text format, ex images or gzip content</c></p>
 <p style="Normal" xid="32" props="dom-dir:ltr"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c></p>
 <p style="Heading 2" xid="17" props="dom-dir:ltr"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none">Testing</c></p>
 <p style="Normal" xid="19" props="dom-dir:ltr"><c props="lang:sv-SE; display:inline; height:0in; width:0in; homogeneous:1; text-transform:none"></c></p>
 <p style="Normal" xid="21" props="dom-dir:ltr"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:sv-SE">The proxyserver has been tested with all the major browsers without any problems. When requesting large web pages such as Aftonbladet or CNN some extra loading time might be present (due to the frequent string operations etc.). I have also notices that some ads does not show properly. The proxy server have no problems streaming video content from various web sites. </c></p>
-</section>
-<section id="0" listid="0" parentid="0" type="header" xid="33">
-<p xid="34" props="text-align:left"><c>							Magnus Qvigstad    TDTS06     Lab 2   </c></p>
 </section>
 </abiword>

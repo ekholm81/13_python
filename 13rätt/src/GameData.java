@@ -13,6 +13,8 @@ public class GameData {
     public Triplet[] rowVal;
     public int[][] tecken;
     public int[][] dtecken;
+    public boolean[] modOdds;
+    public double[] oddsC;
     public double expval;
     public double sannolikhet12;
     public double sannolikhet13;
@@ -25,17 +27,27 @@ public class GameData {
     public int numMatch;
     public int[] utdarray;
     public double[] utdchans;
+    //spikarray, 1:hemmalalg, 2, kryss, 3, bortalag!!!!!!!
+    public int[] spikar;
+    public int[] dodgers;
+    public int[] rowValArray;
     public GameData(int numMatches){
+
         numMatch=numMatches;
         int numRows;
         if (numMatches==13)numRows=1594323;
         else numRows=6561;
+        oddsC=new double[numMatches];
+        spikar=new int[numMatches];
+        dodgers=new int[numMatches];
+        rowValArray=new int[20];
         beastData=new double[numMatches][3];
         rowVal =new Triplet[numRows];
         games=new String[numMatches];
         odds=new double[numMatches][3];
         crossed=new double[numMatches][3];
         wodds=new double[numMatches][3];
+        modOdds=new boolean[numMatches];
         value=new double[numMatches][3];
         wvalue=new double[numMatches][3];
         rad=new boolean[numMatches][3];

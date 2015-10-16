@@ -119,6 +119,31 @@ public class GUI extends JFrame{
                     Msysch r=new Msysch();
                 }
             });
+            JMenuItem spikarmenuitem=new JMenuItem("Spikar");
+            datamenu.add(spikarmenuitem);
+            spikarmenuitem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    spikar s = new spikar();
+                }
+            });
+
+            JMenuItem dodgersmenuitem=new JMenuItem("Dodgers");
+            datamenu.add(dodgersmenuitem);
+            dodgersmenuitem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    dodgers d=new dodgers();
+                }
+            });
+            JMenuItem oddsMod=new JMenuItem("Ändra odds");
+            datamenu.add(oddsMod);
+            oddsMod.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    OddsMod o=new OddsMod();
+                }
+            });
         }
 
         private void settingsMenu(){
@@ -193,6 +218,151 @@ public class GUI extends JFrame{
                 setVisible(true);
             }
         }
+
+        public class OddsMod extends JFrame{
+           public OddsMod(){
+               if(gamedata.wvalue.length==13)setSize(320, 610);
+               else setSize(320, 410);
+               setLayout(null);
+               JLabel nrLabels[]=new JLabel[gamedata.wvalue.length];
+               final JTextField text[]=new JTextField[gamedata.wvalue.length];
+               final JCheckBox checkBox[]=new JCheckBox[gamedata.wvalue.length];
+               JButton okButton=new JButton("Ok");
+               if(gamedata.wvalue.length==13)okButton.setBounds(100,510,80,60);
+               else okButton.setBounds(100, 325, 80, 40);
+               this.add(okButton);
+               for(int i=0;i<text.length;i++){
+                   nrLabels[i]=new JLabel(String.valueOf(i+1));
+                   nrLabels[i].setBounds(10,35*(i+1),20,20);
+                   this.add(nrLabels[i]);
+                   checkBox[i]=new JCheckBox("Kombo");
+                   checkBox[i].setBounds(200,35*(i+1),100,20);
+                   this.add(checkBox[i]);
+                   text[i]=new JTextField("");
+                   text[i].setBounds(40,35*(i+1),140,30);
+                   this.add(text[i]);
+               }
+               okButton.addActionListener(new ActionListener() {
+                   @Override
+                   public void actionPerformed(ActionEvent actionEvent) {
+                       for(int i=0;i<gamedata.wvalue.length;i++){
+                           if(!(text[i].getText().equals(""))){
+                               String s= text[i].getText();
+                               double[] odds=utills.stripodds(s);
+                               if(checkBox[i].isSelected()){
+                                   gamedata.wodds[i][0]=utills.round((gamedata.wodds[i][0]+odds[0])/2.00,2);
+                                   gamedata.wodds[i][1]=utills.round((gamedata.wodds[i][1]+odds[1])/2.00,2);
+                                   gamedata.wodds[i][2]=utills.round((gamedata.wodds[i][2]+odds[2])/2.00,2);
+                               }
+                               else{
+                                   gamedata.wodds[i][0]=utills.round(odds[0],2);
+                                   gamedata.wodds[i][1]=utills.round(odds[1],2);
+                                   gamedata.wodds[i][2]=utills.round(odds[2],2);
+                               }
+                               gamedata.value[i][0]=utills.round(gamedata.crossed[i][0]*gamedata.wodds[i][0],2);
+                               gamedata.value[i][1]=utills.round(gamedata.crossed[i][1]*gamedata.wodds[i][1],2);
+                               gamedata.value[i][2]=utills.round(gamedata.crossed[i][2]*gamedata.wodds[i][2],2);
+                               gamedata.modOdds[i]=true;
+                           }
+                       }Datapanel.this.repaint();
+                   }
+               });
+               setVisible(true);
+           }
+        }
+
+        //spikarray, 1:hemmalalg, 2, kryss, 3, bortalag!!!!!!!
+        public class spikar extends JFrame{
+            public spikar(){
+                setSize(310, 110);
+                setLayout(null);
+                final JTextField jt=new JTextField();
+                jt.setBounds(10, 40, 200, 30);
+                JLabel ulabel=new JLabel("Spikar");
+                ulabel.setBounds(10, 5, 150, 30);
+                final JLabel rlabel=new JLabel("");
+                rlabel.setBounds(160, 35, 200, 50);
+                JButton btn=new JButton("ok");
+                btn.setBounds(225, 40, 55, 30);
+                btn.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        String s=jt.getText();
+                        int []res=new int[gamedata.crossed.length];
+                        for (int i=0;i<s.length();i=i+2){
+                            if(s.charAt(i)>=97 &&s.charAt(i)<=97+gamedata.crossed.length){
+                                if(Character.getNumericValue(s.charAt(i+1))==0||Character.getNumericValue(s.charAt(i+1))==1||Character.getNumericValue(s.charAt(i+1))==2){
+                                    res[s.charAt(i)-97]=Character.getNumericValue(s.charAt(i+1))+1;
+                                }
+                                else{
+                                    rlabel.setText("Input Error");
+                                    return;
+                                }
+                            }
+                            else {
+                                System.out.println("hej");
+                                rlabel.setText("Input Error");
+                                return;
+                            }
+                        }
+                       gamedata.spikar=res;
+                    }
+                });
+
+                add(rlabel);
+                add(ulabel);
+                add(jt);
+                add(btn);
+                setVisible(true);
+            }
+        }
+
+        //spikarray, 1:hemmalalg, 2, kryss, 3, bortalag!!!!!!!
+        public class dodgers extends JFrame{
+            public dodgers(){
+                setSize(310, 110);
+                setLayout(null);
+                setVisible(true);
+                final JTextField jt=new JTextField();
+                jt.setBounds(10, 40, 200, 30);
+                JLabel ulabel=new JLabel("Dodgers");
+                ulabel.setBounds(10, 5, 150, 30);
+                final JLabel rlabel=new JLabel("");
+                rlabel.setBounds(160, 35, 200, 50);
+                JButton btn=new JButton("ok");
+                btn.setBounds(225, 40, 55, 30);
+                btn.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        String s=jt.getText();
+                        int []res=new int[gamedata.crossed.length];
+                        for (int i=0;i<s.length();i=i+2){
+                            if(s.charAt(i)>=97 &&s.charAt(i)<=97+gamedata.crossed.length){
+                                if(Character.getNumericValue(s.charAt(i+1))==0||Character.getNumericValue(s.charAt(i+1))==1||Character.getNumericValue(s.charAt(i+1))==2){
+                                    res[s.charAt(i)-97]=Character.getNumericValue(s.charAt(i+1))+1;
+                                }
+                                else{
+                                    rlabel.setText("Input Error");
+                                    return;
+                                }
+                            }
+                            else {
+                                System.out.println("hej");
+                                rlabel.setText("Input Error");
+                                return;
+                            }
+                        }
+                        gamedata.dodgers=res;
+                    }
+                });
+                add(rlabel);
+                add(ulabel);
+                add(jt);
+                add(btn);
+                setVisible(true);
+            }
+        }
+
 
         public class Radutd extends JFrame{
             public Radutd(){
@@ -270,32 +440,38 @@ public class GUI extends JFrame{
         }
 
         public class Details extends JFrame{
-            public Details(){
-                setSize(680, 510);
+            public Details() {
+                setSize(907, 510);
                 setLayout(null);
                 setVisible(true);
-                JLabel[] labels= new JLabel[120];
+                if(gamedata.wvalue.length==8){
+                    JLabel[] labels = new JLabel[120];
 
-                double[] sumch=new double[labels.length];
-                for(int i=labels.length-1;i>=0;i--){
-                    if(i==labels.length-1)sumch[i]=gamedata.utdchans[i];
-                    else{
-                        sumch[i]=sumch[i+1]+gamedata.utdchans[i];
+                    double[] sumch = new double[labels.length];
+                    for (int i = labels.length - 1; i >= 0; i--) {
+                        if (i == labels.length - 1) sumch[i] = gamedata.utdchans[i];
+                        else {
+                            sumch[i] = sumch[i + 1] + gamedata.utdchans[i];
+                        }
+                    }
+                    for (int i = 0; i < labels.length; i++) {
+                        String num = utills.fs(String.valueOf(750 * (i + 1)), 5);
+                        labels[i] = new JLabel(num + ":   " + utills.fs(String.valueOf(gamedata.utdarray[i]), 4) + " / " + utills.fs(String.valueOf(utills.round(gamedata.utdchans[i], 2)), 4) + "% / " + utills.fs(String.valueOf(utills.round(sumch[i], 2)), 4) + "%");
+                        if (i < (labels.length / 3.00)) {
+                            labels[i].setBounds(20, -20 + (i * 10), 220, 100);
+                        } else if (i < ((2 * labels.length) / 3.00)) {
+                            labels[i].setBounds(240, -20 + (i - labels.length / 3) * 10, 220, 100);
+                        } else {
+                            labels[i].setBounds(450, -20 + ((i - labels.length * 2 / 3) * 10), 220, 100);
+                        }
+                        this.add(labels[i]);
                     }
                 }
-                for(int i=0;i<labels.length;i++){
-                    String num=utills.fs(String.valueOf(750 * (i + 1)), 5);
-                    labels[i]=new JLabel(num+":   "+utills.fs(String.valueOf(gamedata.utdarray[i]), 4)+" / "+utills.fs(String.valueOf(utills.round(gamedata.utdchans[i],2)),4)+"% / "+utills.fs(String.valueOf(utills.round(sumch[i],2)),4)+"%");
-                    if(i<(labels.length/3.00)){
-                        labels[i].setBounds(20,-20+(i*10),220,100);
-                    }
-                    else if (i<((2*labels.length)/3.00)) {
-                        labels[i].setBounds(240,-20+(i-labels.length/3)*10,220,100);
-                    }
-                    else{
-                        labels[i].setBounds(450,-20+((i-labels.length*2/3)*10),220,100);
-                    }
-                    this.add(labels[i]);
+                JLabel[] vlabels = new JLabel[gamedata.rowValArray.length];
+                for (int i = 0; i < vlabels.length; i++) {
+                    vlabels[i] = new JLabel(String.valueOf(i+": "+gamedata.rowValArray[i]));
+                    vlabels[i].setBounds(680, -20 + (i * 10), 220, 100);
+                    this.add(vlabels[i]);
                 }
             }
         }
@@ -375,7 +551,7 @@ public class GUI extends JFrame{
             data.collectStrykData(offline);
             if(data.access==false)return;
             gamedata=data.Stryk;
-            tick.setEnabled(false);
+           // tick.setEnabled(false);
             repaint();
         }
 
@@ -383,7 +559,7 @@ public class GUI extends JFrame{
             data.collectEUData(offline);
             if(data.access==false)return;
             gamedata=data.EU;
-            tick.setEnabled(false);
+            //tick.setEnabled(false);
             repaint();
 
         }
@@ -392,7 +568,7 @@ public class GUI extends JFrame{
             data.collectTTData(offline);
             if(data.access==false)return;
             gamedata=data.TT;
-            tick.setEnabled(true);
+           // tick.setEnabled(true);
             repaint();
         }
 
@@ -400,7 +576,7 @@ public class GUI extends JFrame{
             data.collectPPData(offline);
             if(data.access==false)return;
             gamedata=data.PP;
-            tick.setEnabled(true);
+            //tick.setEnabled(true);
             repaint();
         }
         @Override
@@ -424,17 +600,26 @@ public class GUI extends JFrame{
 
             for(int i=0;i<gamedata.games.length;i++){
                 if(gamedata.games[i]==null)break;
+                if(gamedata.modOdds[i]==true)g.setColor(Color.red);
                 g.drawString((String.valueOf(gamedata.wodds[i][0])+"   "+String.valueOf(gamedata.wodds[i][1])+"   "+String.valueOf(gamedata.wodds[i][2])), (int)((double)panelWidth*0.20), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                g.setColor(Color.white);
             }
 
             for(int i=0;i<gamedata.games.length;i++){
                 if(gamedata.games[i]==null)break;
-                g.drawString((String.valueOf(gamedata.crossed[i][0]) + "   " + String.valueOf(gamedata.crossed[i][1]) + "   " + String.valueOf(gamedata.crossed[i][2])), (int) ((double) panelWidth * 0.35), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
+                g.drawString(String.valueOf(String.valueOf(gamedata.oddsC[i])), (int) ((double) panelWidth * 0.35), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
             }
 
             for(int i=0;i<gamedata.games.length;i++){
                 if(gamedata.games[i]==null)break;
-                g.drawString((String.valueOf(gamedata.value[i][0]) + "   " + String.valueOf(gamedata.value[i][1]) + "   " + String.valueOf(gamedata.value[i][2])), (int) ((double) panelWidth * 0.50), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
+                g.drawString((String.valueOf(gamedata.crossed[i][0]) + "   " + String.valueOf(gamedata.crossed[i][1]) + "   " + String.valueOf(gamedata.crossed[i][2])), (int) ((double) panelWidth * 0.42), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
+            }
+
+            for(int i=0;i<gamedata.games.length;i++){
+                if(gamedata.games[i]==null)break;
+                if(gamedata.modOdds[i]==true)g.setColor(Color.red);
+                g.drawString((String.valueOf(gamedata.value[i][0]) + "   " + String.valueOf(gamedata.value[i][1]) + "   " + String.valueOf(gamedata.value[i][2])), (int) ((double) panelWidth * 0.57), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
+                g.setColor(Color.white);
             }
 
             g.drawString("Spelstopp: " + gamedata.spelstopp, (int) ((double) panelWidth * 0.03), (int) ((double) panelHeight * 0.85));

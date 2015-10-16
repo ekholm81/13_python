@@ -93,23 +93,11 @@ public class Data {
 
                 c++;
                 int inc=0;
-                if(c>n)break;/*
-                if(c==5){
-                    gd.odds[c-1][0]=1.61;
-                    gd.odds[c-1][1]=3.75;
-                    gd.odds[c-1][2]=5.50;
-                    gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
-                    continue;
-                }if(c==6){
-                    gd.odds[c-1][0]=2.25;
-                    gd.odds[c-1][1]=3.40;
-                    gd.odds[c-1][2]=3.10;
-                    gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
-                    continue;
-                }if(c==2){
-                    gd.odds[c-1][0]=30;
-                    gd.odds[c-1][1]=6;
-                    gd.odds[c-1][2]=1.1;
+                if(c>n)break;
+                /*if(c==1){
+                    gd.odds[c-1][0]=1.44;
+                    gd.odds[c-1][1]=3.50;
+                    gd.odds[c-1][2]=11.70;
                     gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
                     continue;
                 }*/
@@ -121,6 +109,7 @@ public class Data {
 
                     continue;
                 }
+
                 String o1=(line.substring(i+15,i+19)).replaceAll(",",".");
                 gd.odds[c-1][0]=Double.parseDouble(o1);
                 if(gd.odds[c-1][0]>10.00)inc++;
@@ -129,7 +118,8 @@ public class Data {
                 if(gd.odds[c-1][1]>10.00)inc++;
                 String o3=(line.substring(i+39+inc,i+43+inc)).replaceAll(",",".");
                 gd.odds[c-1][2]=Double.parseDouble(o3);
-                gd.wodds[c-1]=utills.getwodds(gd.odds[c-1].clone());
+                gd.wodds[c-1]=utills.getwodds(gd.odds[c - 1].clone());
+                gd.oddsC[c-1]=utills.round(100*utills.getOddsC(gd.odds[c - 1].clone()),2);
 
             }
              c=0;
@@ -145,6 +135,9 @@ public class Data {
                 if(gd.crossed[c-1][1]<10.00)inc--;
                 String o3=cleanString(line.substring(i+38+inc,i+40+inc));
                 gd.crossed[c-1][2]=Double.parseDouble(o3);
+                //System.out.println(gd.crossed[c-1][0]+" "+gd.crossed[c-1][1]+" "+gd.crossed[c-1][2]);
+
+
             }
 
             i=line.indexOf("\"currentNetSale\":\"");
@@ -164,7 +157,7 @@ public class Data {
             }
             i = line.indexOf(", stänger ", i + 1);
             gd.spelstopp=line.substring(i + 10, i + 26);
-            if(gd.spelstopp.substring(0,6).equals("2015-0"))access=true;
+            if(gd.spelstopp.substring(0,6).equals("2015-1"))access=true;
             if(type==gameTypes.STRYKTIPSET)Stryk=gd;
             if(type==gameTypes.EUROPATIPSET)EU=gd;
             if(type==gameTypes.POWERPLAY)PP=gd;

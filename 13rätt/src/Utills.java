@@ -3,6 +3,29 @@
  */
 public class Utills {
 
+    public double[] stripodds(String s){
+        double[] res=new double[3];
+        int index=0;
+        for(int i=0;i<3;i++){
+            StringBuilder tmp=new StringBuilder();
+            while (true){
+                if(index==s.length()){
+                    res[i]=Double.parseDouble(tmp.toString());
+                    index++;
+                    break;
+                }
+                if(s.charAt(index)=='-'){
+                    res[i]=Double.parseDouble(tmp.toString());
+                    index++;
+                    break;
+                }
+                tmp.append(s.charAt(index));
+                index++;
+            }
+        }
+        return getwodds(res);
+    }
+
     public double[] getwodds(double[] i){
         double c= 1.00/(1/i[0]+1.00/i[1]+1.00/i[2]);
         i[0]=round(i[0]/c,2);
@@ -10,6 +33,11 @@ public class Utills {
         i[2]=round(i[2]/c,2);
         return i;
     }
+
+    public double getOddsC(double[] i){
+        return 1.00/(1/i[0]+1.00/i[1]+1.00/i[2]);
+    }
+
     public double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
         long factor = (long) Math.pow(10, places);

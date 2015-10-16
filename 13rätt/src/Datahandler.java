@@ -77,29 +77,61 @@ public class Datahandler {
            // writer.print("\r\n");
             gd.utdarray=new int[50000];
             gd.utdchans=new double[50000];
+            gd.rowValArray=new int[20];
+            int index=0;
+            StringBuilder SB;
             for(int i=0;i<antalrader;i++){
-                if(gd.wodds.length==8){
-                    gd.utdarray[(int)(gd.rowVal[i].cross()/750.00)]++;
-                    gd.utdchans[(int)(gd.rowVal[i].cross()/750.00)]+=gd.rowVal[i].chance()*100.00;
+                while(true) {
+                    boolean valid=true;
+                    SB = new StringBuilder();
+                    int num = gd.rowVal[i+index].key();
+                    int r = -1;
+                    while (true) {
+                        r = num % 3;
+                        SB.append(r);
+                        num = num / 3;
+                        if (num == 0) break;
+                    }
+                    for (int j = 0; j < gd.wvalue.length; j++) {
+                        int p = (int) Math.pow(3, j);
+                        if (gd.rowVal[i+index].key() < p) SB.append(0);
+                    }
+                    SB.reverse();
+                    for (int j = 0; j < gd.wvalue.length; j++) {
+                        if (gd.spikar[j] != 0) {
+                            if ((gd.spikar[j] == 1 && SB.charAt(j) != '0')||(gd.spikar[j] == 2 && SB.charAt(j) != '1')||(gd.spikar[j] == 3 && SB.charAt(j) != '2')) {
+                                index++;
+                                valid=false;
+                                break;
+                            }
+                        }
+                        if(gd.dodgers[j]!=0){
+                            if(gd.dodgers[j]==1 && SB.charAt(j)=='0'|| gd.dodgers[j]==2 && SB.charAt(j)=='1'|| gd.dodgers[j]==3 && SB.charAt(j)=='2'){
+                                index++;
+                                valid=false;
+                                break;
+                            }
+                        }
+                    }
+                    if(valid)break;
+                    else if(gd.wvalue.length!=13){
+                        for(int j=0;j<gd.wvalue.length;j++){
+                            char c=SB.charAt(j);
+                            if(c=='0')iwriter.print('0');
+                            if(c=='1')iwriter.print('1');
+                            if(c=='2')iwriter.print('2');
+                        } iwriter.print("\n");
+                    }
                 }
-
+                int a=(int)(10.00/(get_val(gd,SB.toString())*gd.utdelning)+0.5);
+                if(a>19)a=19;
+                //System.out.println(a+"   :   "+10.00/get_val(gd,SB.toString()));
+                gd.rowValArray[a]++;
                 double rowchance=100;
-
-                StringBuilder SB=new StringBuilder();
-                int num = gd.rowVal[i].key();
-                int r = -1;
-                while (true){
-                    r=num %3;
-                    SB.append(r);
-                    num=num/3;
-                    if(num==0)break;
+                if(gd.wodds.length==8){
+                    gd.utdarray[(int)(gd.rowVal[i+index].cross()/750.00)]++;
+                    gd.utdchans[(int)(gd.rowVal[i+index].cross()/750.00)]+=gd.rowVal[i+index].chance()*100.00;
                 }
-                for(int j=0;j<gd.wvalue.length;j++){
-                    int p = (int)Math.pow(3, j);
-                    if(gd.rowVal[i].key()<p)SB.append(0);
-                }
-                SB.reverse();
-
                 writer.print("E,");
                 for(int j=0;j<gd.wvalue.length;j++){
                     char c=SB.charAt(j);
@@ -121,35 +153,37 @@ public class Datahandler {
 
                 chance+=rowchance;
             }
-            for(int i=antalrader;i<Math.pow(3,gd.wvalue.length);i++){
-                StringBuilder SB=new StringBuilder();
-                int num = gd.rowVal[i].key();
-                int r = -1;
-                while (true){
-                    r=num %3;
-                    SB.append(r);
-                    num=num/3;
-                    if(num==0)break;
-                }
-                for(int j=0;j<gd.wvalue.length;j++){
-                    int p = (int)Math.pow(3, j);
-                    if(gd.rowVal[i].key()<p)SB.append(0);
-                }
-                SB.reverse();
-                for(int j=0;j<gd.wvalue.length;j++){
-                    char c=SB.charAt(j);
-                    if(c=='0')iwriter.print('0');
-                    if(c=='1')iwriter.print('1');
-                    if(c=='2')iwriter.print('2');
-                }
+            if(gd.wvalue.length!=13) {
+                for (int i = antalrader; i < Math.pow(3, gd.wvalue.length); i++) {
+                    SB = new StringBuilder();
+                    int num = gd.rowVal[i].key();
+                    int r = -1;
+                    while (true) {
+                        r = num % 3;
+                        SB.append(r);
+                        num = num / 3;
+                        if (num == 0) break;
+                    }
+                    for (int j = 0; j < gd.wvalue.length; j++) {
+                        int p = (int) Math.pow(3, j);
+                        if (gd.rowVal[i].key() < p) SB.append(0);
+                    }
+                    SB.reverse();
+                    for (int j = 0; j < gd.wvalue.length; j++) {
+                        char c = SB.charAt(j);
+                        if (c == '0') iwriter.print('0');
+                        if (c == '1') iwriter.print('1');
+                        if (c == '2') iwriter.print('2');
+                    }
 
-                if (i+1!=Math.pow(3,gd.wvalue.length))iwriter.print("\n");
+                    if (i + 1 != Math.pow(3, gd.wvalue.length)) iwriter.print("\n");
+                }
             }
             gd.expval =utills.round(rowVal*gd.utdelning, 2);
             gd.sannolikhet13=  utills.round(chance,2);
             gd.sannolikhet12=utills.round(gd.sannolikhet13+getC(1,chance,gd.games.length),2);
             gd.sannolikhet11=utills.round(gd.sannolikhet12+getC(2,chance,gd.games.length),2);
-            gd.sannolikhet10=utills.round(gd.sannolikhet11+getC(3,chance,gd.games.length),2);
+            gd.sannolikhet10 = utills.round(gd.sannolikhet11 + getC(3, chance, gd.games.length),2);
             for(int i=0;i<gd.wvalue.length;i++){
                 for(int j=0;j<3;j++){
                     gd.dtecken[i][j]=(int)utills.round((double)(gd.tecken[i][j])*100/(double)antalrader,0);

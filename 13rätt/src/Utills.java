@@ -87,4 +87,23 @@ public class Utills {
         return 1.00-getProb(i,b);
     }
 
+    public GameData mergeData(GameData n, GameData o){
+        if(o==null)return n;
+        for(int i=0;i<n.crossed.length;i++){
+            for(int j=0;j<3;j++){
+                if(n.wodds[i][j]<o.wodds[i][j])n.oddsCh[i][j]=1;
+                else if(n.wodds[i][j]>o.wodds[i][j])n.oddsCh[i][j]=2;
+                else n.oddsCh[i][j]=0;
+
+                if(n.crossed[i][j]<o.crossed[i][j])n.crossedCh[i][j]=1;
+                else if(n.crossed[i][j]>o.crossed[i][j])n.crossedCh[i][j]=2;
+                else n.crossedCh[i][j]=0;
+
+                if(n.value[i][j]<o.value[i][j])n.valueCh[i][j]=1;
+                else if(n.value[i][j]>o.value[i][j])n.valueCh[i][j]=2;
+                else n.valueCh[i][j]=0;
+            }
+        }return n;
+    }
+
 }

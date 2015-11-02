@@ -9,6 +9,11 @@ public class GameData {
     public double[][] value;
     public double[][] wvalue;
     public boolean[][] rad;
+    // 0 no change,  1 increase, 2 decrease
+    public int[][] oddsCh;
+    public int[][] crossedCh;
+    public int[][] valueCh;
+
     public double[][] beastData;
     public Triplet[] rowVal;
     public int[][] tecken;
@@ -53,6 +58,9 @@ public class GameData {
         rad=new boolean[numMatches][3];
         tecken=new int[numMatches][3];
         dtecken=new int[numMatches][3];
+        oddsCh=new int[numMatches][3];
+        crossedCh=new int[numMatches][3];
+        valueCh=new int[numMatches][3];
         spelstopp=new String("");
         omsättning=new String("");
         sannolikhet13 =0;

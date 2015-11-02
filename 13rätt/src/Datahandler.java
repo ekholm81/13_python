@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +20,8 @@ public class Datahandler {
     public void calcRows(GameData gd, double slider){
         for(int i=0;i<gd.games.length;i++){
             for(int j=0;j<3;j++){
-                gd.wvalue[i][j]=(gd.crossed[i][j]*(gd.wodds[i][j]-(slider))/100.00);
+                if(gd.crossed[i][j]*(gd.wodds[i][j]-(slider))<=0)gd.wvalue[i][j]=0.000000000000001;
+                else gd.wvalue[i][j]=(gd.crossed[i][j]*(gd.wodds[i][j]-(slider))/100.00);
             }
         }
         if(gd.numMatch==13){
@@ -64,8 +67,8 @@ public class Datahandler {
         return (1.00/numrows)*ch;
     }
 
-   private void setTecken(GameData gd, int antalrader){
-
+   private void setTecken(GameData gd, int antalrader,boolean filter){
+        if(filter) System.out.println("HEJ");
         gd.tecken=new int[gd.wvalue.length][3];
         double chance=0;
         double rowVal=0;
@@ -84,6 +87,7 @@ public class Datahandler {
                 while(true) {
                     boolean valid=true;
                     SB = new StringBuilder();
+                 //  if(i+index>Math.pow(3,gd.crossed.length))break;
                     int num = gd.rowVal[i+index].key();
                     int r = -1;
                     while (true) {
@@ -97,22 +101,30 @@ public class Datahandler {
                         if (gd.rowVal[i+index].key() < p) SB.append(0);
                     }
                     SB.reverse();
-                    for (int j = 0; j < gd.wvalue.length; j++) {
-                        if (gd.spikar[j] != 0) {
-                            if ((gd.spikar[j] == 1 && SB.charAt(j) != '0')||(gd.spikar[j] == 2 && SB.charAt(j) != '1')||(gd.spikar[j] == 3 && SB.charAt(j) != '2')) {
-                                index++;
-                                valid=false;
-                                break;
+                    if(filter==true && 1.00/get_val(gd,SB.toString())>gd.utdelning){
+                       // System.out.println("block");
+                        index++;
+                        valid=false;
+                    }
+                    else {
+                        for (int j = 0; j < gd.wvalue.length; j++) {
+                            if (gd.spikar[j] != 0) {
+                                if ((gd.spikar[j] == 1 && SB.charAt(j) != '0')||(gd.spikar[j] == 2 && SB.charAt(j) != '1')||(gd.spikar[j] == 3 && SB.charAt(j) != '2')) {
+                                    index++;
+                                    valid=false;
+                                    break;
+                                }
                             }
-                        }
-                        if(gd.dodgers[j]!=0){
-                            if(gd.dodgers[j]==1 && SB.charAt(j)=='0'|| gd.dodgers[j]==2 && SB.charAt(j)=='1'|| gd.dodgers[j]==3 && SB.charAt(j)=='2'){
-                                index++;
-                                valid=false;
-                                break;
+                            if(gd.dodgers[j]!=0){
+                                if(gd.dodgers[j]==1 && SB.charAt(j)=='0'|| gd.dodgers[j]==2 && SB.charAt(j)=='1'|| gd.dodgers[j]==3 && SB.charAt(j)=='2'){
+                                    index++;
+                                    valid=false;
+                                    break;
+                                }
                             }
                         }
                     }
+
                     if(valid)break;
                     else if(gd.wvalue.length!=13){
                         for(int j=0;j<gd.wvalue.length;j++){
@@ -154,7 +166,7 @@ public class Datahandler {
                 chance+=rowchance;
             }
             if(gd.wvalue.length!=13) {
-                for (int i = antalrader; i < Math.pow(3, gd.wvalue.length); i++) {
+                for (int i = antalrader+index; i < Math.pow(3, gd.wvalue.length); i++) {
                     SB = new StringBuilder();
                     int num = gd.rowVal[i].key();
                     int r = -1;
@@ -200,10 +212,10 @@ public class Datahandler {
 
 
 
-    public void beast(String antalRaderS, GameData gd, double slider){
+    public void beast(String antalRaderS, GameData gd, double slider,boolean filter){
         int antalRader=Integer.parseInt(antalRaderS);
         calcRows(gd, slider);
-        setTecken(gd,antalRader);
+        setTecken(gd,antalRader,filter);
     }
 
     public double[] getRowstats(int[] n, GameData gd){

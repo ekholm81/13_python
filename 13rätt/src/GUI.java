@@ -31,11 +31,13 @@ public class GUI extends JFrame{
 
     private class Datapanel extends JPanel{
         Color bc= new Color(30,32,33);
+        Color[] colarr={Color.white,Color.green,Color.red};
         GameData gamedata;
         Datahandler datahandler;
         Data data;
         private boolean offline=false;
         private JButton tick;
+        private JCheckBox filtertick;
         private JSlider slider;
         private JTextField halv;
         private JTextField hel;
@@ -490,7 +492,7 @@ public class GUI extends JFrame{
         }
 
         private double getSlider(){
-            return slider.getValue()/70.00;
+            return slider.getValue()/50.00;
         }
 
         private void initTextbox(){
@@ -532,7 +534,7 @@ public class GUI extends JFrame{
             beastButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent) {
-                    datahandler.beast(antr.getText(), gamedata, getSlider());
+                    datahandler.beast(antr.getText(), gamedata, getSlider(),filtertick.isSelected());
                     repaint();
                 }
             });
@@ -542,40 +544,46 @@ public class GUI extends JFrame{
                     Details details = new Details();
                 }
             });
-
+            filtertick=new JCheckBox();
+            filtertick.setBounds((int) ((double) panelWidth * 0.87), (int) ((double) panelHeight * 0.57), 20, 20);
+            add(filtertick);
         }
 
 
 
         private void setStryk(){
+            GameData old=data.Stryk;
             data.collectStrykData(offline);
             if(data.access==false)return;
-            gamedata=data.Stryk;
+            gamedata=utills.mergeData(data.Stryk,old);
            // tick.setEnabled(false);
             repaint();
         }
 
         private void setEU(){
+            GameData old=data.EU;
             data.collectEUData(offline);
             if(data.access==false)return;
-            gamedata=data.EU;
+            gamedata=utills.mergeData(data.EU,old);
             //tick.setEnabled(false);
             repaint();
 
         }
 
         private void setTT(){
+            GameData old=data.TT;
             data.collectTTData(offline);
             if(data.access==false)return;
-            gamedata=data.TT;
+            gamedata=utills.mergeData(data.TT,old);
            // tick.setEnabled(true);
             repaint();
         }
 
         private void setPP(){
+            GameData old=data.PP;
             data.collectPPData(offline);
             if(data.access==false)return;
-            gamedata=data.PP;
+            gamedata=utills.mergeData(data.PP,old);
             //tick.setEnabled(true);
             repaint();
         }
@@ -600,8 +608,19 @@ public class GUI extends JFrame{
 
             for(int i=0;i<gamedata.games.length;i++){
                 if(gamedata.games[i]==null)break;
-                if(gamedata.modOdds[i]==true)g.setColor(Color.red);
-                g.drawString((String.valueOf(gamedata.wodds[i][0])+"   "+String.valueOf(gamedata.wodds[i][1])+"   "+String.valueOf(gamedata.wodds[i][2])), (int)((double)panelWidth*0.20), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                if(gamedata.modOdds[i]==true){
+                    g.setColor(Color.red);
+                    g.drawString((String.valueOf(gamedata.wodds[i][0])+"   "+String.valueOf(gamedata.wodds[i][1])+"   "+String.valueOf(gamedata.wodds[i][2])), (int)((double)panelWidth*0.20), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                }
+                else {
+                    g.setColor(colarr[gamedata.oddsCh[i][0]]);
+                    g.drawString(String.valueOf(gamedata.wodds[i][0]),(int)((double)panelWidth*0.20), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                    g.setColor(colarr[gamedata.oddsCh[i][1]]);
+                    g.drawString(String.valueOf(gamedata.wodds[i][1]),(int)((double)panelWidth*0.24), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                    g.setColor(colarr[gamedata.oddsCh[i][2]]);
+                    g.drawString(String.valueOf(gamedata.wodds[i][2]),(int)((double)panelWidth*0.28), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+
+                }
                 g.setColor(Color.white);
             }
 
@@ -612,13 +631,29 @@ public class GUI extends JFrame{
 
             for(int i=0;i<gamedata.games.length;i++){
                 if(gamedata.games[i]==null)break;
-                g.drawString((String.valueOf(gamedata.crossed[i][0]) + "   " + String.valueOf(gamedata.crossed[i][1]) + "   " + String.valueOf(gamedata.crossed[i][2])), (int) ((double) panelWidth * 0.42), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
+                g.setColor(colarr[gamedata.crossedCh[i][0]]);
+                g.drawString(String.valueOf(gamedata.crossed[i][0]),(int)((double)panelWidth*0.42), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                g.setColor(colarr[gamedata.crossedCh[i][1]]);
+                g.drawString(String.valueOf(gamedata.crossed[i][1]),(int)((double)panelWidth*0.46), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                g.setColor(colarr[gamedata.crossedCh[i][2]]);
+                g.drawString(String.valueOf(gamedata.crossed[i][2]),(int)((double)panelWidth*0.50), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+               // g.drawString((String.valueOf(gamedata.crossed[i][0]) + "   " + String.valueOf(gamedata.crossed[i][1]) + "   " + String.valueOf(gamedata.crossed[i][2])), (int) ((double) panelWidth * 0.42), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
             }
 
             for(int i=0;i<gamedata.games.length;i++){
                 if(gamedata.games[i]==null)break;
-                if(gamedata.modOdds[i]==true)g.setColor(Color.red);
-                g.drawString((String.valueOf(gamedata.value[i][0]) + "   " + String.valueOf(gamedata.value[i][1]) + "   " + String.valueOf(gamedata.value[i][2])), (int) ((double) panelWidth * 0.57), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
+                if(gamedata.modOdds[i]==true){
+                    g.setColor(Color.red);
+                    g.drawString((String.valueOf(gamedata.value[i][0]) + "   " + String.valueOf(gamedata.value[i][1]) + "   " + String.valueOf(gamedata.value[i][2])), (int) ((double) panelWidth * 0.57), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
+                }
+                else{
+                    g.setColor(colarr[gamedata.valueCh[i][0]]);
+                    g.drawString(String.valueOf(gamedata.value[i][0]),(int)((double)panelWidth*0.57), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                    g.setColor(colarr[gamedata.valueCh[i][1]]);
+                    g.drawString(String.valueOf(gamedata.value[i][1]),(int)((double)panelWidth*0.63), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                    g.setColor(colarr[gamedata.valueCh[i][2]]);
+                    g.drawString(String.valueOf(gamedata.value[i][2]),(int)((double)panelWidth*0.69), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                }
                 g.setColor(Color.white);
             }
 

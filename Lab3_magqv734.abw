@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="558" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.0" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="0.99.2" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Fri Nov  6 12:18:01 2015
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">mq</m>
+<m key="dc.date">Mon Nov  2 16:01:10 2015
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="25" edit-time="105640" last-saved="1446808681" uid="46acc4e2-6140-11e5-88f3-8fb922e0552c">
+<version id="2" started="1442936452" uid="3f153d60-616b-11e5-88f3-8fb922e0552c" auto="0" top-xid="2"/>
+<version id="4" started="1443043292" uid="0e386ab4-623d-11e5-987a-df01dff17895" auto="0" top-xid="65"/>
+<version id="5" started="1443194610" uid="60b14d80-6399-11e5-9e51-a0fed888d459" auto="0" top-xid="308"/>
+<version id="12" started="1443438312" uid="a30a683e-65fa-11e5-9b93-b588c9ed2030" auto="0" top-xid="356"/>
+<version id="13" started="1444236270" uid="ae14ad2e-6d12-11e5-996e-b08add581656" auto="0" top-xid="486"/>
+<version id="14" started="1444998589" uid="97984c22-7401-11e5-9dc9-c26ff6ca16d2" auto="0" top-xid="525"/>
+<version id="16" started="1446476470" uid="6d372802-8187-11e5-8048-a91df83cdf9a" auto="0" top-xid="525"/>
+<version id="24" started="1446755781" uid="9794279e-840c-11e5-8339-a5ce60cae355" auto="0" top-xid="536"/>
+<version id="25" started="1446808681" uid="0a707194-8478-11e5-8bfd-834b1d666ec5" auto="0" top-xid="558"/>
+</history>
+<styles>
+<s type="P" name="Heading 1" basedon="Normal" followedby="Normal" props="keep-with-next:1; margin-top:22pt; font-weight:bold; margin-bottom:3pt; font-family:Arial; font-size:17pt"/>
+<s type="P" name="Normal" followedby="Current Settings" props="font-weight:normal; font-family:Times New Roman; margin-top:0pt; font-style:normal; margin-left:0pt; text-align:left; widows:2; color:000000; text-indent:0in; font-variant:normal; text-decoration:none; bgcolor:transparent; margin-right:0pt; margin-bottom:0pt; font-size:12pt; line-height:1.0; text-position:normal; font-stretch:normal"/>
+<s type="P" name="Plain Text" basedon="Normal" followedby="Current Settings" props="font-family:Courier New"/>
+<s type="P" name="Heading 3" basedon="Normal" followedby="Normal" props="font-size:12pt; margin-top:22pt; font-weight:bold; margin-bottom:3pt; font-family:Arial; keep-with-next:1"/>
+<s type="P" name="Heading 2" basedon="Normal" followedby="Normal" props="keep-with-next:1; margin-top:22pt; font-weight:bold; margin-bottom:3pt; font-family:Arial; font-size:14pt"/>
+</styles>
+<lists>
+<l id="1000" parentid="0" type="5" start-value="0" list-delim="%L" list-decimal="."/>
+</lists>
+<pagesize pagetype="Letter" orientation="portrait" width="8.500000" height="11.000000" units="in" page-scale="1.000000"/>
+<section xid="1" props="page-margin-footer:0.5in; page-margin-header:0.5in">
+<p style="Heading 1" xid="2">TCP report				        </p>
+<p style="Plain Text" xid="554">								 Magnus Qvigstad</p>
+<p style="Heading 1" xid="551"><c></c>Task A</p>
+<p style="Normal" xid="4" props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal"><c></c><c></c></p>
+<p style="Normal" xid="488" props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal"><c></c>When your ar<c props="font-weight:normal">e requesting a HTTP POST, the transport layer protocol is TCP. Since TCP is a connection-based protocol, the first packet transfers involves what is known as the three-way-handshake. This handshake looks like following:</c></p>
+<p style="Normal" xid="33" props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal"><c props="font-weight:normal"></c><c></c></p>
+<p level="1" listid="1000" parentid="0" style="Normal" xid="24" props="list-delim:%L; list-decimal:.; list-style:Bullet List; start-value:0; margin-left:0.5000in; text-indent:-0.3000in; field-font:NULL"><c props="list-tag:1001; font-weight:normal"></c><field type="list_label" xid="23" props="width:0in; font-family:Times New Roman; display:inline; font-variant:normal; font-weight:normal; lang:en-US; font-style:normal; text-transform:none; color:000000; homogeneous:1; bgcolor:transparent; font-size:12pt; text-decoration:none; list-style:Bullet List; height:0in; text-position:normal; font-stretch:normal"></field><c props="width:0in; font-family:Times New Roman; display:inline; color:000000; font-weight:bold; text-position:normal; lang:en-US; font-style:normal; text-transform:none; font-variant:normal; list-style:Bullet List; bgcolor:transparent; homogeneous:1; text-decoration:none; height:0in; font-size:12pt; font-stretch:normal">	SYN  </c><c props="width:0in; font-family:Times New Roman; display:inline; font-variant:normal; font-weight:normal; lang:en-US; font-style:normal; text-transform:none; list-style:Bullet List; text-decoration:none; bgcolor:transparent; font-size:12pt; color:000000; homogeneous:1; height:0in; text-position:normal; font-stretch:normal">The client sends a packet with the SYN bit set to 1 and  a random value as the sequence number to the server.</c></p>
+<p level="0" listid="0" parentid="0" style="Normal" xid="29" props="list-delim:%L; list-decimal:.; list-style:Bullet List; start-value:0; margin-left:0.5000in; text-indent:0.0000in; field-font:NULL"><c props="width:0in; list-tag:1020; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; color:000000; lang:en-US; text-decoration:none; text-transform:none; font-variant:normal; homogeneous:1; bgcolor:transparent; list-style:Bullet List; font-size:12pt; height:0in; text-position:normal; font-stretch:normal"></c><c></c></p>
+<p level="1" listid="1000" parentid="0" style="Normal" xid="25" props="list-delim:%L; list-decimal:.; list-style:Bullet List; start-value:0; margin-left:0.5000in; text-indent:-0.3000in; field-font:NULL"><c props="list-tag:1002; font-weight:bold"></c><field type="list_label" xid="22" props="width:0in; font-family:Times New Roman; display:inline; font-variant:normal; font-weight:bold; lang:en-US; font-style:normal; text-transform:none; color:000000; homogeneous:1; bgcolor:transparent; font-size:12pt; text-decoration:none; list-style:Bullet List; height:0in; text-position:normal; font-stretch:normal"></field><c props="width:0in; font-family:Times New Roman; display:inline; font-variant:normal; font-weight:bold; lang:en-US; font-style:normal; text-transform:none; color:000000; homogeneous:1; bgcolor:transparent; font-size:12pt; text-decoration:none; list-style:Bullet List; height:0in; text-position:normal; font-stretch:normal">	SYN-ACK </c><c props="width:0in; font-family:Times New Roman; display:inline; color:000000; font-weight:normal; text-position:normal; lang:en-US; font-style:normal; text-transform:none; font-variant:normal; list-style:Bullet List; bgcolor:transparent; homogeneous:1; text-decoration:none; height:0in; font-size:12pt; font-stretch:normal">T</c><c props=":000000; display:inline; font-family:Times New Roman; font-style:normal; font-weight:normal; lang:en-US; text-decoration:none; text-transform:none; font-variant:normal; bgcolor:transparent; font-size:12pt; homogeneous:1; list-style:Bullet List; height:0in; text-position:normal; width:0in; font-stretch:normal">h</c><c props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; lang:en-US; RN:000000; text-transform:none; font-variant:normal; homogeneous:1; bgcolor:transparent; font-size:12pt; list-style:Bullet List; text-decoration:none; height:0in; text-position:normal; font-stretch:normal">e</c><c props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; lang:en-US; text-decoration:none; text-transform:none; font-variant:normal; bgcolor:transparent; pmN:000000; font-size:12pt; homogeneous:1; list-style:Bullet List; height:0in; text-position:normal; font-stretch:normal"> </c><c props="width:0in; font-family:Times New Roman; @O:000000; font-style:normal; display:inline; bgcolor:transparent; lang:en-US; font-variant:normal; font-weight:normal; text-decoration:none; text-transform:none; font-size:12pt; homogeneous:1; list-style:Bullet List; height:0in; text-position:normal; font-stretch:normal">S</c><c props=":000000; display:inline; font-family:Times New Roman; font-style:normal; font-weight:normal; lang:en-US; text-decoration:none; text-transform:none; font-variant:normal; bgcolor:transparent; font-size:12pt; homogeneous:1; list-style:Bullet List; height:0in; text-position:normal; width:0in; font-stretch:normal">erver responds with a packet that has the ACK and SYN bit set to one an</c><c props="en-US:000000; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; lang:en-US; text-decoration:none; text-transform:none; font-variant:normal; bgcolor:transparent; font-size:12pt; homogeneous:1; list-style:Bullet List; height:0in; text-position:normal; width:0in; font-stretch:normal">d have t</c><c props="font-family:Times New Roman; font-size:12pt; font-variant:normal; color:#252525; font-weight:normal; font-style:normal; text-transform:none">he acknowledgment number set to one more than the received random sequence number from the client. The server also sets its own random number in the sequence number field.</c></p>
+<p style="Normal" xid="34" props="text-indent:0.0000in; margin-left:0.5000in"><c></c><c></c></p>
+<p level="1" listid="1000" parentid="0" style="Normal" xid="26" props="list-delim:%L; list-decimal:.; list-style:Bullet List; start-value:0; margin-left:0.5000in; text-indent:-0.3000in; field-font:NULL"><c props="list-tag:1003; font-weight:bold"></c><field type="list_label" xid="21" props="width:0in; font-family:Times New Roman; display:inline; font-variant:normal; font-weight:bold; lang:en-US; font-style:normal; text-transform:none; color:000000; homogeneous:1; bgcolor:transparent; font-size:12pt; text-decoration:none; list-style:Bullet List; height:0in; text-position:normal; font-stretch:normal"></field><c props="width:0in; font-family:Times New Roman; display:inline; font-variant:normal; font-weight:bold; lang:en-US; font-style:normal; text-transform:none; color:000000; homogeneous:1; bgcolor:transparent; font-size:12pt; text-decoration:none; list-style:Bullet List; height:0in; text-position:normal; font-stretch:normal">	ACK </c><c props="en-US:000000; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; lang:en-US; text-decoration:none; text-transform:none; font-variant:normal; bgcolor:transparent; font-size:12pt; homogeneous:1; list-style:Bullet List; height:0in; text-position:normal; width:0in; font-stretch:normal">The client sends an ACK back to the server. The sequence number is here set to the received acknowledgement number(which should be the initial sequence number sent by the client +1). The acknowledgement number is set to 1+ the received sequence number. </c></p>
+<p style="Normal" xid="41" props="text-indent:0.0000in; margin-left:0.5000in"><c props="en-US:000000; font-family:Times New Roman; display:inline; homogeneous:1; font-weight:normal; lang:en-US; font-style:normal; text-transform:none; text-position:normal; bgcolor:transparent; font-variant:normal; font-size:12pt; height:0in; text-decoration:none; width:0in; font-stretch:normal"></c><c></c></p>
+<p style="Normal" xid="43" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">After these steps are complete, the connection is setup. It is important that the sequence number and </c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">acknowledgment number is synchronized in both directions throughout the whole connection. If they are not, the packet will have to be resent. </c></p>
+<p style="Normal" xid="52" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">In order to avoid overflowing the TCP input buffers of either part of the connection, TCP has some flow-control features implemented. The general idea is that for every packet that is sent, the sender advertises how much space they have available in their buffer. The sender are then not allowed to send a packet with data larger that the advertised bufferspace. </c></p>
+<p style="Normal" xid="55" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="59" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">When transferring packet over a network there is always risk of packets not arriving. TCP handles these packet losses by keeping track of how long it generally takes for a packet to be acknowledged(RTT). It also keeps track of the variations of the round trip times (DevRTT). These variables are used to determine when a packet that have not yet been acknowledged should be resent. You do not want to resend packets too early in order to avoid unnecessary retransmissions. But you do not either want to wait too long because it will result in large delays. TCP uses the formula below in general. </c><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="62" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="63" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Times New Roman; font-size:12pt; color:252525; text-decoration:none; text-position:normal; font-weight:normal; font-style:italic; lang:en-US">TimeOutInterval = Estimated RTT + 4*DevRTT</c></p>
+<p style="Normal" xid="64" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Heading 3" xid="489"><c></c><c></c></p>
+<p style="Heading 3" xid="494"><c></c><c></c></p>
+<p style="Normal" xid="513"><c></c><c></c></p>
+<p style="Normal" xid="514"><c></c><c></c></p>
+<p style="Normal" xid="515"><c></c><c props="font-family:Arial; font-size:17pt; lang:en-US; text-position:normal; font-weight:bold; font-style:normal; text-decoration:none">Task B</c></p>
+<p style="Heading 3" xid="521"><c props="lang:en-US">13)</c><c props="lang:en-US"></c><field type="list_label" xid="522"></field> <c type="list_label">Use the Time-Sequence-Graph (Stevens) plotting tool to view the sequence number versus time plot of segments being sent from the client to the </c>server (Figure 2a and Figure 2b). For each of the two traces, can you identify where TCP's <c props="font-style:italic">slow start</c> phase begins and ends, and where <c props="font-style:italic">congestion avoidance</c> takes over? If you can, explain how. If not, explain why not. To better identify these phases, you may need to find the number of unacknowledged packets (or bytes) at different times and plot the unacknowledged packets (y-axis) as a function of time (x-axis). Note that the number of unacknowledged packets at different times can be found by comparing the number of packets that have been sent with the number of packets that have been acknowledged. After plotting the number of unacknowledged packets versus time, comment on ways in which the measured data differs from the idealized behavior of TCP that we've studied in the text.</p>
+<p style="Normal" xid="523"><c></c><c></c></p>
+<p style="Normal" xid="526" props="tabstops:4.5625in/L0">In the old TCP-trace it seems like the slow-start begins directly after the connection initiation(packet 4) and ends after a couple of packets (packet 13). We then enter the congestion-avoidance state but it seems like we are sending at a constant rate instead of linearly increasing the amount of data. The receiver advertises a large window size throughout the whole connection so this should not be the limiting factor. I am guessing that the senders send-buffer might be small which would cause this.</p>
+<p style="Normal" xid="527"><c></c><c></c></p>
+<p style="Normal" xid="528">In the new TCP-trace file we can see that there is some packet loss in the start. It is rather unclear where the slow-start ends in this one. I assume that the ssthresh value is initially very small in this case so we go almost instantly from slow-start to congestion avoidance. </p>
+<p style="Normal" xid="537">In the start of the back-to-back chunks that is sent the sender send at a high speed which causes the vertical lines. I guess the receiver are running out of bufferspace after a while which makes the sender lower the send rate. </p>
+<p style="Heading 3" xid="516" props="font-family:Arial; font-size:17pt; lang:en-US; text-position:normal; font-weight:bold; font-style:normal; text-decoration:none"><c></c><c props="font-size:12pt">14)</c><field type="list_label" xid="490" props="font-size:12pt"></field><c type="list_label" props="font-size:12pt">	Explain the relationship between (i) the congestion window, (ii) the receiver advertised window, (iii) the number of unacknowledged bytes, and (iv) the effective window at the sender.</c></p>
+<p style="Normal" xid="491"><c type="list_label"></c><c></c></p>
+<p style="Normal" xid="492"><c type="list_label"></c><c props="font-family:Times New Roman; font-size:12pt; color:252525; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">i) The congestion window is a variable that is stored at the endpoint hosts in a TCP connection. Its purpose is to detect congestion in the network path. As long as packets are getting through the congestion window will increase and the sender are allowed to send larger packet chunks.</c></p>
+<p style="Normal" xid="493" props="tabstops:5.1250in/L0"><c props="font-family:Times New Roman; font-size:12pt; color:252525; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="496"><c props="font-family:Times New Roman; font-size:12pt; color:252525; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Times New Roman; font-size:12pt; color:252525; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">ii) The </c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">receiver advertised window is used to implement flow control. Every TCP packet in a connection has a field that is allocated for this variable. The variable represent the amount of free buffer space that the receiving host has.</c></p>
+<p style="Normal" xid="497"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="498"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">iii) The number of unacknowledged bytes are the bytes that has been sent to a receiving host but the receiver has not yet confirmed that it has received them. </c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="499"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="500"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">iv) The number of unacknowledged bytes are not permitted to be more than either the congestion window or the receiver advertised window.  The effective window at the sender is the minimum of those two windows.</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+<p style="Normal" xid="71" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="72" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Arial; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:bold; font-style:normal; lang:en-US">15) Is it generally possible to find the congestion window size (i.e. cwnd) and how it changes with time, from the captured trace files? If so, please explain how. If not, please explain when and when not. Motivate your answer and give examples. Your answer may also benefit from trying to describe and discuss your answer in the context of the two prior questions, for example.</c></p>
+<p style="Normal" xid="507" props="dom-dir:ltr"><c props="lang:en-US"></c><c></c></p>
+<p style="Normal" xid="508" props="dom-dir:ltr"><c props="lang:en-US">I guess you can estimate the congestion window from trace files. Unlike the </c><c props="lang:en-US"></c><c props="font-style:italic; lang:en-US">rwnd </c><c props="font-style:normal; lang:en-US">it is not advertised but if you know the senders congestion algorithm you should be able to get a decent value by looking at the sent frames and the received ACKs.</c></p>
+<p style="Normal" xid="73" props="font-family:Arial; margin-left:0.0000in; font-size:12pt; text-indent:0.0000in; text-position:normal; lang:en-US; color:000000; font-weight:bold; font-style:normal; text-decoration:none"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="74" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="75" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="76" props="text-indent:0.0000in; margin-left:0.0000in"><c props="font-family:Times New Roman; text-decoration:none; color:252525; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Heading 1" xid="79"><c props="lang:en-US"></c><c></c></p>
+<p style="Heading 1" xid="509"><c props="lang:en-US"></c><c></c></p>
+<p style="Normal" xid="517"><c props="lang:en-US"></c><c></c></p>
+<p style="Normal" xid="518"><c props="lang:en-US"></c><c></c></p>
+<p style="Normal" xid="519"><c props="lang:en-US"></c><c></c></p>
+<p style="Normal" xid="530"><c></c><c></c></p>
+<p style="Normal" xid="531"><c></c><c></c></p>
+<p style="Normal" xid="532"><c></c><c></c></p>
+<p style="Normal" xid="533"><c></c><c></c></p>
+<p style="Normal" xid="534"><c></c><c></c></p>
+<p style="Normal" xid="535"><c></c><c></c></p>
+<p style="Normal" xid="536"><c></c><c></c></p>
+<p style="Normal" xid="538"><c></c><c></c></p>
+<p style="Normal" xid="539"><c></c><c></c></p>
+<p style="Normal" xid="540"><c></c><c></c></p>
+<p style="Normal" xid="541"><c></c><c></c></p>
+<p style="Normal" xid="542"><c></c><c></c></p>
+<p style="Normal" xid="543"><c></c><c></c></p>
+<p style="Normal" xid="544"><c></c><c></c></p>
+<p style="Normal" xid="545"><c></c><c></c></p>
+<p style="Normal" xid="546"><c></c><c></c></p>
+<p style="Normal" xid="547"><c></c><c></c></p>
+<p style="Normal" xid="548"><c></c><c></c></p>
+<p style="Normal" xid="549"><c></c><c></c></p>
+<p style="Normal" xid="550"><c></c><c></c></p>
+<p style="Heading 1" xid="125"><c props="lang:en-US">Task C</c><c props="lang:en-US"></c></p>
+<p style="Heading 2" xid="169"><c props="lang:en-US">16)</c><c props="lang:en-US"></c></p>
+<table xid="129" props="table-row-heights:0.1875in/0.2500in/0.1875in/0.1875in/0.2500in/; table-column-props:1.1250in/1.5625in/">
+<cell xid="130" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="131"><c props="bgcolor:969696">Connection no.</c><c props="bgcolor:969696"></c></p>
+</cell>
+<cell xid="133" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="134"><c props="bgcolor:969696">Avg. throughput (bps)</c><c props="bgcolor:969696"></c></p>
+</cell>
+<cell xid="136" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="137"><c props="font-size:14pt">1</c><c props="font-size:14pt"></c></p>
+</cell>
+<cell xid="139" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="140"><c props="font-variant:normal; font-weight:normal; color:#222222; text-transform:none; font-size:14pt; font-style:normal">2,535,059</c><c props="font-variant:normal; font-weight:normal; color:#222222; text-transform:none; font-size:14pt; font-style:normal"></c></p>
+</cell>
+<cell xid="142" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="143"><c props="font-size:14pt">2</c><c props="font-size:14pt"></c></p>
+</cell>
+<cell xid="145" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="146"><c props="font-size:14pt">2,546,529</c><c props="font-size:14pt"></c></p>
+</cell>
+<cell xid="148" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="149"><c props="font-size:14pt">3</c><c props="font-size:14pt"></c></p>
+</cell>
+<cell xid="151" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="152"><c props="font-size:14pt">2,575,234</c><c props="font-size:14pt"></c></p>
+</cell>
+<cell xid="154" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="155"><c props="font-size:14pt">4</c><c props="font-size:14pt"></c></p>
+</cell>
+<cell xid="157" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="158"><c props="font-size:14pt">2,550,559</c><c props="font-size:14pt"></c></p>
+</cell>
+</table>
+<p style="Normal" xid="128"><c props="lang:en-US"></c><c></c></p>
+<p style="Normal" xid="163"><c props="lang:en-US">Total bandwidth of host = </c><c props="lang:en-US"></c><c props="font-variant:normal; font-weight:bold; font-size:14pt; text-transform:none; color:#222222; font-style:normal">1,275,923 bytes/sec</c></p>
+<p style="Normal" xid="166">In this case, we can see that bandwidth is distributed fair along the connections.<c></c></p>
+<p style="Heading 2" xid="168">17)</p>
+<table xid="234" props="table-column-props:1.1250in/1.6250in/0.7500in/; table-row-heights:0.2500in/0.1875in/0.1875in/0.2500in/0.1875in/0.1875in/0.1875in/0.1875in/0.1875in/0.1875in/; list-tag:1">
+<cell xid="235" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="236"><c props="font-family:Times New Roman; color:000000; text-decoration:none; text-position:normal; font-size:12pt; bgcolor:969696; font-weight:normal; font-style:normal; lang:en-US">Connection no</c><c props="font-family:Times New Roman; color:000000; text-decoration:none; text-position:normal; font-size:12pt; bgcolor:969696; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="238" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="239"><c props="font-family:Times New Roman; color:000000; text-decoration:none; text-position:normal; font-size:12pt; bgcolor:969696; font-weight:normal; font-style:normal; lang:en-US">Avg. throughput (bps)</c><c props="font-family:Times New Roman; color:000000; text-decoration:none; text-position:normal; font-size:12pt; bgcolor:969696; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="309" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="310"><c props="bgcolor:969696">RTT(ms)</c><c props="bgcolor:969696"></c></p>
+</cell>
+<cell xid="241" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="242">1</p>
+</cell>
+<cell xid="244" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="245">23,228,367</p>
+</cell>
+<cell xid="312" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="313">13</p>
+</cell>
+<cell xid="247" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="248">2</p>
+</cell>
+<cell xid="250" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="251">15,644,073</p>
+</cell>
+<cell xid="315" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="316">35</p>
+</cell>
+<cell xid="253" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="254">3</p>
+</cell>
+<cell xid="256" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="257">13,501,737</p>
+</cell>
+<cell xid="318" props="bot-attach:4; left-attach:2; right-attach:3; top-attach:3">
+<p style="Normal" xid="319">68</p>
+</cell>
+<cell xid="259" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="260">4</p>
+</cell>
+<cell xid="262" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="263">12,478,983</p>
+</cell>
+<cell xid="321" props="bot-attach:5; left-attach:2; right-attach:3; top-attach:4">
+<p style="Normal" xid="322">73</p>
+</cell>
+<cell xid="265" props="bot-attach:6; left-attach:0; right-attach:1; top-attach:5">
+<p style="Normal" xid="266">5</p>
+</cell>
+<cell xid="268" props="bot-attach:6; left-attach:1; right-attach:2; top-attach:5">
+<p style="Normal" xid="269">9,654,284</p>
+</cell>
+<cell xid="324" props="bot-attach:6; left-attach:2; right-attach:3; top-attach:5">
+<p style="Normal" xid="325">49</p>
+</cell>
+<cell xid="271" props="bot-attach:7; left-attach:0; right-attach:1; top-attach:6">
+<p style="Normal" xid="272">6</p>
+</cell>
+<cell xid="274" props="bot-attach:7; left-attach:1; right-attach:2; top-attach:6">
+<p style="Normal" xid="275">6,279,528</p>
+</cell>
+<cell xid="327" props="bot-attach:7; left-attach:2; right-attach:3; top-attach:6">
+<p style="Normal" xid="328">33</p>
+</cell>
+<cell xid="277" props="bot-attach:8; left-attach:0; right-attach:1; top-attach:7">
+<p style="Normal" xid="278">7</p>
+</cell>
+<cell xid="280" props="bot-attach:8; left-attach:1; right-attach:2; top-attach:7">
+<p style="Normal" xid="281">5,843,994</p>
+</cell>
+<cell xid="330" props="bot-attach:8; left-attach:2; right-attach:3; top-attach:7">
+<p style="Normal" xid="331">135</p>
+</cell>
+<cell xid="283" props="bot-attach:9; left-attach:0; right-attach:1; top-attach:8">
+<p style="Normal" xid="284">8</p>
+</cell>
+<cell xid="286" props="bot-attach:9; left-attach:1; right-attach:2; top-attach:8">
+<p style="Normal" xid="287">3,841,144</p>
+</cell>
+<cell xid="333" props="bot-attach:9; left-attach:2; right-attach:3; top-attach:8">
+<p style="Normal" xid="334">326</p>
+</cell>
+<cell xid="289" props="bot-attach:10; left-attach:0; right-attach:1; top-attach:9">
+<p style="Normal" xid="290">9</p>
+</cell>
+<cell xid="292" props="bot-attach:10; left-attach:1; right-attach:2; top-attach:9">
+<p style="Normal" xid="293">3,486,446</p>
+</cell>
+<cell xid="336" props="bot-attach:10; left-attach:2; right-attach:3; top-attach:9">
+<p style="Normal" xid="337">322</p>
+</cell>
+</table>
+<p style="Normal" xid="165"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c></c></p>
+<p style="Normal" xid="306"><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c><c props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">Total bandwidth of host =</c><c props="font-weight:bold">11,744,820 bytes/sec</c></p>
+<p style="Normal" xid="357"><c props="font-weight:normal">In this case the different connections also get a fair amount of bandwidth. Since the expected throughput is inverse proportional to the RTT, the connections with longer RTT’s are transferring data at a lower rate.</c></p>
+<p style="Normal" xid="557"><c props="font-weight:normal"></c></p>
+<p style="Normal" xid="558"><c props="font-weight:normal"></c></p>
+<p style="Normal" xid="358"><c props="font-weight:normal"></c><c></c></p>
+<p style="Heading 2" xid="359"><c></c><c></c></p>
+<p style="Heading 2" xid="464"><c></c><c></c></p>
+<p style="Heading 2" xid="465"><c></c><c></c></p>
+<p style="Heading 2" xid="466"><c></c>18)</p>
+<table xid="363" props="table-row-heights:0.1875in/0.1875in/0.1875in/0.1875in/0.1875in/0.1875in/0.1875in/0.1875in/0.1875in/0.2500in/0.2500in/; table-column-props:1.1250in/2.0625in/0.8750in/">
+<cell xid="364" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="365"><c props="bgcolor:808080">Connection no.</c><c props="bgcolor:808080"></c></p>
+</cell>
+<cell xid="367" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" xid="368"><c props="bgcolor:808080">Avg. Throughput (bytes/sec)</c><c props="bgcolor:808080"></c></p>
+</cell>
+<cell xid="370" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" xid="371"><c props="bgcolor:808080">RTT(ms)</c><c props="bgcolor:808080"></c></p>
+</cell>
+<cell xid="373" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" xid="374">1</p>
+</cell>
+<cell xid="376" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" xid="377"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">1,876,744</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="379" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" xid="380">40</p>
+</cell>
+<cell xid="382" props="bot-attach:3; left-attach:0; right-attach:1; top-attach:2">
+<p style="Normal" xid="383">2</p>
+</cell>
+<cell xid="385" props="bot-attach:3; left-attach:1; right-attach:2; top-attach:2">
+<p style="Normal" xid="386"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">1,559,236</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="388" props="bot-attach:3; left-attach:2; right-attach:3; top-attach:2">
+<p style="Normal" xid="389">36</p>
+</cell>
+<cell xid="391" props="bot-attach:4; left-attach:0; right-attach:1; top-attach:3">
+<p style="Normal" xid="392">3</p>
+</cell>
+<cell xid="394" props="bot-attach:4; left-attach:1; right-attach:2; top-attach:3">
+<p style="Normal" xid="395"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">1,093,803</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="397" props="bot-attach:4; left-attach:2; right-attach:3; top-attach:3">
+<p style="Normal" xid="398">100</p>
+</cell>
+<cell xid="400" props="bot-attach:5; left-attach:0; right-attach:1; top-attach:4">
+<p style="Normal" xid="401">4</p>
+</cell>
+<cell xid="403" props="bot-attach:5; left-attach:1; right-attach:2; top-attach:4">
+<p style="Normal" xid="404"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">1,103,449</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="406" props="bot-attach:5; left-attach:2; right-attach:3; top-attach:4">
+<p style="Normal" xid="407">68</p>
+</cell>
+<cell xid="409" props="bot-attach:6; left-attach:0; right-attach:1; top-attach:5">
+<p style="Normal" xid="410">5</p>
+</cell>
+<cell xid="412" props="bot-attach:6; left-attach:1; right-attach:2; top-attach:5">
+<p style="Normal" xid="413"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">930,210</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="415" props="bot-attach:6; left-attach:2; right-attach:3; top-attach:5">
+<p style="Normal" xid="416">31</p>
+</cell>
+<cell xid="418" props="bot-attach:7; left-attach:0; right-attach:1; top-attach:6">
+<p style="Normal" xid="419">6</p>
+</cell>
+<cell xid="421" props="bot-attach:7; left-attach:1; right-attach:2; top-attach:6">
+<p style="Normal" xid="422"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">877,399</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="424" props="bot-attach:7; left-attach:2; right-attach:3; top-attach:6">
+<p style="Normal" xid="425">33</p>
+</cell>
+<cell xid="427" props="bot-attach:8; left-attach:0; right-attach:1; top-attach:7">
+<p style="Normal" xid="428">7</p>
+</cell>
+<cell xid="430" props="bot-attach:8; left-attach:1; right-attach:2; top-attach:7">
+<p style="Normal" xid="431"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">849,341</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="433" props="bot-attach:8; left-attach:2; right-attach:3; top-attach:7">
+<p style="Normal" xid="434">122</p>
+</cell>
+<cell xid="436" props="bot-attach:9; left-attach:0; right-attach:1; top-attach:8">
+<p style="Normal" xid="437">8</p>
+</cell>
+<cell xid="439" props="bot-attach:9; left-attach:1; right-attach:2; top-attach:8">
+<p style="Normal" xid="440"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">693,473</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="442" props="bot-attach:9; left-attach:2; right-attach:3; top-attach:8">
+<p style="Normal" xid="443">146</p>
+</cell>
+<cell xid="445" props="bot-attach:10; left-attach:0; right-attach:1; top-attach:9">
+<p style="Normal" xid="446">9</p>
+</cell>
+<cell xid="448" props="bot-attach:10; left-attach:1; right-attach:2; top-attach:9">
+<p style="Normal" xid="449"><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">673,479</c><c props="font-family:Times New Roman; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"></c></p>
+</cell>
+<cell xid="451" props="bot-attach:10; left-attach:2; right-attach:3; top-attach:9">
+<p style="Normal" xid="452">74</p>
+</cell>
+<cell xid="454" props="bot-attach:11; left-attach:0; right-attach:1; top-attach:10">
+<p style="Normal" xid="455">10</p>
+</cell>
+<cell xid="457" props="bot-attach:11; left-attach:1; right-attach:2; top-attach:10">
+<p style="Normal" xid="458" props="font-family:Times New Roman; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c props="font-family:Times New Roman; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">659,149</c><c props="font-family:Times New Roman; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+</cell>
+<cell xid="460" props="bot-attach:11; left-attach:2; right-attach:3; top-attach:10">
+<p style="Normal" xid="461">66</p>
+</cell>
+</table>
+<p style="Normal" xid="361"><c></c><c></c></p>
+<p style="Normal" xid="485">The connections does not get equal throughput in this case either. We can see that the throughput for each of the connections are not only dependent of its RTT. We can assume that since each of the connections have different hosts the connections have different paths, from client to host, resulting in the packets in each of the connections passes through different routers along the way. Some of these paths might be severely congested with frequent packet losses as a result, while others are not congested at all. This may be the reason why the different connections gets different throughput. Also some of the hosts may have a upload bandwidth in the software that controls their peer to peer connection.</p>
+<p style="Normal" xid="486" props="margin-top:0.0000in; margin-left:0.0000in; text-indent:0.0000in; dom-dir:ltr; margin-bottom:0.0000in; line-height:1.000000; text-align:left; margin-right:0.0000in"><c></c><c></c></p>
+<p style="Normal" xid="479" props="font-family:Times New Roman; font-size:12pt; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"><c></c><c></c></p>
+<p style="Normal" xid="480"><c></c><c></c></p>
+<p style="Normal" xid="481"><c></c><c></c></p>
+<p style="Normal" xid="482"><c></c><c></c></p>
+<p style="Normal" xid="483"></p>
+</section>
+</abiword>

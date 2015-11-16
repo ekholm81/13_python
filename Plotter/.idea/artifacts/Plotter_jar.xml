@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Plotter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Plotter_jar</output-path>
+    <root id="archive" name="Plotter.jar">
+      <element id="module-output" name="Plotter" />
+    </root>
+  </artifact>
+</component>

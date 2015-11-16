@@ -480,7 +480,7 @@ public class GUI extends JFrame{
 
         private void initslider(){
             slider=new JSlider();
-            slider.setBounds((int)((double)panelWidth*0.77),(int)((double)panelHeight * 0.80),215,20);
+            slider.setBounds((int)((double)panelWidth*0.67),(int)((double)panelHeight * 0.80),315,20);
             slider.setValue(0);
             add(slider);
             slider.addChangeListener(new ChangeListener() {
@@ -492,7 +492,7 @@ public class GUI extends JFrame{
         }
 
         private double getSlider(){
-            return slider.getValue()/50.00;
+            return slider.getValue()/35.00;
         }
 
         private void initTextbox(){
@@ -690,7 +690,7 @@ public class GUI extends JFrame{
                 g.drawString(String.valueOf("6:   "+gamedata.sannolikhet11+"%"), (int) ((double) panelWidth * 0.87), (int) ((double) panelHeight * 0.40));
                 g.drawString(String.valueOf("7:   "+gamedata.sannolikhet12+"%"), (int) ((double) panelWidth * 0.87), (int) ((double) panelHeight * 0.45));
             }
-            g.drawString(String.valueOf("Subtrahera odds: "+utills.round((getSlider()),2)),(int)((double)panelWidth*0.60),(int)((double)panelHeight*0.85));
+            g.drawString(String.valueOf("Subtrahera odds: "+utills.round((getSlider()),2)),(int)((double)panelWidth*0.50),(int)((double)panelHeight*0.85));
         }
 
     }

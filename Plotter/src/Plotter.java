@@ -222,11 +222,11 @@ public class Plotter extends JFrame {
                         robot.mouseMove(coords[i][j][0], coords[i][j][1]);
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                        Thread.sleep(200);
+                        Thread.sleep(145);
                     }
                 }
             }
-            Thread.sleep(1300);
+            Thread.sleep(1700);
             robot.mouseMove(betala[0], betala[1]);
             robot.mousePress(InputEvent.BUTTON1_MASK);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
@@ -237,11 +237,11 @@ public class Plotter extends JFrame {
                 robot.mousePress(InputEvent.BUTTON1_MASK);
                 robot.mouseRelease(InputEvent.BUTTON1_MASK);
             }
-            Thread.sleep(1500);
+            Thread.sleep(1000);
             robot.mouseMove(con[0], con[1]);
             robot.mousePress(InputEvent.BUTTON1_MASK);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            Thread.sleep(1500);
+            Thread.sleep(1000);
 
         }
         catch (Exception e){}

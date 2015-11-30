@@ -1,5 +1,5 @@
 import com.sun.org.apache.xpath.internal.SourceTree;
-
+import java.io.PrintWriter;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
@@ -61,7 +61,7 @@ public class Data {
         if (type==gameTypes.TOPPTIPSET)n=8;
         GameData gd=new GameData(n);
         try{
-
+	    PrintWriter writer = new PrintWriter("matriser.txt", "UTF-8");
             BufferedReader br = new BufferedReader(new FileReader(gameType));
             String line = null;
             if(type==gameTypes.STRYKTIPSET)gd.utdelning=0.65;
@@ -120,6 +120,7 @@ public class Data {
                 gd.odds[c-1][2]=Double.parseDouble(o3);
                 gd.wodds[c-1]=utills.getwodds(gd.odds[c - 1].clone());
                 gd.oddsC[c-1]=utills.round(100*utills.getOddsC(gd.odds[c - 1].clone()),2);
+		writer.println("["+gd.wodds[c-1][0]+","+gd.wodds[c-1][1]+","+gd.wodds[c-1][2]+"],");
 
             }
              c=0;
@@ -135,8 +136,7 @@ public class Data {
                 if(gd.crossed[c-1][1]<10.00)inc--;
                 String o3=cleanString(line.substring(i+38+inc,i+40+inc));
                 gd.crossed[c-1][2]=Double.parseDouble(o3);
-                //System.out.println(gd.crossed[c-1][0]+" "+gd.crossed[c-1][1]+" "+gd.crossed[c-1][2]);
-
+                writer.println("["+gd.crossed[c-1][0]+","+gd.crossed[c-1][1]+","+gd.crossed[c-1][2]+"],");
 
             }
 
@@ -149,7 +149,7 @@ public class Data {
             gd.omsättning=OSB.toString();
 
 
-
+	    writer.close();
             for(i=0;i<n;i++){
                 gd.value[i][0]=utills.round(gd.crossed[i][0]*gd.wodds[i][0],2);
                 gd.value[i][1]=utills.round(gd.crossed[i][1]*gd.wodds[i][1],2);

@@ -4,7 +4,7 @@
 public class Utills {
 
     public double[] stripodds(String s){
-        double[] res=new double[3];
+        double[] res=new double[4];
         int index=0;
         for(int i=0;i<3;i++){
             StringBuilder tmp=new StringBuilder();
@@ -23,6 +23,7 @@ public class Utills {
                 index++;
             }
         }
+        res[3]=getOddsC(res);
         return getwodds(res);
     }
 

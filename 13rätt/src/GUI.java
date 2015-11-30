@@ -264,6 +264,7 @@ public class GUI extends JFrame{
                                gamedata.value[i][0]=utills.round(gamedata.crossed[i][0]*gamedata.wodds[i][0],2);
                                gamedata.value[i][1]=utills.round(gamedata.crossed[i][1]*gamedata.wodds[i][1],2);
                                gamedata.value[i][2]=utills.round(gamedata.crossed[i][2]*gamedata.wodds[i][2],2);
+                               gamedata.oddsC[i]=utills.round(odds[3]*100,2);
                                gamedata.modOdds[i]=true;
                            }
                        }Datapanel.this.repaint();
@@ -611,6 +612,7 @@ public class GUI extends JFrame{
                 if(gamedata.modOdds[i]==true){
                     g.setColor(Color.red);
                     g.drawString((String.valueOf(gamedata.wodds[i][0])+"   "+String.valueOf(gamedata.wodds[i][1])+"   "+String.valueOf(gamedata.wodds[i][2])), (int)((double)panelWidth*0.20), (int)(((double)panelHeight*0.065)+(i*(double)panelHeight/18.0)));
+                    g.drawString(String.valueOf(String.valueOf(gamedata.oddsC[i])), (int) ((double) panelWidth * 0.35), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
                 }
                 else {
                     g.setColor(colarr[gamedata.oddsCh[i][0]]);
@@ -626,6 +628,7 @@ public class GUI extends JFrame{
 
             for(int i=0;i<gamedata.games.length;i++){
                 if(gamedata.games[i]==null)break;
+                if(gamedata.modOdds[i]!=true)
                 g.drawString(String.valueOf(String.valueOf(gamedata.oddsC[i])), (int) ((double) panelWidth * 0.35), (int) (((double) panelHeight * 0.065) + (i * (double) panelHeight / 18.0)));
             }
 

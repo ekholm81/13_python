@@ -237,7 +237,7 @@ public class Plotter extends JFrame {
                 robot.mousePress(InputEvent.BUTTON1_MASK);
                 robot.mouseRelease(InputEvent.BUTTON1_MASK);
             }
-            Thread.sleep(1000);
+            Thread.sleep(1500);
             robot.mouseMove(con[0], con[1]);
             robot.mousePress(InputEvent.BUTTON1_MASK);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);

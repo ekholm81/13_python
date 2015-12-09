@@ -81,6 +81,7 @@ public class Data {
                 c++;
                 if(c>n)break;
                 String g=(line.substring(i+19,i+60));
+               // System.out.println(g);
                 for (int j=0;j<100;j++){
                     if(g.charAt(j)=='\"'){
                         gd.games[c-1]=g.substring(0,j);
@@ -112,7 +113,7 @@ public class Data {
 
                 String o1=(line.substring(i+15,i+19)).replaceAll(",",".");
                 gd.odds[c-1][0]=Double.parseDouble(o1);
-                if(gd.odds[c-1][0]>10.00)inc++;
+                if(gd.odds[c-1][0]>=10.00)inc++;
                 String o2=(line.substring(i+26+inc,i+30+inc)).replaceAll(",",".");
                 gd.odds[c-1][1]=Double.parseDouble(o2);
                 if(gd.odds[c-1][1]>10.00)inc++;
@@ -120,7 +121,10 @@ public class Data {
                 gd.odds[c-1][2]=Double.parseDouble(o3);
                 gd.wodds[c-1]=utills.getwodds(gd.odds[c - 1].clone());
                 gd.oddsC[c-1]=utills.round(100*utills.getOddsC(gd.odds[c - 1].clone()),2);
-		writer.println("["+gd.wodds[c-1][0]+","+gd.wodds[c-1][1]+","+gd.wodds[c-1][2]+"],");
+		        //writer.println("["+gd.wodds[c-1][0]+","+gd.wodds[c-1][1]+","+gd.wodds[c-1][2]+"],");
+               // System.out.println( gd.wodds[c-1][0]);
+               // System.out.println( gd.wodds[c-1][1]);
+              //  System.out.println( gd.wodds[c-1][2]);
 
             }
              c=0;

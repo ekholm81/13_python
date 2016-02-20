@@ -116,12 +116,12 @@ public class Data {
                 if(gd.odds[c-1][0]>=10.00)inc++;
                 String o2=(line.substring(i+26+inc,i+30+inc)).replaceAll(",",".");
                 gd.odds[c-1][1]=Double.parseDouble(o2);
-                if(gd.odds[c-1][1]>10.00)inc++;
+                if(gd.odds[c-1][1]>=10.00)inc++;
                 String o3=(line.substring(i+39+inc,i+43+inc)).replaceAll(",",".");
                 gd.odds[c-1][2]=Double.parseDouble(o3);
                 gd.wodds[c-1]=utills.getwodds(gd.odds[c - 1].clone());
                 gd.oddsC[c-1]=utills.round(100*utills.getOddsC(gd.odds[c - 1].clone()),2);
-		        //writer.println("["+gd.wodds[c-1][0]+","+gd.wodds[c-1][1]+","+gd.wodds[c-1][2]+"],");
+                System.out.println("["+gd.wodds[c-1][0]+","+gd.wodds[c-1][1]+","+gd.wodds[c-1][2]+"],");
                // System.out.println( gd.wodds[c-1][0]);
                // System.out.println( gd.wodds[c-1][1]);
               //  System.out.println( gd.wodds[c-1][2]);
@@ -140,7 +140,7 @@ public class Data {
                 if(gd.crossed[c-1][1]<10.00)inc--;
                 String o3=cleanString(line.substring(i+38+inc,i+40+inc));
                 gd.crossed[c-1][2]=Double.parseDouble(o3);
-                writer.println("["+gd.crossed[c-1][0]+","+gd.crossed[c-1][1]+","+gd.crossed[c-1][2]+"],");
+                System.out.println("["+gd.crossed[c-1][0]+","+gd.crossed[c-1][1]+","+gd.crossed[c-1][2]+"],");
 
             }
 
@@ -161,7 +161,7 @@ public class Data {
             }
             i = line.indexOf(", stänger ", i + 1);
             gd.spelstopp=line.substring(i + 10, i + 26);
-            if(gd.spelstopp.substring(0,6).equals("2015-1"))access=true;
+            if(gd.spelstopp.substring(0,6).equals("2016-0"))access=true;
             if(type==gameTypes.STRYKTIPSET)Stryk=gd;
             if(type==gameTypes.EUROPATIPSET)EU=gd;
             if(type==gameTypes.POWERPLAY)PP=gd;

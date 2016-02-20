@@ -1,5 +1,5 @@
 
-
+o=open("rader.txt","w")
 def same_sign(b, a):
 	if (b==0):
 		return (a==0 or a==3 or a==4 or a==6)
@@ -14,19 +14,19 @@ def s_in_m(s,m):
 	return True
 
 def printr(r):
-	o=open("rader.txt","w")
-	o.write("E,")
+	
+	#o.write("E,")
 	for i in range(len(r)):
 		if r[i]==0:
-			o.write("1")
+			o.write("0")
 		elif r[i]==1:
-			o.write("X")
+			o.write("1")
 		elif r[i]==2:
 			o.write("2")
 		if i+1==len(r):
 			o.write("\n")
-		else:
-			o.write(",")
+		#else:
+			#o.write(",")
 
 f=open("msys.txt","r")
 m=[]

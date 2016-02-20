@@ -186,11 +186,7 @@ public class Plotter extends JFrame {
 
 
             });
-            testB.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent actionEvent) {
-                    test();
-                }
-            });
+
             mata.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent actionEvent) {
                     if (!kali) return;
@@ -212,36 +208,41 @@ public class Plotter extends JFrame {
     private void matarad(int[][] msys){
         try{
             Robot robot = new Robot();
-            robot.mouseMove(ren[0], ren[1]);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            Thread.sleep(500);
+
             for(int i=0;i<8;i++) {
                 for (int j = 0; j < 3; j++) {
                     if(msys[i][j]==1){
                         robot.mouseMove(coords[i][j][0], coords[i][j][1]);
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                        Thread.sleep(145);
+                        Thread.sleep(140);
                     }
                 }
             }
-            Thread.sleep(2000);
+            Thread.sleep(1750);
             robot.mouseMove(betala[0], betala[1]);
             robot.mousePress(InputEvent.BUTTON1_MASK);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
-
+            Thread.sleep(500);
+            robot.mouseMove(betala[0], betala[1]);
+            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+            Thread.sleep(700);
+            robot.mouseMove(con[0], con[1]);
+            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.mouseRelease(InputEvent.BUTTON1_MASK);
             if(cb.isSelected()){
-                Thread.sleep(1500);
+                Thread.sleep(2300);
                 robot.mouseMove(bolag[0], bolag[1]);
                 robot.mousePress(InputEvent.BUTTON1_MASK);
                 robot.mouseRelease(InputEvent.BUTTON1_MASK);
             }
             Thread.sleep(1500);
-            robot.mouseMove(con[0], con[1]);
+            robot.mouseMove(ren[0], ren[1]);
             robot.mousePress(InputEvent.BUTTON1_MASK);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            Thread.sleep(1000);
+            Thread.sleep(1500);
+
 
         }
         catch (Exception e){}
@@ -269,41 +270,6 @@ public class Plotter extends JFrame {
         }catch(Exception e){}
     }
 
-    public void test(){
-        try{
-            Robot robot = new Robot();
-            robot.mouseMove(ren[0], ren[1]);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            Thread.sleep(1500);
-            for(int i=0;i<8;i++) {
-                    robot.mouseMove(coords[i][0][0], coords[i][0][1]);
-                    robot.mousePress(InputEvent.BUTTON1_MASK);
-                    robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                    Thread.sleep(400);
-            }
-            Thread.sleep(2400);
-            robot.mouseMove(betala[0], betala[1]);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            Thread.sleep(2500);
-            robot.mouseMove(con[0], con[1]);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            Thread.sleep(1500);
-
-        }
-       catch (Exception e){}
-    }
-
-    public void calibrate(){
-
-
-    }
-
-    public void start(){
-
-    }
 
     //0 not checked, 1 checked, 2 error
     public int color(int x, int y){

@@ -68,7 +68,6 @@ public class Datahandler {
     }
 
    private void setTecken(GameData gd, int antalrader,boolean filter){
-        if(filter) System.out.println("HEJ");
         gd.tecken=new int[gd.wvalue.length][3];
         double chance=0;
         double rowVal=0;
